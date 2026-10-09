@@ -88,6 +88,9 @@
       "inactive": "Other countries in the region",
       "titleAlt": "OMICRON presence in Latin America and the Caribbean",
       "description": "Cartogram with intentionally enlarged Central America and Caribbean. Countries with documented experience are shown in green.",
+      "engagementCount": "{count, plural, one {# consulting engagement} other {# consulting engagements}}",
+      "countryAction": "View {count, plural, one {# consulting engagement} other {# consulting engagements}} in {country}",
+      "view": "View",
       "countryLabel": "countries in Latin America and the Caribbean",
       "engagementLabel": "consulting engagements",
       "international": "Other international markets",
@@ -99,6 +102,7 @@
       "previous": "Previous step",
       "next": "Next step",
       "carouselDescription": "carousel",
+      "slideDescription": "slide",
       "stepsNavigation": "Step navigation",
       "goToStep": "Go to step {number}: {title}",
       "steps": {

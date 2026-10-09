@@ -1,13 +1,14 @@
 @use "../styles/tokens" as *;
 
 .header { position: sticky; top: 0; z-index: 50; background: $white; border-bottom: 1px solid $border; color: $navy; }
-.headerInner { min-height: 100px; display: flex; align-items: center; gap: 38px; }
-.logoWrap { margin-right: auto; flex-shrink: 0; }
+.headerInner { min-height: 100px; display: grid; grid-template-columns: 280px minmax(0, 1fr) auto 54px; align-items: center; gap: 30px; }
+.logoWrap { min-width: 0; }
 .brandLogo { position: relative; display: block; width: 280px;
   img { display: block; width: 100%; height: auto; }
   .lightWordmark { position: absolute; inset: 0; filter: brightness(0) invert(1); clip-path: inset(0 0 0 25%); pointer-events: none; }
 }
 .navigation { display: flex; align-items: center; gap: 44px; font-size: 18px; font-weight: 500;
+  justify-self: center;
   a { padding-block: 12px; border-bottom: 3px solid transparent; transition: border-color 150ms ease, color 150ms ease; }
   a:hover, a[aria-current="page"] { border-color: $sky; }
   a[aria-current="page"] { font-weight: 650; }
@@ -22,7 +23,6 @@
 }
 .homeHeader { position: sticky; top: 0; z-index: 50; margin-bottom: -112px; background: transparent; border: 0; color: $white; transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, backdrop-filter 180ms ease;
   .headerInner { min-height: 112px; }
-  .navigation { margin-right: auto; margin-left: 50px; }
 }
 .scrolledHeader { background: rgba(0,36,59,.94); border-bottom: 1px solid rgba(209,231,243,.2); color: $white; box-shadow: 0 8px 24px rgba(0,17,31,.18); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .searchLink { display: grid; place-items: center; width: 54px; height: 54px; flex-shrink: 0; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; background: rgba(255,255,255,.06); transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
@@ -30,6 +30,7 @@
   &:active { background: rgba(255,255,255,.24); }
   &:focus-visible { outline: 3px solid $sky; outline-offset: 3px; }
 }
+.searchSlot { display: block; width: 54px; height: 54px; }
 .skip { position: absolute; left: 20px; top: -100px; background: $navy; color: white; padding: 12px 20px; z-index: 60; &:focus { top: 10px; } }
 .footer { position: relative; isolation: isolate; overflow: hidden; padding-block: 48px; background: #00243b; color: $white; }
 .footerGrid { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 48px; }
@@ -43,7 +44,7 @@
   > :first-child { border-right: 1px solid rgba(209,231,243,.3); padding-right: 24px; }
 }
 .pending { display: grid; place-items: center; color: #c0d0df; }
-@media (max-width: 1200px) { .headerInner { gap: 24px; } .brandLogo { width: 245px; } .homeHeader .navigation { margin-left: 18px; } .navigation { gap: 28px; font-size: 17px; } .searchLink { width: 48px; height: 48px; } .footerGrid { gap: 28px; } }
-@media (max-width: 1000px) { .brandLogo { width: 205px; } .navigation { gap: 20px; font-size: 15px; } .homeHeader .navigation { margin-left: 0; } .headerInner { gap: 20px; } .languages { font-size: 14px; } .searchLink { width: 42px; height: 42px; } .footerLogo .brandLogo { width: 220px; } .institution { font-size: 14px; } .footerRight { gap: 20px; font-size: 14px; } }
-@media (max-width: 700px) { .homeHeader { margin-bottom: -130px; } .headerInner { padding-block: 16px; gap: 16px; flex-wrap: wrap; } .homeHeader .headerInner { min-height: 130px; } .brandLogo { width: 180px; } .logoWrap { flex: 1; } .navigation, .homeHeader .navigation { order: 3; width: 100%; justify-content: space-between; margin: 0; font-size: 14px; gap: 12px; a { padding-block: 7px; } } .searchLink { width: 36px; height: 36px; svg { width: 20px; height: 20px; } } .footer { padding-block: 36px; } .footerGrid { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 32px; } .footerRight, .legal { justify-content: center; justify-self: center; } .legal { width: auto; } }
+@media (max-width: 1200px) { .headerInner { grid-template-columns: 245px minmax(0, 1fr) auto 48px; gap: 20px; } .brandLogo { width: 245px; } .navigation { gap: 28px; font-size: 17px; } .searchLink, .searchSlot { width: 48px; height: 48px; } .footerGrid { gap: 28px; } }
+@media (max-width: 1000px) { .headerInner { grid-template-columns: 205px minmax(0, 1fr) auto 42px; gap: 16px; } .brandLogo { width: 205px; } .navigation { gap: 16px; font-size: 14px; } .languages { font-size: 14px; } .searchLink, .searchSlot { width: 42px; height: 42px; } .footerLogo .brandLogo { width: 220px; } .institution { font-size: 14px; } .footerRight { gap: 20px; font-size: 14px; } }
+@media (max-width: 700px) { .homeHeader { margin-bottom: -130px; .headerInner { min-height: 130px; } } .headerInner { min-height: 130px; padding-block: 16px; gap: 8px 16px; grid-template-columns: minmax(0, 1fr) auto 36px; grid-template-rows: auto auto; align-content: center; } .brandLogo { width: 180px; } .logoWrap { grid-column: 1; grid-row: 1; } .navigation { grid-column: 1 / -1; grid-row: 2; width: 100%; justify-content: space-between; font-size: 14px; gap: 12px; a { padding-block: 7px; } } .languages { grid-column: 2; grid-row: 1; } .searchLink, .searchSlot { grid-column: 3; grid-row: 1; width: 36px; height: 36px; } .searchLink svg { width: 20px; height: 20px; } .footer { padding-block: 36px; } .footerGrid { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 32px; } .footerRight, .legal { justify-content: center; justify-self: center; } .legal { width: auto; } }
 @media (prefers-reduced-motion: reduce) { .navigation a, .languages a, .searchLink { transition: none; } }

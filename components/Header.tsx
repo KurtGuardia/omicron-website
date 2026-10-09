@@ -32,7 +32,9 @@ export function Header({locale, active = "home"}: {locale: Locale; active?: "hom
         <Link href={`/${locale}#contact`}>{t("contact")}</Link>
       </nav>
       <LanguageSwitcher locale={locale}/>
-      {active === "home" && <Link className={styles.searchLink} href={`/${locale}/experience`} aria-label={t("searchProjects")}><Search size={25} aria-hidden="true"/></Link>}
+      {active === "home"
+        ? <Link className={styles.searchLink} href={`/${locale}/experience`} aria-label={t("searchProjects")}><Search size={25} aria-hidden="true"/></Link>
+        : <span className={styles.searchSlot} aria-hidden="true"/>}
     </div>
   </header>;
 }

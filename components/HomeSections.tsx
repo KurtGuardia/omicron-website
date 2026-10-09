@@ -5,32 +5,25 @@ import {useTranslations} from "next-intl";
 import {ArrowRight, FileText, MapPin, Leaf, Mail, Globe2, CalendarDays, Sprout, Landmark, Zap, Building2, Users, Compass, ChartNoAxesCombined, Handshake, BookOpen, Monitor, Wrench} from "lucide-react";
 import type {Locale, Project} from "@/types/project";
 import {assets} from "@/data/assets";
-import {expertiseKeys, serviceKeys, homeMetrics, homeFeaturedOrder, homePartners, temporaryProfiles} from "@/data/home";
+import {expertiseKeys, serviceKeys, homeMetrics, homePartners, temporaryProfiles} from "@/data/home";
 import {Contours} from "./Contours";
+import {HomeFeaturedProjects} from "./HomeFeaturedProjects";
 import {HomeHowCarousel} from "./HomeHowCarousel";
 import {OmicronMap} from "./map/OmicronMap";
 import styles from "./HomeSections.module.scss";
 
 const expertiseIcons = [Leaf, ChartNoAxesCombined, Sprout, Landmark, Zap, Building2, Users];
 const serviceIcons = [Compass, ChartNoAxesCombined, Building2, Wrench, Handshake, BookOpen, Monitor];
-const countryCodes: Record<string, string> = {
-  Colombia: "CO", Ecuador: "EC", Perú: "PE", "Costa Rica": "CR", Panamá: "PA",
-  "El Salvador": "SV", Honduras: "HN", Guatemala: "GT", "República Dominicana": "DO", Bolivia: "BO",
-};
-
 function PhotoBackground({priority = false}: {priority?: boolean}) {
   return <Image src={assets.hero} alt="" fill priority={priority} sizes="100vw" className={styles.background}/>;
 }
 
 export function HomeSections({locale, featured}: {locale: Locale; featured: Project[]}) {
   const t = useTranslations("Home");
-  const common = useTranslations("Common");
-  const countries = useTranslations("Countries");
   const headline = {
     line: (children: ReactNode) => <span className={styles.headlineLine}>{children}</span>,
     last: (children: ReactNode) => <span className={styles.headlineLine}>{children}<span className={styles.accentDot} aria-hidden="true"/></span>,
   };
-  const cards = homeFeaturedOrder.map(slug => featured.find(project => project.slug === slug)).filter((project): project is Project => Boolean(project));
   return <main id="main-content">
     <section className={styles.hero} aria-labelledby="hero-title">
       <PhotoBackground priority/>
@@ -57,30 +50,17 @@ export function HomeSections({locale, featured}: {locale: Locale; featured: Proj
       <Contours/>
       <div className={`container ${styles.dualList}`}>
         <div><h2>{t("expertise.title")}</h2><p className={styles.listIntro}>{t("expertise.intro")}</p>
-          <ul className={styles.rows}>{expertiseKeys.map(key => {const Icon = expertiseIcons[key]; return <li className={styles.expertiseRow} key={key}><span className={styles.rowIcon}><Icon size={28} aria-hidden="true"/></span><span>{t(`expertise.items.${key}`)}</span></li>;})}</ul>
+          <ul className={styles.rows}>{expertiseKeys.map(key => {const Icon = expertiseIcons[key]; return <li className={styles.expertiseRow} key={key} tabIndex={0}><span className={styles.rowIcon}><Icon size={28} aria-hidden="true"/></span><span>{t(`expertise.items.${key}`)}</span></li>;})}</ul>
         </div>
         <div><h2>{t("services.title")}</h2><p className={styles.listIntro}>{t("services.intro")}</p>
-          <ul className={styles.rows}>{serviceKeys.map(key => {const Icon = serviceIcons[key]; return <li className={styles.serviceRow} key={key}><span className={styles.rowIcon}><Icon size={28} aria-hidden="true"/></span><span>{t(`services.items.${key}`)}</span></li>;})}</ul>
+          <ul className={styles.rows}>{serviceKeys.map(key => {const Icon = serviceIcons[key]; return <li className={styles.serviceRow} key={key} tabIndex={0}><span className={styles.rowIcon}><Icon size={28} aria-hidden="true"/></span><span>{t(`services.items.${key}`)}</span></li>;})}</ul>
         </div>
       </div>
     </section>
 
     <section className={styles.projectsSection} aria-labelledby="featured-title">
       <Contours tone="light"/>
-      <div className="container">
-        <div className={styles.sectionHeading}><h2 id="featured-title">{t("featured.title")}</h2><p>{t("featured.intro")}</p></div>
-        <div className={styles.projectGrid}>{cards.map(project => <article className={styles.projectCard} key={project.slug}>
-          <div className={styles.projectImage}><Image src={project.image || assets.project} alt={t("featured.imageAlt")} fill sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 25vw"/></div>
-          <div className={styles.projectContent}>
-            <ul className={styles.tags}>{[0, 1].map(key => <li key={key}>{t(`featured.tags.${project.slug}.${key}`)}</li>)}</ul>
-            <h3>{t(`projects.${project.slug}.title`)}</h3>
-            <p className={styles.client}>{project.client}{project.funder && <> · {project.funder === "Unión Europea" ? t("clients.eu") : project.funder}</>}</p>
-            <p className={styles.projectMeta}>{project.countries.length > 1 ? t(`featured.regions.${project.region === "Centroamérica" ? "centroamerica" : "andina"}`) : countries(countryCodes[project.countries[0]])} · {project.period}</p>
-            <Link className={styles.projectLink} href={`/${locale}/experience?project=${project.slug}`}>{common("viewProject")}<ArrowRight size={17} aria-hidden="true"/></Link>
-          </div>
-        </article>)}</div>
-        <div className={styles.projectsAction}><Link className={styles.outlineButton} href={`/${locale}/experience`}>{t("projectsCta")}<ArrowRight size={19} aria-hidden="true"/></Link></div>
-      </div>
+      <HomeFeaturedProjects locale={locale} featured={featured}/>
     </section>
 
     <section className={styles.mapSection} aria-labelledby="regional-title">
@@ -93,7 +73,7 @@ export function HomeSections({locale, featured}: {locale: Locale; featured: Proj
             <div className={styles.internationalMetric}><span className={styles.metricIcon}><Users size={44} aria-hidden="true"/></span><dt>{t("map.international")}</dt></div>
           </dl>
         </div>
-        <div className={styles.mapVisual}><OmicronMap/></div>
+        <div className={styles.mapVisual}><OmicronMap locale={locale}/></div>
       </div>
     </section>
 

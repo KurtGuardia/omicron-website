@@ -1,11 +1,79 @@
+.frame { position: relative; width: 100%; }
+
 .map {
   display: block;
   width: 100%;
   height: auto;
   max-height: 760px;
   overflow: visible;
+
   :global(.country) { vector-effect: non-scaling-stroke; transform-box: fill-box; transform-origin: center; }
   :global(.country--inactive) { fill: #deeceb; stroke: #fff; stroke-width: 1.15; pointer-events: none; }
-  :global(.country--active) { fill: url(#regionalCountryFill); stroke: #fff; stroke-width: 1.35; }
-  // Working hover/focus/selection controls remain deferred to Task 8.4.
+  :global(.country--active) {
+    fill: url(#regionalCountryFill);
+    stroke: #fff;
+    stroke-width: 1.35;
+    cursor: pointer;
+    transition: fill 170ms ease, stroke 170ms ease, filter 170ms ease, transform 170ms ease;
+  }
+
+  :global(.country--active[data-hovered="true"]) {
+    fill: #668b43;
+    stroke: #fff;
+    stroke-width: 2;
+    filter: url(#countryGlow);
+    transform: scale(1.014);
+  }
+
+  :global(.country--active:focus-visible),
+  :global(.country--active[data-selected="true"]) {
+    fill: #456a2c;
+    stroke: #fb8a42;
+    stroke-width: 2.4;
+    filter: url(#countryGlow);
+    transform: scale(1.014);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px 8px;
+  width: max-content;
+  max-width: calc(100% - 16px);
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 8px;
+  background: #00243b;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0,27,43,.2);
+  font-size: 14px;
+  line-height: 1.25;
+  text-align: center;
+  transform: translate(-50%, -100%);
+
+  strong { font-weight: 750; }
+  span { color: #e1edf2; }
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    color: #ffad75;
+    font-weight: 750;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { color: #ffd0ac; }
+    &:focus-visible { outline: 2px solid #fb8a42; outline-offset: 3px; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map :global(.country--active) { transition: none; }
+  .map :global(.country--active[data-hovered="true"]),
+  .map :global(.country--active:focus-visible),
+  .map :global(.country--active[data-selected="true"]) { transform: none; }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import {useState, type KeyboardEvent} from "react";
+import {useState, type CSSProperties, type KeyboardEvent, type TransitionEvent} from "react";
 import {BookOpen, ChevronLeft, ChevronRight, Compass, Search, Wrench} from "lucide-react";
 import {useTranslations} from "next-intl";
 import styles from "./HomeSections.module.scss";
@@ -9,21 +9,38 @@ const stepNumbers = ["01", "02", "03", "04"] as const;
 const stepKeys = ["0", "1", "2", "3"] as const;
 const stepIcons = [Search, Compass, Wrench, BookOpen] as const;
 
+type PendingTransition = {target: number; direction: -1 | 1};
+
 export function HomeHowCarousel() {
   const t = useTranslations("Home");
   const [currentStep, setCurrentStep] = useState(0);
+  const [pendingTransition, setPendingTransition] = useState<PendingTransition | null>(null);
   const steps = stepKeys.map((key, index) => ({
     number: stepNumbers[index],
     title: t(`how.steps.${key}.title`),
     text: t(`how.steps.${key}.text`),
     Icon: stepIcons[index],
   }));
-  const step = steps[currentStep];
+  const wrap = (index: number) => (index + steps.length) % steps.length;
+  const slideIndices = pendingTransition
+    ? pendingTransition.direction === 1
+      ? [wrap(currentStep - 1), currentStep, pendingTransition.target]
+      : [pendingTransition.target, currentStep, wrap(currentStep + 1)]
+    : [wrap(currentStep - 1), currentStep, wrap(currentStep + 1)];
+  const trackPosition = pendingTransition ? 1 + pendingTransition.direction : 1;
 
-  const move = (direction: -1 | 1) => {
-    setCurrentStep(index => (index + direction + steps.length) % steps.length);
+  const goToStep = (target: number) => {
+    if (target === currentStep || pendingTransition) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setCurrentStep(target);
+      return;
+    }
+    const forwardDistance = wrap(target - currentStep);
+    const direction: -1 | 1 = forwardDistance <= steps.length / 2 ? 1 : -1;
+    setPendingTransition({target, direction});
   };
 
+  const move = (direction: -1 | 1) => goToStep(wrap(currentStep + direction));
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === "ArrowLeft") {
       event.preventDefault();
@@ -33,6 +50,17 @@ export function HomeHowCarousel() {
       move(1);
     }
   };
+
+  const finishTransition = (event: TransitionEvent<HTMLDivElement>) => {
+    if (event.target !== event.currentTarget || event.propertyName !== "transform" || !pendingTransition) return;
+    setCurrentStep(pendingTransition.target);
+    setPendingTransition(null);
+  };
+
+  const trackStyle = {
+    transform: `translate3d(-${trackPosition * (100 / 3)}%, 0, 0)`,
+    transition: pendingTransition ? undefined : "none",
+  } as CSSProperties;
 
   return <div className={`container ${styles.howContent}`}>
     <h2 id="how-title">{t("how.title")}</h2>
@@ -45,27 +73,43 @@ export function HomeHowCarousel() {
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
-      <div className={styles.howSlide}>
-        <button type="button" className={styles.shellArrow} aria-label={t("how.previous")} onClick={() => move(-1)}>
+      <div className={styles.howViewport}>
+        <div className={styles.howTrack} style={trackStyle} onTransitionEnd={finishTransition}>
+          {slideIndices.map((stepIndex, trackIndex) => {
+            const step = steps[stepIndex];
+            const isCurrent = trackIndex === 1;
+            return <div
+              className={styles.howSlide}
+              key={`${trackIndex}-${step.number}`}
+              role="group"
+              aria-roledescription={t("how.slideDescription")}
+              aria-label={`${step.number} ${step.title}`}
+              aria-hidden={!isCurrent}
+              aria-live={isCurrent ? "polite" : "off"}
+            >
+              <div className={styles.howIcon} aria-hidden="true"><step.Icon/></div>
+              <div className={styles.howTitle}>
+                <span>{step.number}</span><h3>{step.title}</h3>
+              </div>
+              <p className={styles.howDescription}>{step.text}</p>
+            </div>;
+          })}
+        </div>
+        <button type="button" className={`${styles.shellArrow} ${styles.previousArrow}`} aria-label={t("how.previous")} onClick={() => move(-1)}>
           <ChevronLeft size={30} aria-hidden="true"/>
         </button>
-        <div className={styles.howIcon} aria-hidden="true"><step.Icon/></div>
-        <div className={styles.howTitle} key={currentStep} aria-live="polite" aria-atomic="true">
-          <span>{step.number}</span><h3>{step.title}</h3>
-        </div>
-        <p key={`description-${currentStep}`} className={styles.howDescription} aria-live="polite">{step.text}</p>
-        <button type="button" className={styles.shellArrow} aria-label={t("how.next")} onClick={() => move(1)}>
+        <button type="button" className={`${styles.shellArrow} ${styles.nextArrow}`} aria-label={t("how.next")} onClick={() => move(1)}>
           <ChevronRight size={30} aria-hidden="true"/>
         </button>
       </div>
       <div className={styles.dots} role="group" aria-label={t("how.stepsNavigation")}>
-        {steps.map((item, index) => <button
+        {steps.map((step, index) => <button
           type="button"
-          key={item.number}
+          key={step.number}
           className={`${styles.dot} ${index === currentStep ? styles.currentDot : ""}`}
-          aria-label={t("how.goToStep", {number: index + 1, title: item.title})}
+          aria-label={t("how.goToStep", {number: index + 1, title: step.title})}
           aria-current={index === currentStep ? "step" : undefined}
-          onClick={() => setCurrentStep(index)}
+          onClick={() => goToStep(index)}
         />)}
       </div>
     </div>
