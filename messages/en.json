@@ -1,0 +1,217 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "about": "About",
+    "contact": "Contact",
+    "switchLanguage": "Switch to Spanish",
+    "label": "Main navigation",
+    "languages": "Language",
+    "logoAlt": "OMICRON Consultores SRL",
+    "skip": "Skip to content",
+    "searchProjects": "Search projects"
+  },
+  "Home": {
+    "heroEyebrow": "CONSULTING FOR SUSTAINABLE DEVELOPMENT",
+    "heroTitle": "Solutions for complex development challenges.",
+    "heroBody": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
+    "experienceCta": "Explore our experience",
+    "projectsCta": "View projects",
+    "emailCta": "Email us",
+    "stats": {
+      "years": "years of experience",
+      "countries": "countries in Latin America",
+      "projects": "consulting engagements",
+      "reach": "Latin America",
+      "reachDetail": "and other international markets"
+    },
+    "expertise": {
+      "title": "Our expertise",
+      "intro": "Areas where we make the greatest impact.",
+      "items": {
+        "0": "Climate, Natural Resources & Water",
+        "1": "Sustainable Trade, Competitiveness & Value Chains",
+        "2": "Rural & Territorial Development",
+        "3": "Sustainable Finance",
+        "4": "Responsible Mining & Energy",
+        "5": "Infrastructure & Basic Services",
+        "6": "Governance & Institutional Development"
+      }
+    },
+    "services": {
+      "title": "Our services",
+      "intro": "From strategy to implementation.",
+      "items": {
+        "0": "Strategy & Project Design",
+        "1": "Monitoring, Evaluation & Learning",
+        "2": "Institutional & Organizational Development",
+        "3": "Technical Assistance & Implementation",
+        "4": "Facilitation & Participatory Processes",
+        "5": "Knowledge Management & Capacity Building",
+        "6": "Digital Transformation & Solutions"
+      }
+    },
+    "featured": {
+      "title": "Featured projects",
+      "intro": "Experience that turns knowledge into results.",
+      "imageAlt": "River landscape — temporary project image",
+      "tags": {
+        "clima-loca": [
+          "Climate",
+          "Value chains"
+        ],
+        "agro-innova": [
+          "Rural development",
+          "Competitiveness"
+        ],
+        "peb-la": [
+          "Energy",
+          "Sustainable finance"
+        ],
+        "paisajes-resilientes": [
+          "Climate",
+          "Sustainable finance"
+        ]
+      },
+      "regions": {
+        "andina": "Andean region",
+        "centroamerica": "Central America"
+      }
+    },
+    "map": {
+      "eyebrow": "Our presence",
+      "title": "across Latin America and the Caribbean",
+      "body": "Projects that make an impact across different places.",
+      "reach": "Latin America and the Caribbean",
+      "reachLabel": "regional experience",
+      "active": "Countries with documented experience",
+      "inactive": "Other countries in the region",
+      "titleAlt": "OMICRON presence in Latin America and the Caribbean",
+      "description": "Cartogram with intentionally enlarged Central America and Caribbean. Countries with documented experience are shown in green.",
+      "countryLabel": "countries in Latin America and the Caribbean",
+      "engagementLabel": "consulting engagements",
+      "international": "Other international markets",
+      "titleLayout": "<line>across Latin America </line><line>and the Caribbean</line>"
+    },
+    "how": {
+      "title": "How we work",
+      "intro": "A collaborative, flexible and results-oriented approach.",
+      "previous": "Previous step",
+      "next": "Next step",
+      "carouselDescription": "carousel",
+      "stepsNavigation": "Step navigation",
+      "goToStep": "Go to step {number}: {title}",
+      "steps": {
+        "0": {
+          "title": "Understand",
+          "text": "We examine the context, needs, stakeholders and opportunities."
+        },
+        "1": {
+          "title": "Design",
+          "text": "We turn evidence and knowledge into practical strategies and solutions."
+        },
+        "2": {
+          "title": "Implement",
+          "text": "We support implementation by connecting technical and institutional capabilities."
+        },
+        "3": {
+          "title": "Learn",
+          "text": "We measure results and capture lessons to strengthen sustainability."
+        }
+      }
+    },
+    "clients": {
+      "title": "Our clients and partners",
+      "intro": "We work with institutions advancing development.",
+      "eu": "European Union"
+    },
+    "about": {
+      "eyebrow": "About OMICRON",
+      "title": "Over 25 years advancing sustainable development in Latin America",
+      "body": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
+      "detail": "We support public and private institutions from analysis and design through implementation and learning, with solutions tailored to each place.",
+      "values": {
+        "sustainability": "A focus on sustainability",
+        "collaboration": "Collaborative work",
+        "results": "Results with real impact"
+      },
+      "titleLayout": "<line>Over 25 years advancing </line><line>sustainable development </line><line>in Latin America</line>"
+    },
+    "team": {
+      "title": "A multidisciplinary team with regional and international experience.",
+      "intro": "Professionals from different disciplines share a common purpose: creating sustainable solutions for Latin America’s challenges.",
+      "name": "Temporary profile {number}",
+      "role": "Role to be confirmed",
+      "imageAlt": "Temporary team portrait",
+      "eyebrow": "Our team",
+      "titleLayout": "<line>A multidisciplinary team </line><last>with regional and international experience</last>"
+    },
+    "contact": {
+      "eyebrow": "Let’s talk",
+      "title": "Have a project in mind?",
+      "body": "Let’s discuss how we can design and implement solutions together.",
+      "titleLayout": "<line>Have a project </line><last>in mind?</last>"
+    },
+    "projects": {
+      "clima-loca": {
+        "title": "Clima LoCa",
+        "summary": "Regional evaluation of an initiative strengthening the cocoa value chain amid cadmium and climate challenges."
+      },
+      "agro-innova": {
+        "title": "AGRO-INNOVA",
+        "summary": "Final technical evaluation of adapted agroforestry systems in the Central American Dry Corridor."
+      },
+      "peb-la": {
+        "title": "PEB-LA",
+        "summary": "Mid-term evaluation of a sustainable finance, participation, energy and wellbeing initiative."
+      },
+      "paisajes-resilientes": {
+        "title": "Resilient Landscapes",
+        "summary": "Green finance and technical assistance for sustainable livestock and value-chain models."
+      }
+    },
+    "heroTitleLayout": "<line>Solutions for </line><line>complex development </line><last>challenges</last>"
+  },
+  "Common": {
+    "viewProject": "View project",
+    "languageShort": "EN"
+  },
+  "Footer": {
+    "description": "Consulting for sustainable development in Latin America.",
+    "copyright": "© {year} OMICRON Consultores SRL.",
+    "rights": "All rights reserved.",
+    "linkedin": "LinkedIn",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "pending": "Link awaiting confirmation"
+  },
+  "Countries": {
+    "AR": "Argentina",
+    "CL": "Chile",
+    "HT": "Haiti",
+    "DO": "Dominican Republic",
+    "BS": "Bahamas",
+    "MX": "Mexico",
+    "UY": "Uruguay",
+    "BR": "Brazil",
+    "BO": "Bolivia",
+    "PE": "Peru",
+    "CO": "Colombia",
+    "PA": "Panama",
+    "CR": "Costa Rica",
+    "NI": "Nicaragua",
+    "HN": "Honduras",
+    "SV": "El Salvador",
+    "GT": "Guatemala",
+    "BZ": "Belize",
+    "VE": "Venezuela",
+    "GY": "Guyana",
+    "SR": "Suriname",
+    "EC": "Ecuador",
+    "PR": "Puerto Rico",
+    "JM": "Jamaica",
+    "CU": "Cuba",
+    "PY": "Paraguay",
+    "TT": "Trinidad and Tobago"
+  }
+}

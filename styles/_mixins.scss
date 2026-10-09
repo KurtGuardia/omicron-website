@@ -1,0 +1,12 @@
+@mixin container {
+  width: min(var(--max), calc(100% - (2 * var(--pagePadding))));
+  margin-inline: auto;
+}
+
+@mixin topo-pattern($opacity: .11) {
+  background-image: repeating-radial-gradient(
+    ellipse at 0 50%,
+    transparent 0 38px,
+    rgba(115, 168, 246, $opacity) 39px 40px
+  );
+}

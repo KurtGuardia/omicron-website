@@ -1,0 +1,23 @@
+$navy: #07216c;
+$navy-2: #061a3c;
+$sky: #73a8f6;
+$orange: #fb8a42;
+$green: #668b43;
+$green-dark: #285a35;
+$ink: #172033;
+$muted: #5d6878;
+$surface: #f7f8f5;
+$blue-surface: #eef5ff;
+$green-surface: #f2f7ed;
+$orange-surface: #fff4ea;
+$border: #dde4ec;
+$white: #fff;
+
+// Approved wide desktop container. Full-bleed visual sections remain 100vw.
+$content-max: 1560px;
+$page-padding-desktop: clamp(20px, 4vw, 72px);
+$page-padding-tablet: 24px;
+$page-padding-mobile: 18px;
+
+$radius: 14px;
+$section-space: 112px;

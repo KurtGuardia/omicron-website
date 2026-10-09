@@ -1,0 +1,11 @@
+.map {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 760px;
+  overflow: visible;
+  :global(.country) { vector-effect: non-scaling-stroke; transform-box: fill-box; transform-origin: center; }
+  :global(.country--inactive) { fill: #deeceb; stroke: #fff; stroke-width: 1.15; pointer-events: none; }
+  :global(.country--active) { fill: url(#regionalCountryFill); stroke: #fff; stroke-width: 1.35; }
+  // Working hover/focus/selection controls remain deferred to Task 8.4.
+}
