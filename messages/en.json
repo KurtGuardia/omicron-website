@@ -4,7 +4,6 @@
     "experience": "Experience",
     "about": "About",
     "contact": "Contact",
-    "switchLanguage": "Switch to Spanish",
     "label": "Main navigation",
     "languages": "Language",
     "logoAlt": "OMICRON Consultores SRL",
@@ -12,15 +11,16 @@
     "searchProjects": "Search projects",
     "menu": "Navigation menu",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "switchToSpanish": "Switch to Spanish",
+    "switchToEnglish": "Switch to English"
   },
   "Home": {
     "heroEyebrow": "CONSULTING FOR SUSTAINABLE DEVELOPMENT",
-    "heroTitle": "Solutions for complex development challenges.",
     "heroBody": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
     "experienceCta": "Explore our experience",
     "projectsCta": "View projects",
-    "emailCta": "Email us",
+    "emailCta": "Contact us",
     "stats": {
       "years": "years of experience",
       "countries": "countries in Latin America",
@@ -57,38 +57,11 @@
     "featured": {
       "title": "Featured projects",
       "intro": "Experience that turns knowledge into results.",
-      "imageAlt": "River landscape — temporary project image",
-      "tags": {
-        "clima-loca": [
-          "Climate",
-          "Value chains"
-        ],
-        "agro-innova": [
-          "Rural development",
-          "Competitiveness"
-        ],
-        "peb-la": [
-          "Energy",
-          "Sustainable finance"
-        ],
-        "paisajes-resilientes": [
-          "Climate",
-          "Sustainable finance"
-        ]
-      },
-      "regions": {
-        "andina": "Andean region",
-        "centroamerica": "Central America"
-      }
+      "imageAlt": "River landscape — temporary project image"
     },
     "map": {
       "eyebrow": "Our presence",
-      "title": "across Latin America and the Caribbean",
-      "body": "Projects that make an impact across different places.",
-      "reach": "Latin America and the Caribbean",
-      "reachLabel": "regional experience",
-      "active": "Countries with documented experience",
-      "inactive": "Other countries in the region",
+      "body": "Projects that make an impact across the region.",
       "titleAlt": "OMICRON presence in Latin America and the Caribbean",
       "description": "Cartogram with intentionally enlarged Central America and Caribbean. Countries with documented experience are shown in green.",
       "engagementCount": "{count, plural, one {# consulting engagement} other {# consulting engagements}}",
@@ -134,9 +107,7 @@
     },
     "about": {
       "eyebrow": "About OMICRON",
-      "title": "Over 25 years advancing sustainable development in Latin America",
       "body": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
-      "detail": "We support public and private institutions from analysis and design through implementation and learning, with solutions tailored to each place.",
       "values": {
         "sustainability": "A focus on sustainability",
         "collaboration": "Collaborative work",
@@ -145,7 +116,6 @@
       "titleLayout": "<line>Over 25 years advancing </line><line>sustainable development </line><line>in Latin America</line>"
     },
     "team": {
-      "title": "A multidisciplinary team with regional and international experience.",
       "intro": "Professionals from different disciplines share a common purpose: creating sustainable solutions for Latin America’s challenges.",
       "name": "Temporary profile {number}",
       "role": "Role to be confirmed",
@@ -155,33 +125,13 @@
     },
     "contact": {
       "eyebrow": "Let’s talk",
-      "title": "Have a project in mind?",
       "body": "Let’s discuss how we can design and implement solutions together.",
       "titleLayout": "<line>Have a project </line><last>in mind?</last>"
-    },
-    "projects": {
-      "clima-loca": {
-        "title": "Clima LoCa",
-        "summary": "Regional evaluation of an initiative strengthening the cocoa value chain amid cadmium and climate challenges."
-      },
-      "agro-innova": {
-        "title": "AGRO-INNOVA",
-        "summary": "Final technical evaluation of adapted agroforestry systems in the Central American Dry Corridor."
-      },
-      "peb-la": {
-        "title": "PEB-LA",
-        "summary": "Mid-term evaluation of a sustainable finance, participation, energy and wellbeing initiative."
-      },
-      "paisajes-resilientes": {
-        "title": "Resilient Landscapes",
-        "summary": "Green finance and technical assistance for sustainable livestock and value-chain models."
-      }
     },
     "heroTitleLayout": "<line>Solutions for </line><line>complex development </line><last>challenges</last>"
   },
   "Common": {
-    "viewProject": "View project",
-    "languageShort": "EN"
+    "viewProject": "View project"
   },
   "Footer": {
     "description": "Consulting for sustainable development in Latin America.",
@@ -252,22 +202,25 @@
     "page": "Go to page {page}",
     "contactTitle": "Do you have a new project in mind?",
     "contactBody": "Let’s discuss how we can design and implement sustainable solutions that generate impact in the region.",
-    "contactCta": "Email us",
+    "contactCta": "Contact us",
     "regionAndean": "Andean Region",
     "regionCentral": "Central America",
-    "regionCaribbean": "Caribbean"
+    "regionCaribbean": "Caribbean",
+    "regionLatinAmerica": "Latin America",
+    "regionAsia": "Asia",
+    "regionAfrica": "Africa"
   },
   "ProjectModal": {
     "close": "Close project details",
-    "client": "Client",
-    "country": "Country",
+    "client": "Client / Partner",
+    "country": "Country / Region",
     "period": "Period",
     "summary": "Summary",
     "context": "Context and challenge",
     "actions": "Actions / services delivered",
     "impact": "Impact and results",
     "similarTitle": "Interested in a similar project?",
-    "similarBody": "Let’s discuss how we can design and implement solutions in your territory.",
+    "similarBody": "Let’s discuss how we can design and implement solutions for your region.",
     "writeUs": "Contact us",
     "areas": "Thematic areas",
     "services": "Related services",
@@ -275,5 +228,11 @@
     "galleryAlt": "Project image for {title}",
     "related": "Related projects",
     "eu": "European Union"
+  },
+  "Metadata": {
+    "homeTitle": "OMICRON Consultores SRL | Sustainable development consulting",
+    "homeDescription": "Consulting for sustainable development in Latin America.",
+    "experienceTitle": "Experience | OMICRON Consultores SRL",
+    "experienceDescription": "Discover our experience across Latin America and the Caribbean."
   }
 }

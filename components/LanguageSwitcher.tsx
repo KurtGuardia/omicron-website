@@ -16,17 +16,22 @@ function LanguageLinks({locale}: {locale: Locale}) {
   const router = useRouter();
   const search = useSearchParams();
   const [hash, setHash] = useState("");
-  useEffect(() => {setHash(window.location.hash);}, [pathname, search]);
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash);
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, [pathname, search]);
   const suffix = (search.size ? `?${search.toString()}` : "") + hash;
   const route = pathname.replace(/^\/(es|en)(?=\/|$)/, "");
   return <nav className={styles.languages} aria-label={t("languages")}>
     {(["es", "en"] as const).map(language => language === locale
       ? <span key={language} aria-current="true">{language.toUpperCase()}</span>
       : <a key={language} href={`/${language}${route}${suffix}`} lang={language} hrefLang={language}
-          aria-label={t("switchLanguage")} onClick={event => {
+          aria-label={t(language === "es" ? "switchToSpanish" : "switchToEnglish")} onClick={event => {
             if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
             event.preventDefault();
-            router.push(`/${language}${route}${window.location.search}${window.location.hash}`);
+            router.push(`/${language}${route}${window.location.search}${window.location.hash}`, {scroll: false});
           }}>{language.toUpperCase()}</a>)}
   </nav>;
 }

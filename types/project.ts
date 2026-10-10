@@ -9,6 +9,14 @@ export type ProjectMetric = {
 
 export type Project = {
   id: string;
+  project_id: string;
+  geographyType: string;
+  geographyNote?: string;
+  countryIso: string[];
+  startYear?: number;
+  endYear?: number;
+  sourceEngagementIds: string[];
+  publishStatus: string;
   slug: string;
   title: Record<Locale, string>;
   summary: Record<Locale, string>;

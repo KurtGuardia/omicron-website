@@ -5,7 +5,6 @@ import Link from "next/link";
 import {useTranslations} from "next-intl";
 import {ArrowRight} from "lucide-react";
 import type {Locale, Project} from "@/types/project";
-import {homeFeaturedOrder} from "@/data/home";
 import {ProjectCard} from "./ProjectCard";
 import {ProjectModal} from "./ProjectModal";
 import styles from "./HomeSections.module.scss";
@@ -15,11 +14,11 @@ export function HomeFeaturedProjects({locale, featured, projects}: {locale: Loca
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const projectFromUrl = useCallback(() => new URLSearchParams(window.location.search).get("project"), []);
   useEffect(() => {
-    const syncProject = () => setSelectedProject(cards.find(project => project.slug === projectFromUrl()) || null);
+    const syncProject = () => setSelectedProject(projects.find(project => project.slug === projectFromUrl()) || null);
     syncProject();
     window.addEventListener("popstate", syncProject);
     return () => window.removeEventListener("popstate", syncProject);
-  }, [projectFromUrl, featured]);
+  }, [projectFromUrl, projects]);
   const setProjectUrl = (project: Project | null, mode: "push" | "replace" = "push") => {
     const url = new URL(window.location.href);
     if (project) url.searchParams.set("project", project.slug);
@@ -29,7 +28,7 @@ export function HomeFeaturedProjects({locale, featured, projects}: {locale: Loca
   };
   const openProject = (project: Project) => setProjectUrl(project);
   const selectRelatedProject = (project: Project) => setProjectUrl(project);
-  const cards = homeFeaturedOrder.map(slug => featured.find(project => project.slug === slug)).filter((project): project is Project => Boolean(project));
+  const cards = featured;
 
   return <>
     <div className="container">

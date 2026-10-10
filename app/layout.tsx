@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import {getLocale} from "next-intl/server";
 import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "OMICRON Consultores SRL",
   icons: {icon: "/favicon.png"},
-  description: "Consultoría para el desarrollo sostenible en América Latina.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang={locale}>
       <body>{children}</body>
     </html>
   );

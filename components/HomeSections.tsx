@@ -1,5 +1,6 @@
 import type {ReactNode} from "react";
 import Image from "next/image";
+import {ContentImage} from "./ContentImage";
 import Link from "next/link";
 import {useTranslations} from "next-intl";
 import {ArrowRight, FileText, MapPin, Leaf, Mail, Globe2, CalendarDays, Sprout, Landmark, Zap, Building2, Users, Compass, ChartNoAxesCombined, Handshake, BookOpen, Monitor, Wrench} from "lucide-react";
@@ -105,7 +106,7 @@ export function HomeSections({locale, projects}: {locale: Locale; projects: Proj
     <section className={styles.teamSection} aria-labelledby="team-title"><Contours tone="light"/><div className="container">
       <div className={styles.sectionHeading}><p className={styles.eyebrow}>{t("team.eyebrow")}</p><h2 id="team-title">{t.rich("team.titleLayout", headline)}</h2><p>{t("team.intro")}</p></div>
       <div className={styles.teamGrid}>{temporaryProfiles.map(number => <article className={styles.teamMember} key={number}>
-        <div className={styles.avatar}><Image src={assets.avatar} alt={t("team.imageAlt")} fill sizes="(max-width: 700px) 45vw, 20vw"/></div>
+        <div className={styles.avatar}><ContentImage src={assets.avatar} fallback={assets.avatar} alt={t("team.imageAlt")} fill sizes="(max-width: 380px) 160px, (max-width: 800px) 40vw, (max-width: 1024px) 28vw, 20vw"/></div>
         <h3>{t("team.name", {number})}</h3><p>{t("team.role")}</p>
       </article>)}</div>
     </div></section>

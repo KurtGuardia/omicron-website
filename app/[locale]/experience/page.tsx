@@ -1,3 +1,4 @@
+import {projectPageMetadata} from "@/lib/pageMetadata";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
@@ -11,4 +12,10 @@ export default async function Experience({ params }: { params: Promise<{ locale:
   if (raw !== "es" && raw !== "en") notFound();
   const locale = raw as Locale;
   return <><Header locale={locale} active="experience"/><Suspense><ExperienceExplorer locale={locale} projects={projects}/></Suspense><Footer locale={locale}/></>;
+}
+
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params;
+  if (locale !== "es" && locale !== "en") notFound();
+  return projectPageMetadata(locale, "experience");
 }

@@ -1,3 +1,4 @@
+import {projectPageMetadata} from "@/lib/pageMetadata";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { HomeSections } from "@/components/HomeSections";
@@ -10,4 +11,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   if (raw !== "es" && raw !== "en") notFound();
   const locale = raw as Locale;
   return <><Header locale={locale}/><HomeSections locale={locale} projects={projects}/><Footer locale={locale}/></>;
+}
+
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
+  const {locale} = await params;
+  if (locale !== "es" && locale !== "en") notFound();
+  return projectPageMetadata(locale, "home");
 }

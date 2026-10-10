@@ -4,13 +4,13 @@ export type ProjectFilters = {q: string; expertise: string; service: string; cou
 export const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase().trim();
 export function projectYears(project: Project): number[] {
   const years = project.period.match(/\d{4}/g)?.map(Number) || [];
-  const start = Number(project.startDate?.slice(0,4)) || years[0];
-  const end = Number(project.endDate?.slice(0,4)) || years.at(-1) || start;
+  const start = project.startYear || Number(project.startDate?.slice(0,4)) || years[0];
+  const end = project.endYear || Number(project.endDate?.slice(0,4)) || years.at(-1) || start;
   return start && end >= start ? Array.from({length: end-start+1}, (_,i) => start+i) : [];
 }
-export function filterProjects(projects: Project[], filters: ProjectFilters, locale: Locale) {
+export function filterProjects(projects: Project[], filters: ProjectFilters, locale: Locale, searchLabels?: (project: Project) => string[]) {
   const matches = projects.filter(project => {
-    const haystack = [project.title[locale], project.summary[locale], project.client, project.funder || '', ...project.countries, project.region, ...project.expertise, ...project.services, ...(project.tags?.[locale] || [])].join(' ');
+    const haystack = [project.title[locale], project.summary[locale], project.client, project.funder || '', ...project.countries, project.region, ...project.expertise, ...project.services, ...(project.tags?.[locale] || []), ...(searchLabels?.(project) || [])].join(' ');
     return normalize(haystack).includes(normalize(filters.q)) &&
       (!filters.expertise || project.expertise.includes(filters.expertise)) &&
       (!filters.service || project.services.includes(filters.service)) &&
