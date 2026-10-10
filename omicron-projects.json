@@ -1,0 +1,2035 @@
+[
+  {
+    "project_id": "PRJ-001",
+    "slug": "clima-loca",
+    "title_es": "Clima LoCa",
+    "title_en": "Clima LoCa",
+    "client_display": "Alianza Bioversity International–CIAT",
+    "funder_display": "Unión Europea",
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "CO",
+      "EC",
+      "PE"
+    ],
+    "countries": [
+      "Colombia",
+      "Ecuador",
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2026,
+    "end_year": 2026,
+    "summary_es": "Evaluación regional del programa Clima LoCa para fortalecer la cadena de cacao frente al cadmio y el cambio climático en Colombia, Ecuador y Perú.",
+    "summary_en": "Regional evaluation of the Clima LoCa program, strengthening the cocoa value chain in response to cadmium and climate change across Colombia, Ecuador and Peru.",
+    "context_es": "Evaluación regional del programa Clima LoCa para fortalecer la cadena de cacao frente al cadmio y el cambio climático en Colombia, Ecuador y Perú.",
+    "context_en": "Regional evaluation of the Clima LoCa program, strengthening the cocoa value chain in response to cadmium and climate change across Colombia, Ecuador and Peru.",
+    "actions_es": [
+      "Evaluación regional de resultados, adaptación climática y competitividad de la cadena de cacao."
+    ],
+    "actions_en": [
+      "Regional evaluation of results, climate adaptation and cocoa value-chain competitiveness."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": true,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-001"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-002",
+    "slug": "biotrade-iv",
+    "title_es": "BioTrade – Fase IV",
+    "title_en": "BioTrade – Phase IV",
+    "client_display": "UNCTAD",
+    "funder_display": "SECO",
+    "geography_type": "REGIONAL",
+    "country_iso": [],
+    "countries": [],
+    "regions": "América Latina; Asia; África",
+    "geography_note": "Regional / global",
+    "start_year": 2024,
+    "end_year": 2025,
+    "summary_es": "Evaluación final y autoevaluación de la Fase IV de BioTrade de UNCTAD/SECO, con participación de actores de América Latina, Asia y África vinculados al comercio sostenible de biodiversidad.",
+    "summary_en": "Final evaluation and self-assessment of UNCTAD/SECO BioTrade Phase IV, engaging stakeholders across Latin America, Asia and Africa involved in sustainable biodiversity-based trade.",
+    "context_es": "Evaluación final y autoevaluación de la Fase IV de BioTrade de UNCTAD/SECO, con participación de actores de América Latina, Asia y África vinculados al comercio sostenible de biodiversidad.",
+    "context_en": "Final evaluation and self-assessment of UNCTAD/SECO BioTrade Phase IV, engaging stakeholders across Latin America, Asia and Africa involved in sustainable biodiversity-based trade.",
+    "actions_es": [
+      "Evaluación final y autoevaluación de la Fase IV bajo criterios DAC de la OCDE."
+    ],
+    "actions_en": [
+      "Final evaluation and Phase IV self-assessment using OECD DAC criteria."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning"
+    ],
+    "featured": true,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-003"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-003",
+    "slug": "agro-innova",
+    "title_es": "AGRO-INNOVA",
+    "title_en": "AGRO-INNOVA",
+    "client_display": "IICA",
+    "funder_display": "Unión Europea",
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "CR",
+      "SV",
+      "GT",
+      "HN",
+      "PA"
+    ],
+    "countries": [
+      "Costa Rica",
+      "El Salvador",
+      "Guatemala",
+      "Honduras",
+      "Panamá"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2025,
+    "end_year": 2025,
+    "summary_es": "Evaluación técnica final del programa regional de sistemas agroforestales adaptados para fortalecer seguridad alimentaria y resiliencia climática en el Corredor Seco Centroamericano.",
+    "summary_en": "Final technical evaluation of the regional adapted agroforestry systems program aimed at strengthening food security and climate resilience in Central America's Dry Corridor.",
+    "context_es": "Evaluación técnica final del programa regional de sistemas agroforestales adaptados para fortalecer seguridad alimentaria y resiliencia climática en el Corredor Seco Centroamericano.",
+    "context_en": "Final technical evaluation of the regional adapted agroforestry systems program aimed at strengthening food security and climate resilience in Central America's Dry Corridor.",
+    "actions_es": [
+      "Evaluación técnica final por resultados del programa regional AGRO-INNOVA."
+    ],
+    "actions_en": [
+      "Final results-based technical evaluation of the regional AGRO-INNOVA program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-002"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-004",
+    "slug": "procacao-procacaho",
+    "title_es": "PROCACAO / PROCACAHO",
+    "title_en": "PROCACAO / PROCACAHO",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "CR",
+      "SV",
+      "GT",
+      "HN",
+      "NI"
+    ],
+    "countries": [
+      "Costa Rica",
+      "El Salvador",
+      "Guatemala",
+      "Honduras",
+      "Nicaragua"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2021,
+    "end_year": 2022,
+    "summary_es": "Evaluación de medio término y apoyo a la planificación de programas regionales de cacao climáticamente inteligente, sistemas agroforestales y financiamiento sostenible en Centroamérica.",
+    "summary_en": "Mid-term evaluation and planning support for regional climate-smart cocoa, agroforestry and sustainable finance programs in Central America.",
+    "context_es": "Evaluación de medio término y apoyo a la planificación de programas regionales de cacao climáticamente inteligente, sistemas agroforestales y financiamiento sostenible en Centroamérica.",
+    "context_en": "Mid-term evaluation and planning support for regional climate-smart cocoa, agroforestry and sustainable finance programs in Central America.",
+    "actions_es": [
+      "Evaluación de medio término y apoyo a la planificación del PRODOC, con procesos participativos."
+    ],
+    "actions_en": [
+      "Mid-term evaluation and PRODOC planning support through participatory processes."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Sustainable Finance"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-011"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-005",
+    "slug": "usaid-colombia-sustainability",
+    "title_es": "Programas de sostenibilidad USAID Colombia",
+    "title_en": "USAID Colombia Sustainability Programs",
+    "client_display": "Chemonics International",
+    "funder_display": "USAID",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "CO"
+    ],
+    "countries": [
+      "Colombia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2023,
+    "end_year": 2023,
+    "summary_es": "Diseño de planes de trabajo y líneas base para Amazonía Mía, Tierra Dorada y Naturaleza Productiva, incorporando biodiversidad, cadenas de valor verdes y finanzas sostenibles.",
+    "summary_en": "Design of work plans and baselines for Amazonía Mía, Tierra Dorada and Naturaleza Productiva, integrating biodiversity, green value chains and sustainable finance.",
+    "context_es": "Diseño de planes de trabajo y líneas base para Amazonía Mía, Tierra Dorada y Naturaleza Productiva, incorporando biodiversidad, cadenas de valor verdes y finanzas sostenibles.",
+    "context_en": "Design of work plans and baselines for Amazonía Mía, Tierra Dorada and Naturaleza Productiva, integrating biodiversity, green value chains and sustainable finance.",
+    "actions_es": [
+      "Diseño de planes de trabajo y líneas base para tres programas de sostenibilidad y cambio climático."
+    ],
+    "actions_en": [
+      "Design of work plans and baselines for three sustainability and climate-change programs."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Sustainable Finance"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-006"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-006",
+    "slug": "priica",
+    "title_es": "PRIICA – Innovación en cadenas de valor agrícolas",
+    "title_en": "PRIICA – Agricultural Value Chain Innovation",
+    "client_display": "IICA",
+    "funder_display": null,
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "SV",
+      "GT",
+      "HN",
+      "NI",
+      "PA"
+    ],
+    "countries": [
+      "El Salvador",
+      "Guatemala",
+      "Honduras",
+      "Nicaragua",
+      "Panamá"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2016,
+    "end_year": 2017,
+    "summary_es": "Evaluación y sistematización del programa regional PRIICA del IICA, orientado a fortalecer investigación, innovación y articulación de cadenas de valor agrícolas en Centroamérica.",
+    "summary_en": "Evaluation and systematization of IICA's regional PRIICA program, focused on strengthening research, innovation and coordination across agricultural value chains in Central America.",
+    "context_es": "Evaluación y sistematización del programa regional PRIICA del IICA, orientado a fortalecer investigación, innovación y articulación de cadenas de valor agrícolas en Centroamérica.",
+    "context_en": "Evaluation and systematization of IICA's regional PRIICA program, focused on strengthening research, innovation and coordination across agricultural value chains in Central America.",
+    "actions_es": [
+      "Evaluación intermedia y sistematización de experiencias y aprendizajes del programa regional."
+    ],
+    "actions_en": [
+      "Mid-term evaluation and systematization of experience and lessons from the regional program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Knowledge Management & Capacity Building",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-035",
+      "EXP-041"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-007",
+    "slug": "caf-biodiversity-finance",
+    "title_es": "Financiamiento para negocios de biodiversidad en la Región Andina",
+    "title_en": "Biodiversity Business Finance in the Andean Region",
+    "client_display": "CAF",
+    "funder_display": null,
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "CO",
+      "EC",
+      "PE"
+    ],
+    "countries": [
+      "Colombia",
+      "Ecuador",
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2013,
+    "end_year": 2013,
+    "summary_es": "Evaluación intermedia de una iniciativa de CAF para facilitar financiamiento y desarrollo de mercado para negocios basados en biodiversidad en Perú, Ecuador y Colombia.",
+    "summary_en": "Mid-term evaluation of a CAF initiative to facilitate finance and market development for biodiversity-based businesses in Peru, Ecuador and Colombia.",
+    "context_es": "Evaluación intermedia de una iniciativa de CAF para facilitar financiamiento y desarrollo de mercado para negocios basados en biodiversidad en Perú, Ecuador y Colombia.",
+    "context_en": "Mid-term evaluation of a CAF initiative to facilitate finance and market development for biodiversity-based businesses in Peru, Ecuador and Colombia.",
+    "actions_es": [
+      "Evaluación intermedia de una iniciativa de financiamiento y desarrollo de mercado para negocios de biodiversidad."
+    ],
+    "actions_en": [
+      "Mid-term evaluation of a biodiversity-business finance and market-development initiative."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-065"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-008",
+    "slug": "peb-la",
+    "title_es": "PEB-LA – Finanzas sostenibles y cooperativas",
+    "title_en": "PEB-LA – Sustainable Finance and Cooperatives",
+    "client_display": "DGRV",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "DO"
+    ],
+    "countries": [
+      "República Dominicana"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2024,
+    "end_year": 2024,
+    "summary_es": "Evaluación de medio término del proyecto PEB-LA de DGRV en República Dominicana, enfocado en finanzas sostenibles, participación, energía, bienestar y sostenibilidad institucional de cooperativas.",
+    "summary_en": "Mid-term evaluation of DGRV's PEB-LA project in the Dominican Republic, focused on sustainable finance, participation, energy, wellbeing and institutional sustainability for cooperatives.",
+    "context_es": "Evaluación de medio término del proyecto PEB-LA de DGRV en República Dominicana, enfocado en finanzas sostenibles, participación, energía, bienestar y sostenibilidad institucional de cooperativas.",
+    "context_en": "Mid-term evaluation of DGRV's PEB-LA project in the Dominican Republic, focused on sustainable finance, participation, energy, wellbeing and institutional sustainability for cooperatives.",
+    "actions_es": [
+      "Evaluación de medio término del proyecto bajo criterios DAC."
+    ],
+    "actions_en": [
+      "Mid-term evaluation of the project using DAC criteria."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Sustainable Finance",
+      "Responsible Mining & Energy",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-004"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-009",
+    "slug": "bermejo-gef",
+    "title_es": "Cuenca transfronteriza del Bermejo – PRODOC GEF",
+    "title_en": "Bermejo Transboundary Basin – GEF PRODOC",
+    "client_display": "CAF",
+    "funder_display": "GEF",
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "AR",
+      "BO"
+    ],
+    "countries": [
+      "Argentina",
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2023,
+    "end_year": 2023,
+    "summary_es": "Diseño del PRODOC para la gestión integral de la cuenca transfronteriza del río Bermejo entre Bolivia y Argentina, incluyendo mecanismos financieros con enfoque de gestión integrada de recursos hídricos.",
+    "summary_en": "Design of the GEF PRODOC for integrated management of the Bermejo transboundary river basin between Bolivia and Argentina, including financing mechanisms under an integrated water resources management approach.",
+    "context_es": "Diseño del PRODOC para la gestión integral de la cuenca transfronteriza del río Bermejo entre Bolivia y Argentina, incluyendo mecanismos financieros con enfoque de gestión integrada de recursos hídricos.",
+    "context_en": "Design of the GEF PRODOC for integrated management of the Bermejo transboundary river basin between Bolivia and Argentina, including financing mechanisms under an integrated water resources management approach.",
+    "actions_es": [
+      "Diseño del PRODOC GEF y propuesta de mecanismos financieros con enfoque GIRH."
+    ],
+    "actions_en": [
+      "Design of the GEF PRODOC and financing mechanisms under an IWRM approach."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Sustainable Finance"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-007"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-010",
+    "slug": "paisajes-resilientes",
+    "title_es": "Paisajes Resilientes – Finanzas y ganadería sostenible",
+    "title_en": "Resilient Landscapes – Sustainable Finance and Livestock",
+    "client_display": "GIZ",
+    "funder_display": "Unión Europea",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2021,
+    "end_year": 2024,
+    "summary_es": "Asistencia técnica, diseño financiero y facilitación multiactor para impulsar ganadería sostenible, cadenas de valor verdes y financiamiento de alto impacto en la Chiquitania Norte de Bolivia.",
+    "summary_en": "Technical assistance, financial design and multi-stakeholder facilitation to advance sustainable livestock, green value chains and high-impact finance in Bolivia's Northern Chiquitania.",
+    "context_es": "Asistencia técnica, diseño financiero y facilitación multiactor para impulsar ganadería sostenible, cadenas de valor verdes y financiamiento de alto impacto en la Chiquitania Norte de Bolivia.",
+    "context_en": "Technical assistance, financial design and multi-stakeholder facilitation to advance sustainable livestock, green value chains and high-impact finance in Bolivia's Northern Chiquitania.",
+    "actions_es": [
+      "Diseño de destinos de financiamiento verde, asistencia técnica y facilitación de la Mesa Departamental de Finanzas Sostenibles."
+    ],
+    "actions_en": [
+      "Design of green-finance priorities, technical assistance and facilitation of the Departmental Sustainable Finance Roundtable."
+    ],
+    "results_es": "Se identificaron destinos de financiamiento verde de alto impacto y se generaron insumos para el diseño de productos financieros, asistencia técnica e indicadores ambientales y sociales.",
+    "results_en": "High-impact green-finance priorities were identified and inputs were generated for the design of financial products, technical assistance, and environmental and social indicators.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Sustainable Finance",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": true,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-005",
+      "EXP-009"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-011",
+    "slug": "arco",
+    "title_es": "ARCO – Oportunidades económicas sostenibles",
+    "title_en": "ARCO – Sustainable Economic Opportunities",
+    "client_display": "Chemonics International",
+    "funder_display": "USAID / AMEXCID",
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "MX",
+      "SV",
+      "HN",
+      "GT"
+    ],
+    "countries": [
+      "México",
+      "El Salvador",
+      "Honduras",
+      "Guatemala"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2022,
+    "end_year": 2022,
+    "summary_es": "Planificación del primer año y línea base del proyecto ARCO, orientado a oportunidades económicas sostenibles para jóvenes y agricultores del norte de Centroamérica.",
+    "summary_en": "Year-one planning and baseline development for the ARCO project, focused on sustainable economic opportunities for youth and farmers in northern Central America.",
+    "context_es": "Planificación del primer año y línea base del proyecto ARCO, orientado a oportunidades económicas sostenibles para jóvenes y agricultores del norte de Centroamérica.",
+    "context_en": "Year-one planning and baseline development for the ARCO project, focused on sustainable economic opportunities for youth and farmers in northern Central America.",
+    "actions_es": [
+      "Planificación del primer año de implementación y desarrollo de la línea base."
+    ],
+    "actions_en": [
+      "Year-one implementation planning and baseline development."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-008"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-012",
+    "slug": "pghtr13gf",
+    "title_es": "Gobernanza Hídrica Territorial – Golfo de Fonseca",
+    "title_en": "Territorial Water Governance – Gulf of Fonseca",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "HN"
+    ],
+    "countries": [
+      "Honduras"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2019,
+    "end_year": 2021,
+    "summary_es": "Evaluación, estrategia de salida y hoja de ruta del programa de gobernanza hídrica territorial de COSUDE en la Región 13 Golfo de Fonseca, con enfoque multiactor y GIRH.",
+    "summary_en": "Evaluation, exit strategy and roadmap for SDC's territorial water governance program in the Gulf of Fonseca Region 13, using a multi-stakeholder and integrated water resources management approach.",
+    "context_es": "Evaluación, estrategia de salida y hoja de ruta del programa de gobernanza hídrica territorial de COSUDE en la Región 13 Golfo de Fonseca, con enfoque multiactor y GIRH.",
+    "context_en": "Evaluation, exit strategy and roadmap for SDC's territorial water governance program in the Gulf of Fonseca Region 13, using a multi-stakeholder and integrated water resources management approach.",
+    "actions_es": [
+      "Evaluación de fase, estrategia de salida y formulación de hoja de ruta para la gobernanza hídrica territorial."
+    ],
+    "actions_en": [
+      "Phase evaluation, exit strategy and roadmap development for territorial water governance."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Institutional & Organizational Development",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building",
+      "Monitoring, Evaluation & Learning",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-012",
+      "EXP-017"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-013",
+    "slug": "mosquitia-governance",
+    "title_es": "Gobernanza Territorial – La Mosquitia",
+    "title_en": "Territorial Governance – La Mosquitia",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "HN"
+    ],
+    "countries": [
+      "Honduras"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2019,
+    "end_year": 2019,
+    "summary_es": "Apoyo a la formulación técnico-estratégica del Programa de Gobernanza Territorial en la Región 10 La Mosquitia, fortaleciendo capacidades, articulación institucional y diseño programático.",
+    "summary_en": "Technical and strategic support for the Territorial Governance Program in La Mosquitia Region 10, strengthening capacities, institutional coordination and program design.",
+    "context_es": "Apoyo a la formulación técnico-estratégica del Programa de Gobernanza Territorial en la Región 10 La Mosquitia, fortaleciendo capacidades, articulación institucional y diseño programático.",
+    "context_en": "Technical and strategic support for the Territorial Governance Program in La Mosquitia Region 10, strengthening capacities, institutional coordination and program design.",
+    "actions_es": [
+      "Apoyo a la formulación técnico-estratégica del programa territorial."
+    ],
+    "actions_en": [
+      "Technical and strategic support for formulation of the territorial program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Rural & Territorial Development",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Institutional & Organizational Development",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-020"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-014",
+    "slug": "pgl-apim",
+    "title_es": "PGL/APIM – Gobernabilidad local e inversiones municipales",
+    "title_en": "PGL/APIM – Local Governance and Municipal Investment",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "HN",
+      "NI"
+    ],
+    "countries": [
+      "Honduras",
+      "Nicaragua"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2014,
+    "end_year": 2014,
+    "summary_es": "Evaluación intermedia del programa PGL/APIM de COSUDE en Honduras y Nicaragua, enfocado en gobernabilidad local, inversión municipal y fortalecimiento de la gestión territorial.",
+    "summary_en": "Mid-term evaluation of SDC's PGL/APIM program in Honduras and Nicaragua, focused on local governance, municipal investment and stronger territorial management.",
+    "context_es": "Evaluación intermedia del programa PGL/APIM de COSUDE en Honduras y Nicaragua, enfocado en gobernabilidad local, inversión municipal y fortalecimiento de la gestión territorial.",
+    "context_en": "Mid-term evaluation of SDC's PGL/APIM program in Honduras and Nicaragua, focused on local governance, municipal investment and stronger territorial management.",
+    "actions_es": [
+      "Evaluación intermedia del programa de gobernabilidad local e inversiones municipales."
+    ],
+    "actions_en": [
+      "Mid-term evaluation of the local-governance and municipal-investment program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-053"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-015",
+    "slug": "misicuni-nexo",
+    "title_es": "Sistema Múltiple Misicuni – Enfoque NEXO",
+    "title_en": "Misicuni Multipurpose System – NEXUS Approach",
+    "client_display": "GIZ",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2019,
+    "end_year": 2019,
+    "summary_es": "Sistematización, facilitación y hoja de ruta para el modelo de gestión del Sistema Múltiple Misicuni en Cochabamba bajo enfoque NEXO agua, energía y alimentación.",
+    "summary_en": "Systematization, facilitation and roadmap development for the management model of the Misicuni Multipurpose System in Cochabamba under a water-energy-food NEXUS approach.",
+    "context_es": "Sistematización, facilitación y hoja de ruta para el modelo de gestión del Sistema Múltiple Misicuni en Cochabamba bajo enfoque NEXO agua, energía y alimentación.",
+    "context_en": "Systematization, facilitation and roadmap development for the management model of the Misicuni Multipurpose System in Cochabamba under a water-energy-food NEXUS approach.",
+    "actions_es": [
+      "Sistematización del modelo de gestión, moderación participativa y elaboración de una hoja de ruta bajo enfoque NEXO."
+    ],
+    "actions_en": [
+      "Management-model systematization, participatory facilitation and roadmap development under a NEXUS approach."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Responsible Mining & Energy",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-021",
+      "EXP-023"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-016",
+    "slug": "gestion-ambiental-municipal",
+    "title_es": "Gestión Ambiental Municipal – Bolivia",
+    "title_en": "Municipal Environmental Management – Bolivia",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2018,
+    "end_year": 2018,
+    "summary_es": "Evaluación externa de fin de Fase I del Proyecto de Gestión Ambiental Municipal de COSUDE en Bolivia, analizando resultados, aprendizajes y recomendaciones para la continuidad.",
+    "summary_en": "External end-of-phase evaluation of SDC's Municipal Environmental Management Project in Bolivia, assessing results, lessons learned and recommendations for continuation.",
+    "context_es": "Evaluación externa de fin de Fase I del Proyecto de Gestión Ambiental Municipal de COSUDE en Bolivia, analizando resultados, aprendizajes y recomendaciones para la continuidad.",
+    "context_en": "External end-of-phase evaluation of SDC's Municipal Environmental Management Project in Bolivia, assessing results, lessons learned and recommendations for continuation.",
+    "actions_es": [
+      "Evaluación externa de fin de Fase I del proyecto."
+    ],
+    "actions_en": [
+      "External end-of-Phase-I evaluation of the project."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-027"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-017",
+    "slug": "bgi-responsible-mining",
+    "title_es": "BGI – Gestión y planificación para minería responsable",
+    "title_en": "BGI – Management and Planning for Responsible Mining",
+    "client_display": "BGI",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2018,
+    "end_year": 2019,
+    "summary_es": "Apoyo a la planificación, monitoreo y gestión de iniciativas vinculadas a minería artesanal responsable y desarrollo sostenible, incluyendo planificación operativa y sistematización regional.",
+    "summary_en": "Support for planning, monitoring and management of responsible artisanal mining and sustainable development initiatives, including operational planning and regional systematization.",
+    "context_es": "Apoyo a la planificación, monitoreo y gestión de iniciativas vinculadas a minería artesanal responsable y desarrollo sostenible, incluyendo planificación operativa y sistematización regional.",
+    "context_en": "Support for planning, monitoring and management of responsible artisanal mining and sustainable development initiatives, including operational planning and regional systematization.",
+    "actions_es": [
+      "Planificación operativa, monitoreo y sistematización regional de iniciativas de minería responsable."
+    ],
+    "actions_en": [
+      "Operational planning, monitoring and regional systematization of responsible-mining initiatives."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Rural & Territorial Development",
+      "Responsible Mining & Energy"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-029",
+      "EXP-022"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-018",
+    "slug": "peru-bosques",
+    "title_es": "Perú Bosques – Gobernanza forestal y fortalecimiento institucional",
+    "title_en": "Peru Forests – Forest Governance and Institutional Strengthening",
+    "client_display": "Chemonics International",
+    "funder_display": "USAID",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2014,
+    "end_year": 2016,
+    "summary_es": "Asistencia técnica al Proyecto Perú Bosques de USAID/Chemonics en sistemas de información forestal, sostenibilidad institucional, fortalecimiento de autoridades regionales y capitalización de experiencias.",
+    "summary_en": "Technical assistance to the USAID/Chemonics Peru Forests project covering forest information systems, institutional sustainability, strengthening of regional authorities and capitalization of lessons learned.",
+    "context_es": "Asistencia técnica al Proyecto Perú Bosques de USAID/Chemonics en sistemas de información forestal, sostenibilidad institucional, fortalecimiento de autoridades regionales y capitalización de experiencias.",
+    "context_en": "Technical assistance to the USAID/Chemonics Peru Forests project covering forest information systems, institutional sustainability, strengthening of regional authorities and capitalization of lessons learned.",
+    "actions_es": [
+      "Asistencia técnica en sistemas de información forestal, sostenibilidad institucional, fortalecimiento de autoridades y capitalización de experiencias."
+    ],
+    "actions_en": [
+      "Technical assistance on forest information systems, institutional sustainability, authority strengthening and capitalization of lessons learned."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Governance & Institutional Development",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Institutional & Organizational Development",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building",
+      "Monitoring, Evaluation & Learning"
+    ],
+    "featured": true,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-044",
+      "EXP-045",
+      "EXP-046",
+      "EXP-049",
+      "EXP-052"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-019",
+    "slug": "mexico-water-policy",
+    "title_es": "Políticas públicas del sector agua – México",
+    "title_en": "Water Sector Public Policy – Mexico",
+    "client_display": "KfW",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "MX"
+    ],
+    "countries": [
+      "México"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2013,
+    "end_year": 2014,
+    "summary_es": "Asistencia técnica a la cooperación financiera alemana para fortalecer políticas públicas del sector agua en México, incluyendo seguimiento de instrumentos y actualización de la matriz de reformas.",
+    "summary_en": "Technical assistance to German financial cooperation to strengthen water-sector public policy in Mexico, including policy-instrument monitoring and updates to the reform matrix.",
+    "context_es": "Asistencia técnica a la cooperación financiera alemana para fortalecer políticas públicas del sector agua en México, incluyendo seguimiento de instrumentos y actualización de la matriz de reformas.",
+    "context_en": "Technical assistance to German financial cooperation to strengthen water-sector public policy in Mexico, including policy-instrument monitoring and updates to the reform matrix.",
+    "actions_es": [
+      "Asistencia técnica y actualización de instrumentos para el seguimiento de reformas del sector agua."
+    ],
+    "actions_en": [
+      "Technical assistance and updating of instruments used to monitor water-sector reforms."
+    ],
+    "results_es": "La asistencia técnica aportó insumos para el análisis y seguimiento de instrumentos de política sectorial del agua en México.",
+    "results_en": "The technical assistance generated inputs for the analysis and monitoring of water-sector policy instruments in Mexico.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development",
+      "Sustainable Finance"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-059",
+      "EXP-051"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-020",
+    "slug": "emagua",
+    "title_es": "Fortalecimiento institucional de EMAGUA",
+    "title_en": "Institutional Strengthening of EMAGUA",
+    "client_display": "BID / EMAGUA",
+    "funder_display": "BID",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2012,
+    "end_year": 2013,
+    "summary_es": "Evaluación de medio término de la Fase I del programa BID/EMAGUA para fortalecer la gestión institucional del sector de agua y saneamiento en Bolivia.",
+    "summary_en": "Mid-term evaluation of Phase I of the IDB/EMAGUA program to strengthen institutional management in Bolivia's water and sanitation sector.",
+    "context_es": "Evaluación de medio término de la Fase I del programa BID/EMAGUA para fortalecer la gestión institucional del sector de agua y saneamiento en Bolivia.",
+    "context_en": "Mid-term evaluation of Phase I of the IDB/EMAGUA program to strengthen institutional management in Bolivia's water and sanitation sector.",
+    "actions_es": [
+      "Evaluación de medio término de la Fase I del programa de fortalecimiento institucional."
+    ],
+    "actions_en": [
+      "Mid-term evaluation of Phase I of the institutional-strengthening program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Institutional & Organizational Development"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-067"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-021",
+    "slug": "water-performance-framework",
+    "title_es": "Marco de Evaluación del Desempeño del sector agua y saneamiento",
+    "title_en": "Water and Sanitation Sector Performance Assessment Framework",
+    "client_display": "KfW",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2010,
+    "end_year": 2011,
+    "summary_es": "Diseño del Marco de Evaluación del Desempeño para el sector de agua potable y saneamiento en Bolivia, orientado a mejorar seguimiento, evaluación y gestión de políticas públicas.",
+    "summary_en": "Design of a performance assessment framework for Bolivia's drinking water and sanitation sector to strengthen monitoring, evaluation and public-policy management.",
+    "context_es": "Diseño del Marco de Evaluación del Desempeño para el sector de agua potable y saneamiento en Bolivia, orientado a mejorar seguimiento, evaluación y gestión de políticas públicas.",
+    "context_en": "Design of a performance assessment framework for Bolivia's drinking water and sanitation sector to strengthen monitoring, evaluation and public-policy management.",
+    "actions_es": [
+      "Diseño y elaboración del Marco de Evaluación del Desempeño del sector."
+    ],
+    "actions_en": [
+      "Design and development of the sector performance assessment framework."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-084"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-022",
+    "slug": "innova-af",
+    "title_es": "Fondo INNOVA AF – Evaluación de propuestas",
+    "title_en": "INNOVA AF Fund – Proposal Evaluation",
+    "client_display": "IICA",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "CR"
+    ],
+    "countries": [
+      "Costa Rica"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2019,
+    "end_year": 2019,
+    "summary_es": "Evaluación técnica de propuestas presentadas al Fondo INNOVA AF del IICA en Costa Rica, orientado a innovación agrícola, productividad, sostenibilidad y adaptación climática.",
+    "summary_en": "Technical evaluation of proposals submitted to IICA's INNOVA AF Fund in Costa Rica, focused on agricultural innovation, productivity, sustainability and climate adaptation.",
+    "context_es": "Evaluación técnica de propuestas presentadas al Fondo INNOVA AF del IICA en Costa Rica, orientado a innovación agrícola, productividad, sostenibilidad y adaptación climática.",
+    "context_en": "Technical evaluation of proposals submitted to IICA's INNOVA AF Fund in Costa Rica, focused on agricultural innovation, productivity, sustainability and climate adaptation.",
+    "actions_es": [
+      "Evaluación técnica de propuestas presentadas al fondo de innovación."
+    ],
+    "actions_en": [
+      "Technical evaluation of proposals submitted to the innovation fund."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-016"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-023",
+    "slug": "periurban-water",
+    "title_es": "Programa de Agua y Alcantarillado Periurbano – Bolivia",
+    "title_en": "Peri-Urban Water and Sewerage Program – Bolivia",
+    "client_display": "BID",
+    "funder_display": "BID",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2013,
+    "end_year": 2013,
+    "summary_es": "Evaluación de medio término de la Fase I del programa BID de agua y alcantarillado periurbano en Bolivia, analizando avances, resultados y recomendaciones operativas.",
+    "summary_en": "Mid-term evaluation of Phase I of the IDB peri-urban water and sewerage program in Bolivia, assessing progress, results and operational recommendations.",
+    "context_es": "Evaluación de medio término de la Fase I del programa BID de agua y alcantarillado periurbano en Bolivia, analizando avances, resultados y recomendaciones operativas.",
+    "context_en": "Mid-term evaluation of Phase I of the IDB peri-urban water and sewerage program in Bolivia, assessing progress, results and operational recommendations.",
+    "actions_es": [
+      "Evaluación de medio término de la Fase I del programa de agua y alcantarillado periurbano."
+    ],
+    "actions_en": [
+      "Mid-term evaluation of Phase I of the peri-urban water and sewerage program."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-063"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-024",
+    "slug": "proagro",
+    "title_es": "PROAGRO – Gestión del riesgo, riego y gestión de presas",
+    "title_en": "PROAGRO – Risk Management, Irrigation and Dam Governance",
+    "client_display": "GTZ / PROAGRO",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2008,
+    "end_year": 2012,
+    "summary_es": "Facilitación y apoyo técnico de GTZ/PROAGRO en Bolivia para gestión del riesgo agropecuario, actualización de guías de riego y diseño de mecanismos institucionales para la gestión de presas.",
+    "summary_en": "Facilitation and technical support to GTZ/PROAGRO in Bolivia on agricultural risk management, irrigation guideline updates and institutional mechanisms for dam governance.",
+    "context_es": "Facilitación y apoyo técnico de GTZ/PROAGRO en Bolivia para gestión del riesgo agropecuario, actualización de guías de riego y diseño de mecanismos institucionales para la gestión de presas.",
+    "context_en": "Facilitation and technical support to GTZ/PROAGRO in Bolivia on agricultural risk management, irrigation guideline updates and institutional mechanisms for dam governance.",
+    "actions_es": [
+      "Facilitación técnica sobre gestión del riesgo agropecuario, actualización de guías de riego y diseño institucional para gestión de presas."
+    ],
+    "actions_en": [
+      "Technical facilitation on agricultural risk management, irrigation-guideline updates and institutional design for dam governance."
+    ],
+    "results_es": "El acompañamiento consolidó insumos técnicos para fortalecer la planificación y ejecución de inversiones en riego.",
+    "results_en": "The assignment consolidated technical inputs to strengthen the planning and implementation of irrigation investments.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Governance & Institutional Development",
+      "Infrastructure & Basic Services"
+    ],
+    "services": [
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes",
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Institutional & Organizational Development"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-075",
+      "EXP-112",
+      "EXP-114"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-025",
+    "slug": "ciao-organic-agriculture",
+    "title_es": "CIAO – Agricultura orgánica y movilización de recursos",
+    "title_en": "CIAO – Organic Agriculture and Resource Mobilization",
+    "client_display": "IICA",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "NI"
+    ],
+    "countries": [
+      "Nicaragua"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2010,
+    "end_year": 2010,
+    "summary_es": "Apoyo técnico del IICA a la Comisión Interamericana de Agricultura Orgánica para estructurar propuestas y movilizar recursos externos destinados a su agenda regional.",
+    "summary_en": "Technical support from IICA to the Inter-American Commission for Organic Agriculture to structure proposals and mobilize external resources for its regional agenda.",
+    "context_es": "Apoyo técnico del IICA a la Comisión Interamericana de Agricultura Orgánica para estructurar propuestas y movilizar recursos externos destinados a su agenda regional.",
+    "context_en": "Technical support from IICA to the Inter-American Commission for Organic Agriculture to structure proposals and mobilize external resources for its regional agenda.",
+    "actions_es": [
+      "Apoyo técnico para estructurar propuestas y movilizar recursos externos para la agenda regional de agricultura orgánica."
+    ],
+    "actions_en": [
+      "Technical support to structure proposals and mobilize external resources for the regional organic-agriculture agenda."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development",
+      "Infrastructure & Basic Services"
+    ],
+    "services": [
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-086"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-026",
+    "slug": "cosude-nicaragua-strategy",
+    "title_es": "COSUDE Nicaragua – Análisis estratégico y toma de decisiones",
+    "title_en": "SDC Nicaragua – Strategic Analysis and Decision-Making",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "NI"
+    ],
+    "countries": [
+      "Nicaragua"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2010,
+    "end_year": 2010,
+    "summary_es": "Facilitación de talleres de análisis del entorno y discusión estratégica para apoyar decisiones de cooperación y programación institucional de COSUDE en Nicaragua.",
+    "summary_en": "Facilitation of context-analysis and strategic discussion workshops to support SDC's cooperation and institutional programming decisions in Nicaragua.",
+    "context_es": "Facilitación de talleres de análisis del entorno y discusión estratégica para apoyar decisiones de cooperación y programación institucional de COSUDE en Nicaragua.",
+    "context_en": "Facilitation of context-analysis and strategic discussion workshops to support SDC's cooperation and institutional programming decisions in Nicaragua.",
+    "actions_es": [
+      "Facilitación de talleres de análisis del entorno y discusión estratégica."
+    ],
+    "actions_en": [
+      "Facilitation of context-analysis and strategic-discussion workshops."
+    ],
+    "results_es": "Los talleres generaron insumos para la toma de decisiones estratégicas de COSUDE en Nicaragua.",
+    "results_en": "The workshops generated inputs to support SDC's strategic decision-making in Nicaragua.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-089"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-027",
+    "slug": "lake-poopo",
+    "title_es": "Cuenca del Lago Poopó – Gestión sostenible de recursos naturales",
+    "title_en": "Lake Poopó Basin – Sustainable Natural Resource Management",
+    "client_display": "Programa Cuenca Poopó / Integration",
+    "funder_display": "Unión Europea",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2014,
+    "end_year": 2014,
+    "summary_es": "Asistencia técnica internacional para fortalecer planificación y gestión sostenible de recursos naturales en la Cuenca del Lago Poopó, Oruro, con apoyo de la Unión Europea.",
+    "summary_en": "International technical assistance to strengthen planning and sustainable natural resource management in the Lake Poopó Basin in Oruro, with European Union support.",
+    "context_es": "Asistencia técnica internacional para fortalecer planificación y gestión sostenible de recursos naturales en la Cuenca del Lago Poopó, Oruro, con apoyo de la Unión Europea.",
+    "context_en": "International technical assistance to strengthen planning and sustainable natural resource management in the Lake Poopó Basin in Oruro, with European Union support.",
+    "actions_es": [
+      "Asistencia técnica para fortalecer planificación y gestión sostenible de recursos naturales en la Cuenca del Lago Poopó."
+    ],
+    "actions_en": [
+      "Technical assistance to strengthen planning and sustainable natural-resource management in the Lake Poopó Basin."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Technical Assistance & Implementation"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-057"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-028",
+    "slug": "fautapo-social-enterprise",
+    "title_es": "FAUTAPO – Empresa social y empleo digno",
+    "title_en": "FAUTAPO – Social Enterprise and Decent Employment",
+    "client_display": "FAUTAPO",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2013,
+    "end_year": 2013,
+    "summary_es": "Apoyo a la selección gerencial y diseño de transición de una empresa social orientada a empleo digno y fortalecimiento de iniciativas productivas para trabajadores por cuenta propia en Tarija.",
+    "summary_en": "Support for management selection and transition design for a social enterprise focused on decent employment and stronger productive initiatives for self-employed workers in Tarija.",
+    "context_es": "Apoyo a la selección gerencial y diseño de transición de una empresa social orientada a empleo digno y fortalecimiento de iniciativas productivas para trabajadores por cuenta propia en Tarija.",
+    "context_en": "Support for management selection and transition design for a social enterprise focused on decent employment and stronger productive initiatives for self-employed workers in Tarija.",
+    "actions_es": [
+      "Selección gerencial, aplicación de instrumentos de evaluación y diseño de la fase de transición de una empresa social."
+    ],
+    "actions_en": [
+      "Management selection, application of assessment tools and design of a social-enterprise transition phase."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes",
+      "Digital Transformation & Solutions"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-060"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-029",
+    "slug": "northern-zone-el-salvador",
+    "title_es": "Desarrollo Productivo de la Zona Norte – El Salvador",
+    "title_en": "Northern Zone Productive Development – El Salvador",
+    "client_display": "Chemonics International",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "SV"
+    ],
+    "countries": [
+      "El Salvador"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2011,
+    "end_year": 2012,
+    "summary_es": "Capitalización y sistematización de experiencias del Proyecto de Desarrollo Productivo de la Zona Norte de El Salvador, enfocado en cadenas productivas, desarrollo económico local y aprendizaje.",
+    "summary_en": "Capitalization and systematization of experience from the Northern Zone Productive Development Project in El Salvador, focused on value chains, local economic development and learning.",
+    "context_es": "Capitalización y sistematización de experiencias del Proyecto de Desarrollo Productivo de la Zona Norte de El Salvador, enfocado en cadenas productivas, desarrollo económico local y aprendizaje.",
+    "context_en": "Capitalization and systematization of experience from the Northern Zone Productive Development Project in El Salvador, focused on value chains, local economic development and learning.",
+    "actions_es": [
+      "Capitalización y sistematización de experiencias y aprendizajes del proyecto."
+    ],
+    "actions_en": [
+      "Capitalization and systematization of project experience and lessons learned."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-073",
+      "EXP-078"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-030",
+    "slug": "fomilenio",
+    "title_es": "FOMILENIO – Desarrollo productivo en El Salvador",
+    "title_en": "FOMILENIO – Productive Development in El Salvador",
+    "client_display": "Chemonics International",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "SV"
+    ],
+    "countries": [
+      "El Salvador"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2010,
+    "end_year": 2010,
+    "summary_es": "Evaluación de medio término y apoyo a la planificación de intervenciones de desarrollo productivo en El Salvador, incluyendo recomendaciones, instrumentos de gestión y programación operativa.",
+    "summary_en": "Mid-term evaluation and planning support for productive-development interventions in El Salvador, including recommendations, management instruments and operational programming.",
+    "context_es": "Evaluación de medio término y apoyo a la planificación de intervenciones de desarrollo productivo en El Salvador, incluyendo recomendaciones, instrumentos de gestión y programación operativa.",
+    "context_en": "Mid-term evaluation and planning support for productive-development interventions in El Salvador, including recommendations, management instruments and operational programming.",
+    "actions_es": [
+      "Evaluación de medio término y apoyo a instrumentos de planificación y programación operativa."
+    ],
+    "actions_en": [
+      "Mid-term evaluation and support to planning and operational-programming instruments."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Strategy & Project Design"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-082",
+      "EXP-088"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-031",
+    "slug": "peru-sanitation-sector",
+    "title_es": "Asistencia técnica al sector saneamiento – Perú",
+    "title_en": "Technical Assistance to the Sanitation Sector – Peru",
+    "client_display": "KfW",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2010,
+    "end_year": 2010,
+    "summary_es": "Apoyo a la coordinación, moderación y sistematización de asistencia técnica de KfW vinculada al sector saneamiento y al Viceministerio de Construcción y Saneamiento del Perú.",
+    "summary_en": "Support for coordination, facilitation and systematization of KfW technical assistance linked to Peru's sanitation sector and the Vice Ministry of Construction and Sanitation.",
+    "context_es": "Apoyo a la coordinación, moderación y sistematización de asistencia técnica de KfW vinculada al sector saneamiento y al Viceministerio de Construcción y Saneamiento del Perú.",
+    "context_en": "Support for coordination, facilitation and systematization of KfW technical assistance linked to Peru's sanitation sector and the Vice Ministry of Construction and Sanitation.",
+    "actions_es": [
+      "Coordinación, moderación y sistematización de asistencia técnica para el sector saneamiento."
+    ],
+    "actions_en": [
+      "Coordination, facilitation and systematization of technical assistance for the sanitation sector."
+    ],
+    "results_es": null,
+    "results_en": null,
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-091"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-032",
+    "slug": "apemin-ii",
+    "title_es": "APEMIN II – Alternativas económicas y políticas sectoriales",
+    "title_en": "APEMIN II – Economic Alternatives and Sector Policy",
+    "client_display": "GFA Consulting Group",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": "Oruro; Potosí; Occidente de Bolivia",
+    "geography_note": "",
+    "start_year": 2003,
+    "end_year": 2010,
+    "summary_es": "Asistencia técnica, evaluación, estudios de mercado, definición de estrategias y sistematización de impactos para APEMIN II, programa orientado al desarrollo económico sostenible y alternativas productivas en áreas mineras del occidente de Bolivia.",
+    "summary_en": "Technical assistance, evaluation, market studies, strategy definition and impact systematization for APEMIN II, a program focused on sustainable economic development and productive alternatives in mining areas of western Bolivia.",
+    "context_es": "APEMIN II abordó el desarrollo económico sostenible y la diversificación productiva en áreas mineras empobrecidas del occidente de Bolivia.",
+    "context_en": "APEMIN II addressed sustainable economic development and productive diversification in disadvantaged mining areas of western Bolivia.",
+    "actions_es": [
+      "Preparación de propuesta",
+      "evaluación institucional",
+      "estudios de mercado para proyectos no mineros",
+      "definición de estrategias y políticas sectoriales",
+      "sistematización e interpretación de impactos."
+    ],
+    "actions_en": [
+      "Proposal preparation",
+      "institutional evaluation",
+      "market studies for non-mining projects",
+      "definition of sector strategies and policies",
+      "impact systematization and interpretation."
+    ],
+    "results_es": "Se sistematizaron, documentaron e interpretaron impactos socioeconómicos, sociales, institucionales y ambientales de APEMIN II para evidenciar resultados, aprendizajes y aportes institucionales.",
+    "results_en": "Socioeconomic, social, institutional and environmental impacts of APEMIN II were systematized, documented and interpreted to evidence results, lessons learned and institutional contributions.",
+    "expertise": [
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Responsible Mining & Energy",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-196",
+      "EXP-154",
+      "EXP-137",
+      "EXP-106",
+      "EXP-092"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-033",
+    "slug": "aguasan-peru",
+    "title_es": "AGUASAN – Plan de salida en Perú",
+    "title_en": "AGUASAN – Exit-Phase Plan in Peru",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2008,
+    "end_year": 2008,
+    "summary_es": "Elaboración del plan operativo de la fase de salida de AGUASAN en Perú, ordenando logros, responsabilidades y condiciones de sostenibilidad para la continuidad de acciones de agua y saneamiento.",
+    "summary_en": "Preparation of the operational plan for AGUASAN's exit phase in Peru, organizing achievements, responsibilities and sustainability conditions for continued water and sanitation action.",
+    "context_es": "Elaboración del plan operativo de la fase de salida de AGUASAN en Perú, ordenando logros, responsabilidades y condiciones de sostenibilidad para la continuidad de acciones de agua y saneamiento.",
+    "context_en": "Preparation of the operational plan for AGUASAN's exit phase in Peru, organizing achievements, responsibilities and sustainability conditions for continued water and sanitation action.",
+    "actions_es": [
+      "Elaboración del plan operativo de la fase de salida del programa."
+    ],
+    "actions_en": [
+      "Preparation of the operational plan for the program's exit phase."
+    ],
+    "results_es": "El plan de salida aportó claridad operativa y fortaleció las condiciones de sostenibilidad del programa.",
+    "results_en": "The exit-phase plan provided greater operational clarity and strengthened the program's sustainability conditions.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-107"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-034",
+    "slug": "redsicta",
+    "title_es": "REDSICTA – Innovación tecnológica agroalimentaria",
+    "title_en": "REDSICTA – Agri-Food Technology Innovation",
+    "client_display": "IICA / REDSICTA",
+    "funder_display": "COSUDE",
+    "geography_type": "MULTI_COUNTRY",
+    "country_iso": [
+      "NI",
+      "CR",
+      "HN"
+    ],
+    "countries": [
+      "Nicaragua",
+      "Costa Rica",
+      "Honduras"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2006,
+    "end_year": 2006,
+    "summary_es": "Sistematización, planificación y consulta para fortalecer la innovación tecnológica en cadenas agroalimentarias de Centroamérica y orientar la segunda fase de REDSICTA.",
+    "summary_en": "Systematization, planning and consultation to strengthen technological innovation in Central American agri-food value chains and guide REDSICTA's second phase.",
+    "context_es": "Sistematización, planificación y consulta para fortalecer la innovación tecnológica en cadenas agroalimentarias de Centroamérica y orientar la segunda fase de REDSICTA.",
+    "context_en": "Systematization, planning and consultation to strengthen technological innovation in Central American agri-food value chains and guide REDSICTA's second phase.",
+    "actions_es": [
+      "Sistematización de la primera fase y planificación participativa de la segunda fase del programa."
+    ],
+    "actions_en": [
+      "Systematization of the first phase and participatory planning of the program's second phase."
+    ],
+    "results_es": "La sistematización generó una memoria técnica de la primera fase y la planificación aportó una base metodológica y estratégica para orientar la segunda fase.",
+    "results_en": "The systematization produced a technical record of the first phase, while the planning process provided a methodological and strategic basis for the second phase.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Rural & Territorial Development",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Knowledge Management & Capacity Building",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-139",
+      "EXP-142",
+      "EXP-145",
+      "EXP-146"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-035",
+    "slug": "papa-andina",
+    "title_es": "Papa Andina – Planificación de Fase III",
+    "title_en": "Papa Andina – Phase III Planning",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2006,
+    "end_year": 2006,
+    "summary_es": "Diseño del plan operativo de la tercera fase de Papa Andina, orientado a fortalecer innovación, articulación institucional y desarrollo de cadenas vinculadas a la papa con enfoque regional y participativo.",
+    "summary_en": "Design of the operational plan for Papa Andina's third phase, aimed at strengthening innovation, institutional coordination and potato-related value chains through a regional, participatory approach.",
+    "context_es": "Diseño del plan operativo de la tercera fase de Papa Andina, orientado a fortalecer innovación, articulación institucional y desarrollo de cadenas vinculadas a la papa con enfoque regional y participativo.",
+    "context_en": "Design of the operational plan for Papa Andina's third phase, aimed at strengthening innovation, institutional coordination and potato-related value chains through a regional, participatory approach.",
+    "actions_es": [
+      "Diseño del plan operativo de la tercera fase del proyecto."
+    ],
+    "actions_en": [
+      "Design of the project's Phase III operational plan."
+    ],
+    "results_es": "La planificación operativa ordenó resultados, actividades, responsabilidades y mecanismos de seguimiento para la tercera fase.",
+    "results_en": "The operational planning organized results, activities, responsibilities and monitoring mechanisms for the third phase.",
+    "expertise": [
+      "Rural & Territorial Development",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-149"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-036",
+    "slug": "gama-peru",
+    "title_es": "GAMA – Gestión ambiental y minería artesanal en Perú",
+    "title_en": "GAMA – Environmental Management and Artisanal Mining in Peru",
+    "client_display": "GAMA / COSUDE",
+    "funder_display": "COSUDE",
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2005,
+    "end_year": 2005,
+    "summary_es": "Revisión y planificación de fases del Proyecto GAMA de COSUDE en Perú, enfocado en gestión ambiental, minería artesanal, aprendizaje programático y desarrollo sostenible.",
+    "summary_en": "Review and phase planning for SDC's GAMA Project in Peru, focused on environmental management, artisanal mining, program learning and sustainable development.",
+    "context_es": "Revisión y planificación de fases del Proyecto GAMA de COSUDE en Perú, enfocado en gestión ambiental, minería artesanal, aprendizaje programático y desarrollo sostenible.",
+    "context_en": "Review and phase planning for SDC's GAMA Project in Peru, focused on environmental management, artisanal mining, program learning and sustainable development.",
+    "actions_es": [
+      "Peer review y planificación de fases del proyecto de gestión ambiental y minería artesanal."
+    ],
+    "actions_en": [
+      "Peer review and phase planning for the environmental-management and artisanal-mining project."
+    ],
+    "results_es": "El peer review aportó una mirada externa sobre los resultados alcanzados y la planificación generó una base organizada para mejorar la implementación y seguimiento del proyecto.",
+    "results_en": "The peer review provided an external perspective on results achieved, while the planning process created an organized basis to improve project implementation and monitoring.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Responsible Mining & Energy",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-159",
+      "EXP-165"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-037",
+    "slug": "proeib-andes",
+    "title_es": "PROEIB Andes – Desarrollo institucional",
+    "title_en": "PROEIB Andes – Institutional Development",
+    "client_display": "GTZ / PROEIB Andes",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2005,
+    "end_year": 2005,
+    "summary_es": "Diseño del concepto institucional de la Fundación PROEIB Andes y de sus componentes técnicos, organizativos, administrativos, financieros y jurídicos para una institucionalidad sostenible.",
+    "summary_en": "Design of the institutional concept for the PROEIB Andes Foundation and its technical, organizational, administrative, financial and legal components to support long-term sustainability.",
+    "context_es": "Diseño del concepto institucional de la Fundación PROEIB Andes y de sus componentes técnicos, organizativos, administrativos, financieros y jurídicos para una institucionalidad sostenible.",
+    "context_en": "Design of the institutional concept for the PROEIB Andes Foundation and its technical, organizational, administrative, financial and legal components to support long-term sustainability.",
+    "actions_es": [
+      "Diseño del concepto institucional y de los componentes técnicos, organizativos, administrativos, financieros y jurídicos de la Fundación."
+    ],
+    "actions_en": [
+      "Design of the Foundation's institutional concept and its technical, organizational, administrative, financial and legal components."
+    ],
+    "results_es": "El trabajo aportó una base sólida para la constitución y sostenibilidad futura de la Fundación PROEIB Andes.",
+    "results_en": "The assignment provided a solid basis for the establishment and future sustainability of the PROEIB Andes Foundation.",
+    "expertise": [
+      "Sustainable Finance",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-164"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-038",
+    "slug": "sanbasur",
+    "title_es": "SANBASUR – Saneamiento básico en la Sierra Sur",
+    "title_en": "SANBASUR – Basic Sanitation in Peru's Southern Highlands",
+    "client_display": "COSUDE",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "PE"
+    ],
+    "countries": [
+      "Perú"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2003,
+    "end_year": 2003,
+    "summary_es": "Planificación de la cuarta fase de SANBASUR de COSUDE, orientada a consolidar aprendizajes, capacidades locales y sostenibilidad de servicios de saneamiento básico en la Sierra Sur del Perú.",
+    "summary_en": "Planning of the fourth phase of SDC's SANBASUR program, aimed at consolidating lessons, local capacities and the sustainability of basic sanitation services in Peru's Southern Highlands.",
+    "context_es": "Planificación de la cuarta fase de SANBASUR de COSUDE, orientada a consolidar aprendizajes, capacidades locales y sostenibilidad de servicios de saneamiento básico en la Sierra Sur del Perú.",
+    "context_en": "Planning of the fourth phase of SDC's SANBASUR program, aimed at consolidating lessons, local capacities and the sustainability of basic sanitation services in Peru's Southern Highlands.",
+    "actions_es": [
+      "Planificación de la cuarta fase del proyecto de saneamiento básico."
+    ],
+    "actions_en": [
+      "Planning of the fourth phase of the basic-sanitation project."
+    ],
+    "results_es": "El proceso permitió orientar la planificación futura del programa con mayor claridad y coherencia institucional.",
+    "results_en": "The process helped guide future program planning with greater clarity and institutional coherence.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Rural & Territorial Development",
+      "Infrastructure & Basic Services",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Technical Assistance & Implementation",
+      "Facilitation & Participatory Processes",
+      "Knowledge Management & Capacity Building"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-190"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-039",
+    "slug": "itc-bol-61-80",
+    "title_es": "ITC BOL/61/80 – Indicadores y monitoreo",
+    "title_en": "ITC BOL/61/80 – Indicators and Monitoring",
+    "client_display": "ITC",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2004,
+    "end_year": 2007,
+    "summary_es": "Diseño y fortalecimiento del sistema de indicadores y monitoreo del Proyecto ITC BOL/61/80 para mejorar seguimiento, planificación y gestión de iniciativas de comercio y competitividad en Bolivia.",
+    "summary_en": "Design and strengthening of the indicator and monitoring system for ITC Project BOL/61/80 to improve tracking, planning and management of trade and competitiveness initiatives in Bolivia.",
+    "context_es": "Diseño y fortalecimiento del sistema de indicadores y monitoreo del Proyecto ITC BOL/61/80 para mejorar seguimiento, planificación y gestión de iniciativas de comercio y competitividad en Bolivia.",
+    "context_en": "Design and strengthening of the indicator and monitoring system for ITC Project BOL/61/80 to improve tracking, planning and management of trade and competitiveness initiatives in Bolivia.",
+    "actions_es": [
+      "Diseño y fortalecimiento del sistema de indicadores y monitoreo del proyecto."
+    ],
+    "actions_en": [
+      "Design and strengthening of the project's indicator and monitoring system."
+    ],
+    "results_es": "El sistema de indicadores fortaleció la capacidad de monitoreo y la preparación técnica de una nueva fase del proyecto.",
+    "results_en": "The indicator system strengthened monitoring capacity and the technical preparation of a new project phase.",
+    "expertise": [
+      "Sustainable Trade, Competitiveness & Value Chains",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Strategy & Project Design",
+      "Monitoring, Evaluation & Learning",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building",
+      "Institutional & Organizational Development"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-172",
+      "EXP-133"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  },
+  {
+    "project_id": "PRJ-040",
+    "slug": "funriego",
+    "title_es": "FUNRIEGO / PRONAR – Fortalecimiento institucional del riego",
+    "title_en": "FUNRIEGO / PRONAR – Institutional Strengthening for Irrigation",
+    "client_display": "GTZ / PRONAR",
+    "funder_display": null,
+    "geography_type": "COUNTRY",
+    "country_iso": [
+      "BO"
+    ],
+    "countries": [
+      "Bolivia"
+    ],
+    "regions": null,
+    "geography_note": null,
+    "start_year": 2003,
+    "end_year": 2005,
+    "summary_es": "Estructuración institucional y jurídica de FUNRIEGO con apoyo de GTZ/PRONAR, incluyendo documentos base, participación de miembros fundadores e instrumentos para una gestión formal del riego en Bolivia.",
+    "summary_en": "Institutional and legal structuring of FUNRIEGO with GTZ/PRONAR support, including foundational documents, engagement of founding members and instruments for formal irrigation management in Bolivia.",
+    "context_es": "Estructuración institucional y jurídica de FUNRIEGO con apoyo de GTZ/PRONAR, incluyendo documentos base, participación de miembros fundadores e instrumentos para una gestión formal del riego en Bolivia.",
+    "context_en": "Institutional and legal structuring of FUNRIEGO with GTZ/PRONAR support, including foundational documents, engagement of founding members and instruments for formal irrigation management in Bolivia.",
+    "actions_es": [
+      "Estructuración institucional y jurídica, documentos base e instrumentos de gestión para FUNRIEGO."
+    ],
+    "actions_en": [
+      "Institutional and legal structuring, foundational documents and management instruments for FUNRIEGO."
+    ],
+    "results_es": "La intervención consolidó fundamentos técnicos, organizativos y jurídicos necesarios para la constitución y funcionamiento de FUNRIEGO.",
+    "results_en": "The assignment consolidated the technical, organizational and legal foundations required for the establishment and operation of FUNRIEGO.",
+    "expertise": [
+      "Climate, Natural Resources & Water",
+      "Governance & Institutional Development"
+    ],
+    "services": [
+      "Institutional & Organizational Development",
+      "Technical Assistance & Implementation",
+      "Knowledge Management & Capacity Building",
+      "Monitoring, Evaluation & Learning"
+    ],
+    "featured": false,
+    "publish_status": "Publish",
+    "source_engagement_ids": [
+      "EXP-173",
+      "EXP-191"
+    ],
+    "image": null,
+    "gallery": [],
+    "related_project_ids": []
+  }
+]
