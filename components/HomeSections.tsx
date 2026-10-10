@@ -26,7 +26,7 @@ export function HomeSections({locale, projects}: {locale: Locale; projects: Proj
     line: (children: ReactNode) => <span className={styles.headlineLine}>{children}</span>,
     last: (children: ReactNode) => <span className={styles.headlineLine}>{children}<span className={styles.accentDot} aria-hidden="true"/></span>,
   };
-  return <main id="main-content">
+  return <main id="main-content" tabIndex={-1}>
     <section className={styles.hero} aria-labelledby="hero-title">
       <PhotoBackground priority/>
       <Contours/>

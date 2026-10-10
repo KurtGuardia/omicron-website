@@ -70,7 +70,8 @@
       "countryLabel": "countries in Latin America and the Caribbean",
       "engagementLabel": "consulting engagements",
       "international": "Other international markets",
-      "titleLayout": "<line>across Latin America </line><line>and the Caribbean</line>"
+      "titleLayout": "<line>across Latin America </line><line>and the Caribbean</line>",
+      "countryAccessibleName": "{country}, {count, plural, one {# consulting engagement} other {# consulting engagements}}"
     },
     "how": {
       "title": "How we work",

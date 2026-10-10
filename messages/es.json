@@ -70,7 +70,8 @@
       "countryLabel": "países en América Latina y el Caribe",
       "engagementLabel": "consultorías y asistencias técnicas",
       "international": "Otros mercados internacionales",
-      "titleLayout": "<line>en América Latina </line><line>y el Caribe</line>"
+      "titleLayout": "<line>en América Latina </line><line>y el Caribe</line>",
+      "countryAccessibleName": "{country}, {count, plural, one {# consultoría} other {# consultorías}}"
     },
     "how": {
       "title": "Cómo trabajamos",

@@ -88,6 +88,7 @@ export function HomeHowCarousel() {
               aria-roledescription={t("how.slideDescription")}
               aria-label={`${step.number} ${step.title}`}
               aria-hidden={!isCurrent}
+              aria-current={isCurrent ? "step" : undefined}
               aria-live={isCurrent ? "polite" : "off"}
             >
               <div className={styles.howIcon} aria-hidden="true"><step.Icon/></div>

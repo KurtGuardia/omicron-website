@@ -35,7 +35,7 @@ export function OmicronMap({locale}: {locale: Locale}) {
   const countryHref = (code: ActiveMapCountryCode) =>
     `/${locale}/experience?country=${encodeURIComponent(mapCountries[code].queryCountry)}`;
   const countryActionLabel = (code: ActiveMapCountryCode) =>
-    t("countryAction", {country: countries(code), count: mapCountries[code].count});
+    t("countryAccessibleName", {country: countries(code), count: mapCountries[code].count});
 
   const positionTooltip = useCallback((code: ActiveMapCountryCode) => {
     const frame = frameRef.current;

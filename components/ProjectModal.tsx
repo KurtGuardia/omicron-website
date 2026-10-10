@@ -12,7 +12,24 @@ const localized=<T,>(value:LocalizedProjectValue<T>|undefined,locale:Locale):T|u
 export function ProjectModal({locale,project,projects=[],onClose,onSelect}: {locale:Locale;project:Project;projects?:Project[];onClose:()=>void;onSelect?:(project:Project)=>void}) {
   const [portalRoot,setPortalRoot]=useState<HTMLElement|null>(null); const closeRef=useRef<HTMLButtonElement>(null); const closeAction=useRef(onClose); closeAction.current=onClose; const t=useTranslations('ProjectModal'); const labels=useProjectLabels();
   useEffect(()=>{setPortalRoot(document.body);},[]);
-  useEffect(()=>{if(!portalRoot)return;const previous=document.activeElement as HTMLElement|null;const oldOverflow=document.body.style.overflow;document.body.style.overflow='hidden';closeRef.current?.focus();const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape')closeAction.current();};window.addEventListener('keydown',onKey);return()=>{document.body.style.overflow=oldOverflow;window.removeEventListener('keydown',onKey);previous?.focus();};},[portalRoot]);
+  useEffect(()=>{
+    if(!portalRoot)return;
+    const previous=document.activeElement as HTMLElement|null;
+    const oldOverflow=document.body.style.overflow;
+    const modalRoot=closeRef.current?.closest('[role=dialog]')?.parentElement;
+    const isolated=Array.from(document.body.children).filter((node):node is HTMLElement=>node instanceof HTMLElement&&node!==modalRoot).map(element=>({element,inert:element.inert,ariaHidden:element.getAttribute('aria-hidden')}));
+    document.body.style.overflow='hidden';
+    for(const {element} of isolated){element.inert=true;element.setAttribute('aria-hidden','true');}
+    closeRef.current?.focus({preventScroll:true});
+    const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape')closeAction.current();};
+    window.addEventListener('keydown',onKey);
+    return()=>{
+      document.body.style.overflow=oldOverflow;
+      window.removeEventListener('keydown',onKey);
+      for(const {element,inert,ariaHidden} of isolated){element.inert=inert;if(ariaHidden===null)element.removeAttribute('aria-hidden');else element.setAttribute('aria-hidden',ariaHidden);}
+      if(previous?.isConnected)previous.focus({preventScroll:true});
+    };
+  },[portalRoot]);
   if(!portalRoot)return null;
   const related=(project.relatedProjectIds||[]).map(id=>projects.find(item=>item.id===id)).filter((item):item is Project=>item!==undefined&&item.id!==project.id).slice(0,3);
   const image=project.image; const context=localized(project.context,locale); const actions=localized(project.actions,locale); const results=localized(project.results,locale);
@@ -29,7 +46,7 @@ export function ProjectModal({locale,project,projects=[],onClose,onSelect}: {loc
   ];
   const tags=project.tags?.[locale]?.length?project.tags[locale]:project.expertise.map(labels.expertise);
   return createPortal(<div className={styles.backdrop} role='presentation' onMouseDown={event=>{if(event.target===event.currentTarget)onClose();}}>
-    <article className={styles.dialog} role='dialog' aria-modal='true' aria-labelledby='project-modal-title' aria-describedby={project.summary[locale]?"project-modal-summary":undefined} onKeyDown={event=>{if(event.key==='Tab'){const nodes=event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled),a[href]');const first=nodes[0],last=nodes[nodes.length-1];if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}}}}>
+    <article className={styles.dialog} role='dialog' aria-modal='true' aria-labelledby='project-modal-title' aria-describedby={project.summary[locale]?"project-modal-summary":undefined} onKeyDown={event=>{if(event.key==='Tab'){const nodes=event.currentTarget.querySelectorAll<HTMLElement>('button:not(:disabled),a[href]');const first=nodes[0],last=nodes[nodes.length-1],active=document.activeElement;if(!event.currentTarget.contains(active)){event.preventDefault();first?.focus();}else if(event.shiftKey&&active===first){event.preventDefault();last?.focus();}else if(!event.shiftKey&&active===last){event.preventDefault();first?.focus();}}}}>
       <button ref={closeRef} className={styles.close} onClick={onClose} aria-label={t('close')}><X size={24}/></button>
       <div className={styles.scrollBody}>
       <header className={styles.hero}><ContentImage src={image} alt='' fill sizes='(max-width: 1024px) 100vw, (max-width: 1636px) calc(100vw - 96px), 1440px' className={styles.heroImage}/><div className={styles.heroShade}/><div className={styles.heroContent}>{tags.length>0&&<div className={styles.heroTags}>{tags.slice(0,2).map((tag,index)=><span className={index===0?styles.greenTag:styles.blueTag} key={tag}><Leaf size={16}/>{tag}</span>)}</div>}<h2 id='project-modal-title'>{project.title[locale]}</h2>{project.summary[locale]&&<p id='project-modal-summary'>{project.summary[locale]}</p>}</div></header>
