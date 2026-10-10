@@ -77,3 +77,5 @@
   .map :global(.country--active:focus-visible),
   .map :global(.country--active[data-selected="true"]) { transform: none; }
 }
+
+@media (pointer: coarse) { .tooltip { padding: 10px 14px; a { min-height: 44px; padding-inline: 8px; } } }

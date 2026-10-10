@@ -256,3 +256,37 @@ $deep-navy: #00243b;
   .projectCard, .projectImage img, .projectLink, .projectLink svg, .shellArrow, .dots .dot::before { transition: none; }
   .howTrack { transition: none; }
 }
+
+@media (max-width: $breakpoint-tablet) {
+ .projectGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .teamGrid { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }.teamMember:nth-child(4)::before { display: none; }
+ .statsGrid { grid-template-columns: repeat(2,minmax(0,1fr)); row-gap: 24px; > div { padding-inline: 18px; } > div:nth-child(even) { border: 0; } > div:nth-child(3) { padding-left: 18px; } }
+ .howSection { padding-block: 72px; h2 { font-size: 42px; } }
+ .howSlide { grid-template-columns: 48px 150px minmax(0,1fr) 48px; gap: 18px; min-height: 260px; .howIcon { grid-column: 2; grid-row: 1; } .howTitle { grid-column: 3; grid-row: 1; } .howDescription { grid-column: 2/4; grid-row: 2; min-height: 80px; border: 0; padding: 12px 0 0; font-size: 24px; } }
+ .howIcon { width: 150px; height: 150px; border-width: 16px; svg { width: 70px; height: 70px; } }.howTitle { min-height: 130px; h3 { font-size: 40px; } span { font-size: 46px; } }
+ .shellArrow { width: 44px; height: 44px; top: 75px; }.howIntro { font-size: 22px; }
+}
+@media (max-width: $breakpoint-compact) {
+ .dualList { grid-template-columns: 1fr; gap: 32px; &::before { display: none; } > div:last-child { padding-top: 28px; border-top: 1px solid rgba(255,255,255,.2); } }
+ .expertiseSection { padding-block: 40px; }.expertiseRow,.serviceRow { min-height: 60px; font-size: 17px; }
+ .mapLayout { grid-template-columns: 1fr; gap: 24px; }.mapCopy { max-width: 100%; }.mapVisual { width: min(100%,540px); margin-inline: auto; }
+ .teamGrid { grid-template-columns: repeat(2,minmax(0,1fr)); }.teamMember h3 { font-size: 18px; }
+ .heroContent { padding-top: 124px; h1 { font-size: 54px; } }
+ .partnerLogos { gap: 24px; li { min-width: 0; flex-basis: calc(50% - 12px); font-size: 32px; overflow-wrap: anywhere; } }
+ .aboutSection,.contactSection { scroll-margin-top: 100px; }
+}
+@media (max-width: $breakpoint-mobile) {
+ .heroContent { padding-block: 130px 36px; h1 { font-size: 38px; line-height: 1.04; } }.heroBody { font-size: 17px; line-height: 1.4; }.hero .primaryButton { width: 100%; gap: 12px; font-size: 16px; padding-inline: 14px; min-height: 52px; }.hero .background { object-position: 60% center; }
+ .statsGrid { > div { padding-inline: 10px; grid-template-columns: 30px minmax(0,1fr); gap: 10px; } > div:first-child,> div:nth-child(3),> div:last-child { padding-inline: 10px; } dd { font-size: 26px; }.reachValue { font-size: 14px; } dt { font-size: 12px; } }
+ .projectGrid { grid-template-columns: 1fr; }.sectionHeading h2,.teamSection .sectionHeading h2,.projectsSection .sectionHeading h2 { font-size: 29px; }.sectionHeading p,.teamSection .sectionHeading > p:not(.eyebrow) { font-size: 17px; }.projectsAction .outlineButton { width: 100%; border-radius: 8px; }
+ .mapCopy h2 { font-size: 36px; }.mapCopy > p:not(.eyebrow) { font-size: 19px; margin-bottom: 24px; }.mapMetrics { gap: 18px; dt { font-size: 17px; } dd { font-size: 30px; } }
+ .howSection { padding-block: 56px; h2 { font-size: 32px; } }.howIntro { font-size: 17px; }.howSlide { grid-template-columns: 44px minmax(0,1fr) 44px; gap: 14px 10px; min-height: 320px; align-content: start; .howIcon { grid-column: 2; grid-row: 1; justify-self: start; }.howTitle { grid-column: 2; grid-row: 2; min-height: 0; border: 0; padding: 0; h3 { font-size: 32px; } span { font-size: 30px; } }.howDescription { grid-column: 2; grid-row: 3; min-height: 0; padding: 0; font-size: 18px; line-height: 1.4; } }.howIcon { width: 120px; height: 120px; border-width: 12px; svg { width: 58px; height: 58px; } }.shellArrow { top: 60px; }.dots { gap: 4px; .dot { width: 44px; height: 44px; } }.howViewport { margin-top: 28px; }
+ .partnerLogos { li { font-size: 27px; min-height: 78px; } li:last-child { font-size: 23px; } }
+ .aboutLayout h2 { font-size: 30px; }.aboutCopy { font-size: 17px; }.aboutValues { gap: 10px; li { padding-right: 8px; font-size: 13px; overflow-wrap: anywhere; } }
+ .contactInner h2 { font-size: 36px; }.contactInner p:not(.eyebrow) { font-size: 18px; }.contactInner > a { width: 100%; }
+ .avatar { width: min(100%,140px); }.teamMember h3 { font-size: 16px; }.teamMember p { font-size: 14px; }
+}
+@media (max-width: $breakpoint-narrow) { .heroContent h1 { font-size: 34px; }.howSlide .howTitle h3 { font-size: 29px; }.howSlide .howDescription { font-size: 17px; }.teamGrid { grid-template-columns: 1fr; }.avatar { width: 160px; }.statsGrid dt { font-size: 11px; } }
+@media (pointer: coarse) { .expertiseRow,.serviceRow { &:hover::before,&:hover::after { transform: scale(0); } &:focus-within::before { transform: scaleY(1); } &:focus-within::after { transform: scaleX(1); } } }
+.howCarousel { touch-action: pan-y; scroll-margin-top: 100px; }
+@media (min-width: 1025px) and (max-width: 1699px) { .howTitle h3 { font-size: clamp(42px,3.35vw,56px); } }

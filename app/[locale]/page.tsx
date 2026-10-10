@@ -9,5 +9,5 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale: raw } = await params;
   if (raw !== "es" && raw !== "en") notFound();
   const locale = raw as Locale;
-  return <><Header locale={locale}/><HomeSections locale={locale} featured={projects.filter(p=>p.featured)}/><Footer locale={locale}/></>;
+  return <><Header locale={locale}/><HomeSections locale={locale} projects={projects}/><Footer locale={locale}/></>;
 }

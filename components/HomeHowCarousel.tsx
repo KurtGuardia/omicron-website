@@ -1,6 +1,6 @@
 "use client";
 
-import {useState, type CSSProperties, type KeyboardEvent, type TransitionEvent} from "react";
+import {useRef, useState, type CSSProperties, type KeyboardEvent, type TransitionEvent} from "react";
 import {BookOpen, ChevronLeft, ChevronRight, Compass, Search, Wrench} from "lucide-react";
 import {useTranslations} from "next-intl";
 import styles from "./HomeSections.module.scss";
@@ -13,6 +13,7 @@ type PendingTransition = {target: number; direction: -1 | 1};
 
 export function HomeHowCarousel() {
   const t = useTranslations("Home");
+  const touchStart = useRef<{x: number; y: number} | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [pendingTransition, setPendingTransition] = useState<PendingTransition | null>(null);
   const steps = stepKeys.map((key, index) => ({
@@ -72,6 +73,8 @@ export function HomeHowCarousel() {
       aria-label={t("how.title")}
       tabIndex={0}
       onKeyDown={handleKeyDown}
+      onTouchStart={event => { const touch = event.touches[0]; touchStart.current = {x: touch.clientX, y: touch.clientY}; }}
+      onTouchEnd={event => { const start = touchStart.current; touchStart.current = null; if (!start) return; const touch = event.changedTouches[0]; const dx = touch.clientX - start.x, dy = touch.clientY - start.y; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) move(dx < 0 ? 1 : -1); }}
     >
       <div className={styles.howViewport}>
         <div className={styles.howTrack} style={trackStyle} onTransitionEnd={finishTransition}>

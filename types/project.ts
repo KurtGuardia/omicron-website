@@ -1,6 +1,14 @@
 export type Locale = "es" | "en";
 
+export type LocalizedProjectValue<T> = T | Record<Locale, T>;
+
+export type ProjectMetric = {
+  label: string;
+  value: string;
+};
+
 export type Project = {
+  id: string;
   slug: string;
   title: Record<Locale, string>;
   summary: Record<Locale, string>;
@@ -11,9 +19,16 @@ export type Project = {
   period: string;
   expertise: string[];
   services: string[];
-  featured?: boolean;
+  featured: boolean;
+  regions?: string[];
+  startDate?: string;
+  endDate?: string;
+  gallery?: string[];
+  tags?: Record<Locale, string[]>;
   image?: string;
-  context?: Record<Locale, string>;
-  actions?: Record<Locale, string[]>;
-  impact?: Record<Locale, string>;
+  context?: LocalizedProjectValue<string>;
+  actions?: LocalizedProjectValue<string[]>;
+  results?: LocalizedProjectValue<string>;
+  metrics?: ProjectMetric[];
+  relatedProjectIds?: string[];
 };

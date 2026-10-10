@@ -15,9 +15,16 @@ $white: #fff;
 
 // Approved wide desktop container. Full-bleed visual sections remain 100vw.
 $content-max: 1560px;
-$page-padding-desktop: clamp(20px, 4vw, 72px);
+$page-padding-desktop: clamp(20px, 4%, 72px);
 $page-padding-tablet: 24px;
 $page-padding-mobile: 18px;
 
 $radius: 14px;
 $section-space: 112px;
+
+// Shared responsive thresholds, used by page and component modules.
+$breakpoint-wide: 1700px;
+$breakpoint-tablet: 1024px;
+$breakpoint-compact: 800px;
+$breakpoint-mobile: 600px;
+$breakpoint-narrow: 380px;

@@ -18,7 +18,8 @@ function PhotoBackground({priority = false}: {priority?: boolean}) {
   return <Image src={assets.hero} alt="" fill priority={priority} sizes="100vw" className={styles.background}/>;
 }
 
-export function HomeSections({locale, featured}: {locale: Locale; featured: Project[]}) {
+export function HomeSections({locale, projects}: {locale: Locale; projects: Project[]}) {
+  const featured = projects.filter(project => project.featured);
   const t = useTranslations("Home");
   const headline = {
     line: (children: ReactNode) => <span className={styles.headlineLine}>{children}</span>,
@@ -60,7 +61,7 @@ export function HomeSections({locale, featured}: {locale: Locale; featured: Proj
 
     <section className={styles.projectsSection} aria-labelledby="featured-title">
       <Contours tone="light"/>
-      <HomeFeaturedProjects locale={locale} featured={featured}/>
+      <HomeFeaturedProjects locale={locale} featured={featured} projects={projects}/>
     </section>
 
     <section className={styles.mapSection} aria-labelledby="regional-title">
