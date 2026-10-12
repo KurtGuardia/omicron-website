@@ -1,3 +1,4 @@
+import {MobileMenuState} from "@/components/MobileMenuState";
 import type { Metadata } from "next";
 import {getLocale} from "next-intl/server";
 import "./globals.scss";
@@ -11,7 +12,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const locale = await getLocale();
   return (
     <html lang={locale}>
-      <body>{children}</body>
+      <body><MobileMenuState>{children}</MobileMenuState></body>
     </html>
   );
 }

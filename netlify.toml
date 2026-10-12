@@ -5,5 +5,6 @@
 [build.environment]
   NODE_VERSION = "22"
   PNPM_VERSION = "10"
+  PNPM_FLAGS = "--shamefully-hoist"
 
 # Netlify detects Next.js automatically. App Router routes are handled by the framework integration.

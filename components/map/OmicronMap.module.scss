@@ -18,7 +18,7 @@
   }
 
   :global(.country--active[data-hovered="true"]) {
-    fill: #668b43;
+    fill: url(#regionalCountryFillReverse);
     stroke: #fff;
     stroke-width: 2;
     filter: url(#countryGlow);
@@ -27,7 +27,7 @@
 
   :global(.country--active:focus-visible),
   :global(.country--active[data-selected="true"]) {
-    fill: #456a2c;
+    fill: url(#regionalCountryFillReverse);
     stroke: #fb8a42;
     stroke-width: 2.4;
     filter: url(#countryGlow);
@@ -79,3 +79,6 @@
 }
 
 @media (pointer: coarse) { .tooltip { padding: 10px 14px; a { min-height: 44px; padding-inline: 8px; } } }
+.tooltip::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 14px; }
+.touchHint { display: none; margin: 10px 0 0; text-align: center; color: #34577d; font-size: 13px; }
+@media (pointer: coarse), (max-width: 800px) { .touchHint { display: block; } }

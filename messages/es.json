@@ -25,7 +25,7 @@
       "years": "años de experiencia",
       "countries": "países en América Latina",
       "projects": "consultorías y asistencias técnicas",
-      "reach": "América Latina",
+      "reach": "Cono Sur",
       "reachDetail": "y otros mercados internacionales"
     },
     "expertise": {
@@ -71,7 +71,8 @@
       "engagementLabel": "consultorías y asistencias técnicas",
       "international": "Otros mercados internacionales",
       "titleLayout": "<line>en América Latina </line><line>y el Caribe</line>",
-      "countryAccessibleName": "{country}, {count, plural, one {# consultoría} other {# consultorías}}"
+      "countryAccessibleName": "{country}, {count, plural, one {# consultoría} other {# consultorías}}",
+      "tapHint": "Toca un país para explorar"
     },
     "how": {
       "title": "Cómo trabajamos",
@@ -104,7 +105,11 @@
     "clients": {
       "title": "Nuestros clientes y socios",
       "intro": "Trabajamos con instituciones que impulsan el desarrollo.",
-      "eu": "Unión Europea"
+      "eu": "Unión Europea",
+      "carouselDescription": "carrusel",
+      "listLabel": "{count} organizaciones",
+      "previous": "Organizaciones anteriores",
+      "next": "Organizaciones siguientes"
     },
     "about": {
       "eyebrow": "Sobre OMICRON",
@@ -114,15 +119,20 @@
         "collaboration": "Trabajo colaborativo",
         "results": "Resultados con impacto real"
       },
-      "titleLayout": "<line>Más de 25 años impulsando </line><line>un desarrollo sostenible </line><line>en América Latina</line>"
+      "titleLayout": "<line>Más de 30 años impulsando </line><line>un desarrollo sostenible </line><line>en América Latina</line>"
     },
     "team": {
-      "intro": "Contamos con profesionales de diversas disciplinas que comparten un propósito común: generar soluciones sostenibles para los desafíos de América Latina.",
-      "name": "Perfil temporal {number}",
-      "role": "Rol por confirmar",
-      "imageAlt": "Retrato temporal del equipo",
+      "intro": "Contamos con profesionales de diversas disciplinas que comparten un propósito común: generar soluciones sostenibles para los desafíos del desarrollo.",
+      "roles": {
+        "ceo": "CEO",
+        "businessDevelopment": "Desarrollo de negocio",
+        "energy": "Energía",
+        "technology": "Tecnología"
+      },
+      "imageAlt": "Imagen de perfil provisional del equipo",
       "eyebrow": "Nuestro equipo",
-      "titleLayout": "<line>Un equipo multidisciplinario </line><last>con experiencia regional e internacional</last>"
+      "titleLayout": "<line>Un equipo multidisciplinario </line><last>con experiencia regional e internacional</last>",
+      "portraitAlt": "Retrato de {name}"
     },
     "contact": {
       "eyebrow": "Conversemos",
@@ -139,8 +149,8 @@
     "copyright": "© {year} OMICRON Consultores SRL.",
     "rights": "Todos los derechos reservados.",
     "linkedin": "LinkedIn",
-    "terms": "Términos",
-    "privacy": "Privacidad",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
     "pending": "Enlace pendiente de confirmación"
   },
   "Countries": {
@@ -235,5 +245,12 @@
     "homeDescription": "Consultoría para el desarrollo sostenible en América Latina.",
     "experienceTitle": "Experiencia | OMICRON Consultores SRL",
     "experienceDescription": "Conoce nuestra experiencia en América Latina y el Caribe."
+  },
+  "ContactEmail": {
+    "subject": "Consulta desde la web",
+    "body": "Buenos días/tardes,\n\nQuisiera hacer la siguiente consulta,"
+  },
+  "Legal": {
+    "close": "Cerrar documento legal"
   }
 }

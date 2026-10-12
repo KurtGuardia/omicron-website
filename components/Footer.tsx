@@ -4,6 +4,8 @@ import {Contours} from "./Contours";
 import {useTranslations} from "next-intl";
 import type {Locale} from "@/types/project";
 import {LanguageSwitcher} from "./LanguageSwitcher";
+import {LegalLinks} from "./LegalLinks";
+import legalDocuments from "@/data/legalDocuments.json";
 import styles from "./SiteChrome.module.scss";
 
 export function Footer({locale}: {locale: Locale}) {
@@ -18,7 +20,7 @@ export function Footer({locale}: {locale: Locale}) {
         {/* Destinations have not been supplied. Text preserves the layout without fake links. */}
         <span className={styles.pending} title={t("pending")} aria-label={t("linkedin")}><Linkedin size={30} aria-hidden="true"/></span>
         <LanguageSwitcher locale={locale}/>
-        <div className={styles.legal}><span title={t("pending")}>{t("terms")}</span><span title={t("pending")}>{t("privacy")}</span></div>
+        <div className={styles.legal}><LegalLinks documents={legalDocuments[locale]}/></div>
       </div>
     </div>
   </footer>;

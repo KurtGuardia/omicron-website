@@ -27,12 +27,13 @@ export const stats = [
   { value: "América Latina", label: "y otros mercados internacionales" },
 ];
 
-export const team = [
-  { name: "Gastón Méndez", role: "Gerente General" },
-  { name: "Tereza Larraín", role: "Gerencia Administrativa" },
-  { name: "Perfil 3", role: "Especialista" },
-  { name: "Perfil 4", role: "Especialista" },
-  { name: "Perfil 5", role: "Especialista" },
+type TeamMember = {name: string; role: 'ceo' | 'businessDevelopment' | 'energy' | 'technology'; image?: string};
+export const team: readonly TeamMember[] = [
+  { name: "Gastón Mendez", role: "ceo" },
+  { name: "Marco Antonio", role: "businessDevelopment" },
+  { name: "Luis Iporre", role: "energy" },
+  { name: "Arturo", role: "energy" },
+  { name: "Kurt Guardia", role: "technology" },
 ];
 
 export const copy: Record<Locale, Record<string, string>> = {

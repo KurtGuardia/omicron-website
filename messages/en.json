@@ -25,7 +25,7 @@
       "years": "years of experience",
       "countries": "countries in Latin America",
       "projects": "consulting engagements",
-      "reach": "Latin America",
+      "reach": "Southern Cone",
       "reachDetail": "and other international markets"
     },
     "expertise": {
@@ -71,7 +71,8 @@
       "engagementLabel": "consulting engagements",
       "international": "Other international markets",
       "titleLayout": "<line>across Latin America </line><line>and the Caribbean</line>",
-      "countryAccessibleName": "{country}, {count, plural, one {# consulting engagement} other {# consulting engagements}}"
+      "countryAccessibleName": "{country}, {count, plural, one {# consulting engagement} other {# consulting engagements}}",
+      "tapHint": "Tap a country to explore"
     },
     "how": {
       "title": "How we work",
@@ -104,7 +105,11 @@
     "clients": {
       "title": "Our clients and partners",
       "intro": "We work with institutions advancing development.",
-      "eu": "European Union"
+      "eu": "European Union",
+      "carouselDescription": "carousel",
+      "listLabel": "{count} organizations",
+      "previous": "Previous organizations",
+      "next": "Next organizations"
     },
     "about": {
       "eyebrow": "About OMICRON",
@@ -114,15 +119,20 @@
         "collaboration": "Collaborative work",
         "results": "Results with real impact"
       },
-      "titleLayout": "<line>Over 25 years advancing </line><line>sustainable development </line><line>in Latin America</line>"
+      "titleLayout": "<line>Over 30 years advancing </line><line>sustainable development </line><line>in Latin America</line>"
     },
     "team": {
-      "intro": "Professionals from different disciplines share a common purpose: creating sustainable solutions for Latin America’s challenges.",
-      "name": "Temporary profile {number}",
-      "role": "Role to be confirmed",
-      "imageAlt": "Temporary team portrait",
+      "intro": "Professionals from different disciplines share a common purpose: creating sustainable solutions to complex development challenges.",
+      "roles": {
+        "ceo": "CEO",
+        "businessDevelopment": "Business Development",
+        "energy": "Energy",
+        "technology": "Technology"
+      },
+      "imageAlt": "Team profile placeholder",
       "eyebrow": "Our team",
-      "titleLayout": "<line>A multidisciplinary team </line><last>with regional and international experience</last>"
+      "titleLayout": "<line>A multidisciplinary team </line><last>with regional and international experience</last>",
+      "portraitAlt": "Portrait of {name}"
     },
     "contact": {
       "eyebrow": "Let’s talk",
@@ -139,8 +149,8 @@
     "copyright": "© {year} OMICRON Consultores SRL.",
     "rights": "All rights reserved.",
     "linkedin": "LinkedIn",
-    "terms": "Terms",
-    "privacy": "Privacy",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
     "pending": "Link awaiting confirmation"
   },
   "Countries": {
@@ -235,5 +245,12 @@
     "homeDescription": "Consulting for sustainable development in Latin America.",
     "experienceTitle": "Experience | OMICRON Consultores SRL",
     "experienceDescription": "Discover our experience across Latin America and the Caribbean."
+  },
+  "ContactEmail": {
+    "subject": "Consulta desde la web",
+    "body": "Hello,\n\nI would like to make the following inquiry,"
+  },
+  "Legal": {
+    "close": "Close legal document"
   }
 }

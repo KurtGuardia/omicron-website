@@ -1,4 +1,6 @@
 'use client';
+import {ParallaxImage} from './ParallaxImage';
+import {contactMailto} from '@/data/contact';
 import Image from 'next/image';
 import {assets} from '@/data/assets';
 import {ArrowRight, Search, Leaf, FileText, MapPin, Users, CalendarDays, RotateCcw, ChevronLeft, ChevronRight, Mail} from 'lucide-react';
@@ -17,7 +19,7 @@ const filterKeys=['expertise','service','country','client','year'] as const;
 const icons=[Leaf,FileText,MapPin,Users,CalendarDays];
 const unique=(values:string[])=>[...new Set(values.filter(Boolean))].sort();
 export function ExperienceExplorer({locale,projects}:{locale:Locale;projects:Project[]}) {
-  const t=useTranslations('Experience'); const home=useTranslations('Home'); const labels=useProjectLabels();
+  const t=useTranslations('Experience'); const emailCopy = useTranslations("ContactEmail"); const home=useTranslations('Home'); const labels=useProjectLabels();
   const search=useSearchParams(); const router=useRouter(); const pathname=usePathname();
   const query=search.get('q')||''; const [draft,setDraft]=useState(query);
   useEffect(()=>setDraft(query),[query]);
@@ -40,7 +42,7 @@ export function ExperienceExplorer({locale,projects}:{locale:Locale;projects:Pro
     return value==='Unión Europea'?home('clients.eu'):value;
   }
   return <>
-    <section className={styles.hero} aria-labelledby='experience-title'><Image src={assets.hero} alt='' fill priority sizes='100vw' className={styles.heroPhoto}/><Contours tone='light'/><div className='container'>
+    <section className={styles.hero} aria-labelledby='experience-title'><ParallaxImage src={assets.hero} className={styles.heroPhoto}/><Contours tone='light'/><div className='container'>
       <p className={styles.eyebrow}>{t('eyebrow')}</p><h1 id='experience-title'>{t('title')}<span>.</span></h1><p className={styles.intro}>{t('intro')}</p>
     </div></section>
     <main id='main-content' tabIndex={-1} className={styles.explorer}><Contours tone='dark'/><div className='container'>
@@ -54,7 +56,7 @@ export function ExperienceExplorer({locale,projects}:{locale:Locale;projects:Pro
       {items.length ? <div className={styles.grid}>{items.map(project=><ProjectCard key={project.id} project={project} locale={locale} variant='experience' onOpen={project=>update({project:project.slug},false)}/>)}</div> : <div className={styles.empty}><p>{t('empty')}</p><button className={styles.clear} type="button" onClick={clear}>{t('clear')}</button></div>}
       {items.length>0&&<nav className={styles.pagination} aria-label={t('pagination')}><button aria-label={t('previous')} disabled={page===1} onClick={()=>update({page:String(page-1)},false)}><ChevronLeft size={20}/></button>{paginationPages(page,totalPages).map((value,index)=>value==='ellipsis'?<span key={`gap-${index}`}>…</span>:<button key={value} aria-label={t('page',{page:value})} aria-current={value===page?'page':undefined} onClick={()=>update({page:value===1?'':String(value)},false)}>{value}</button>)}<button aria-label={t('next')} disabled={page===totalPages} onClick={()=>update({page:String(page+1)},false)}><ChevronRight size={20}/></button></nav>}
     </div></main>
-    <section className={styles.contact}><Image src={assets.hero} alt='' fill sizes='100vw' className={styles.contactPhoto}/><Contours tone='light'/><div className={`container ${styles.contactInner}`}><div className={styles.mail}><Mail size={44} aria-hidden='true'/></div><div><h2>{t('contactTitle')}</h2><p>{t('contactBody')}</p></div><a className={styles.primary} href='mailto:omicron@entel.bo'>{t('contactCta')}<ArrowRight size={24} aria-hidden='true'/></a></div></section>
+    <section className={styles.contact}><Image src={assets.hero} alt='' fill sizes='100vw' className={styles.contactPhoto}/><Contours tone='light'/><div className={`container ${styles.contactInner}`}><div className={styles.mail}><Mail size={44} aria-hidden='true'/></div><div><h2>{t('contactTitle')}</h2><p>{t('contactBody')}</p></div><a className={styles.primary} href={contactMailto(emailCopy("subject"), emailCopy("body"))} target="_blank" rel="noopener noreferrer">{t('contactCta')}<ArrowRight size={24} aria-hidden='true'/></a></div></section>
     {selected&&<ProjectModal locale={locale} project={selected} projects={projects} onClose={()=>update({project:''},false)} onSelect={project=>update({project:project.slug},false)}/>}
   </>;
 }
