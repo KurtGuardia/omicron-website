@@ -1,6 +1,8 @@
 // Repository assets; replace imagery here without changing section layouts.
 export const assets = {
   logo: "/images/logo.png",
+  // Dark-background variant generated from logo.png by scripts/prepare-logo-variants.mjs.
+  logoLight: "/images/logo-light.png",
   hero: "/images/parallax/hero-parallax-tall.png",
   project: "/images/placeholders/project-placeholder.png",
   avatar: "/images/team/team-placeholder.png",

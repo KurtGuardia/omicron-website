@@ -447,7 +447,7 @@
     "results_en": null,
     "expertise": [
       "Sustainable Finance",
-      "Responsible Mining & Energy",
+      "Renewable Energy",
       "Governance & Institutional Development"
     ],
     "services": [
@@ -507,7 +507,8 @@
     ],
     "services": [
       "Strategy & Project Design",
-      "Technical Assistance & Implementation"
+      "Technical Assistance & Implementation",
+      "Financial Structuring"
     ],
     "featured": false,
     "publish_status": "Publish",
@@ -566,7 +567,8 @@
       "Strategy & Project Design",
       "Monitoring, Evaluation & Learning",
       "Technical Assistance & Implementation",
-      "Facilitation & Participatory Processes"
+      "Facilitation & Participatory Processes",
+      "Financial Structuring"
     ],
     "featured": true,
     "publish_status": "Publish",
@@ -847,7 +849,7 @@
     "results_en": null,
     "expertise": [
       "Climate, Natural Resources & Water",
-      "Responsible Mining & Energy",
+      "Renewable Energy",
       "Governance & Institutional Development"
     ],
     "services": [
@@ -959,7 +961,7 @@
     "results_en": null,
     "expertise": [
       "Rural & Territorial Development",
-      "Responsible Mining & Energy"
+      "Responsible Mining"
     ],
     "services": [
       "Strategy & Project Design",
@@ -1408,7 +1410,8 @@
       "Infrastructure & Basic Services"
     ],
     "services": [
-      "Technical Assistance & Implementation"
+      "Technical Assistance & Implementation",
+      "Financial Structuring"
     ],
     "featured": false,
     "publish_status": "Publish",
@@ -1791,7 +1794,7 @@
     "expertise": [
       "Sustainable Trade, Competitiveness & Value Chains",
       "Rural & Territorial Development",
-      "Responsible Mining & Energy",
+      "Responsible Mining",
       "Governance & Institutional Development"
     ],
     "services": [
@@ -2035,7 +2038,7 @@
     "results_en": "The peer review provided an external perspective on results achieved, while the planning process created an organized basis to improve project implementation and monitoring.",
     "expertise": [
       "Climate, Natural Resources & Water",
-      "Responsible Mining & Energy",
+      "Responsible Mining",
       "Governance & Institutional Development"
     ],
     "services": [

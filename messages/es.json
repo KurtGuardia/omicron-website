@@ -17,7 +17,7 @@
   },
   "Home": {
     "heroEyebrow": "CONSULTORÍA PARA EL DESARROLLO SOSTENIBLE",
-    "heroBody": "Acompañamos a gobiernos, organismos de cooperación, instituciones financieras y organizaciones públicas y privadas en el diseño, implementación y evaluación de soluciones sostenibles en América Latina.",
+    "heroBody": "Acompañamos al sector público y privado, a entidades financieras multilaterales y a organismos de cooperación en el diseño, implementación y evaluación de soluciones sostenibles en América Latina.",
     "experienceCta": "Conoce nuestra experiencia",
     "projectsCta": "Ver proyectos",
     "emailCta": "Escríbenos",
@@ -36,9 +36,10 @@
         "1": "Comercio Sostenible, Competitividad y Cadenas de Valor",
         "2": "Desarrollo Rural y Territorial",
         "3": "Finanzas Sostenibles",
-        "4": "Minería y Energía Responsable",
-        "5": "Infraestructura y Servicios Básicos",
-        "6": "Gobernanza y Desarrollo Institucional"
+        "4": "Minería Responsable",
+        "5": "Energías Renovables",
+        "6": "Infraestructura y Servicios Básicos",
+        "7": "Gobernanza y Desarrollo Institucional"
       }
     },
     "services": {
@@ -51,7 +52,8 @@
         "3": "Asistencia Técnica e Implementación",
         "4": "Facilitación y Procesos Participativos",
         "5": "Gestión del Conocimiento y Desarrollo de Capacidades",
-        "6": "Transformación Digital y Soluciones"
+        "6": "Transformación Digital y Soluciones",
+        "7": "Estructuración Financiera"
       }
     },
     "featured": {
@@ -64,15 +66,15 @@
       "body": "Proyectos que generan impacto en distintos territorios.",
       "titleAlt": "Presencia de OMICRON en América Latina y el Caribe",
       "description": "Cartograma con Centroamérica y el Caribe ampliados intencionalmente. Los países con experiencia documentada se muestran en verde.",
-      "engagementCount": "{count, plural, one {# consultoría} other {# consultorías}}",
-      "countryAction": "Ver {count, plural, one {# consultoría} other {# consultorías}} en {country}",
+      "engagementCount": "{count, plural, one {# proyecto} other {# proyectos}}",
       "view": "Ver",
       "countryLabel": "países en América Latina y el Caribe",
       "engagementLabel": "consultorías y asistencias técnicas",
       "international": "Otros mercados internacionales",
       "titleLayout": "<line>en América Latina </line><line>y el Caribe</line>",
-      "countryAccessibleName": "{country}, {count, plural, one {# consultoría} other {# consultorías}}",
-      "tapHint": "Toca un país para explorar"
+      "countryAccessibleName": "{country}, {count, plural, one {# proyecto} other {# proyectos}}",
+      "tapHint": "Toca un país para explorar",
+      "noPublishedProjects": "Experiencia documentada"
     },
     "how": {
       "title": "Cómo trabajamos",
@@ -113,7 +115,7 @@
     },
     "about": {
       "eyebrow": "Sobre OMICRON",
-      "body": "Acompañamos a gobiernos, organismos de cooperación, instituciones financieras y organizaciones públicas y privadas en el diseño, implementación y evaluación de soluciones sostenibles en América Latina.",
+      "body": "Somos el aliado técnico de instituciones públicas, empresas privadas, la banca multilateral de desarrollo y la cooperación internacional para concebir, poner en marcha y medir soluciones sostenibles en toda América Latina.",
       "values": {
         "sustainability": "Enfoque en sostenibilidad",
         "collaboration": "Trabajo colaborativo",
@@ -124,7 +126,7 @@
     "team": {
       "intro": "Contamos con profesionales de diversas disciplinas que comparten un propósito común: generar soluciones sostenibles para los desafíos del desarrollo.",
       "roles": {
-        "ceo": "CEO",
+        "ceo": "Gerente general",
         "businessDevelopment": "Desarrollo de negocio",
         "energy": "Energía",
         "technology": "Tecnología"
@@ -139,7 +141,7 @@
       "body": "Conversemos sobre cómo podemos diseñar e implementar soluciones juntos.",
       "titleLayout": "<line>¿Tienes un proyecto </line><last>en mente?</last>"
     },
-    "heroTitleLayout": "<line>Soluciones para </line><line>desafíos complejos </line><last>de desarrollo</last>"
+    "heroTitleLayout": "<line>Soluciones integrales </line><last>para desafíos complejos</last>"
   },
   "Common": {
     "viewProject": "Ver proyecto"
@@ -185,7 +187,7 @@
   "Experience": {
     "eyebrow": "NUESTRA EXPERIENCIA",
     "title": "Proyectos que generan impacto",
-    "intro": "Acompañamos a gobiernos, organismos de cooperación, instituciones financieras y organizaciones privadas en el diseño, implementación y evaluación de soluciones sostenibles en los territorios y en la vida de las personas.",
+    "intro": "Junto al sector público y privado, la banca multilateral y la cooperación internacional, convertimos ideas en proyectos sostenibles: los diseñamos, acompañamos su ejecución y evaluamos su impacto en los territorios y en la vida de las personas.",
     "heading": "Explora nuestros proyectos",
     "support": "Conoce nuestra experiencia en América Latina y el Caribe.",
     "searchPlaceholder": "Buscar por proyecto, cliente, país o palabra clave…",

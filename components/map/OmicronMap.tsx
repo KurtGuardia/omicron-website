@@ -20,7 +20,9 @@ function activePathFromTarget(target: EventTarget | null): SVGPathElement | null
   return path instanceof SVGPathElement && isActiveMapCountryCode(path.id) ? path : null;
 }
 
-export function OmicronMap({locale}: {locale: Locale}) {
+// projectCounts are published projects per country, computed on the server with the same
+// filter as /experience?country=…, so the tooltip always matches the listing it links to.
+export function OmicronMap({locale, projectCounts}: {locale: Locale; projectCounts: Record<ActiveMapCountryCode, number>}) {
   const t = useTranslations("Home.map");
   const countries = useTranslations("Countries");
   const router = useRouter();
@@ -36,8 +38,10 @@ export function OmicronMap({locale}: {locale: Locale}) {
 
   const countryHref = (code: ActiveMapCountryCode) =>
     `/${locale}/experience?country=${encodeURIComponent(mapCountries[code].queryCountry)}`;
-  const countryActionLabel = (code: ActiveMapCountryCode) =>
-    t("countryAccessibleName", {country: countries(code), count: mapCountries[code].count});
+  const hasProjects = (code: ActiveMapCountryCode) => projectCounts[code] > 0;
+  const countryActionLabel = (code: ActiveMapCountryCode) => hasProjects(code)
+    ? t("countryAccessibleName", {country: countries(code), count: projectCounts[code]})
+    : `${countries(code)}, ${t("noPublishedProjects")}`;
 
   const positionTooltip = useCallback((code: ActiveMapCountryCode) => {
     const frame = frameRef.current;
@@ -100,7 +104,7 @@ export function OmicronMap({locale}: {locale: Locale}) {
     const code = path.id as ActiveMapCountryCode;
     const touch = lastPointerType.current === "touch";
     lastPointerType.current = "mouse";
-    if (touch && selectedCode !== code) {
+    if ((touch && selectedCode !== code) || !hasProjects(code)) {
       setSelectedCode(code);
       return;
     }
@@ -112,7 +116,9 @@ export function OmicronMap({locale}: {locale: Locale}) {
     const path = activePathFromTarget(event.target);
     if (!path) return;
     event.preventDefault();
-    router.push(countryHref(path.id as ActiveMapCountryCode));
+    const code = path.id as ActiveMapCountryCode;
+    if (hasProjects(code)) router.push(countryHref(code));
+    else setSelectedCode(code);
   };
 
   return (
@@ -145,8 +151,10 @@ export function OmicronMap({locale}: {locale: Locale}) {
     </svg>
     {visibleCode && tooltipPosition?.code === visibleCode && <div className={styles.tooltip} onPointerEnter={() => { if (hideTimer.current) clearTimeout(hideTimer.current); }} onPointerLeave={scheduleHide} style={{left: tooltipPosition.x, top: tooltipPosition.y}}>
       <strong>{countries(visibleCode)}</strong>
-      <span>{t("engagementCount", {count: mapCountries[visibleCode].count})}</span>
-      <Link href={countryHref(visibleCode)}>{t("view")}<ArrowUpRight size={15} aria-hidden="true"/></Link>
+      {hasProjects(visibleCode) ? <>
+        <span>{t("engagementCount", {count: projectCounts[visibleCode]})}</span>
+        <Link href={countryHref(visibleCode)}>{t("view")}<ArrowUpRight size={15} aria-hidden="true"/></Link>
+      </> : <span>{t("noPublishedProjects")}</span>}
     </div>}
     <p className={styles.touchHint}>{t("tapHint")}</p>
     </div>

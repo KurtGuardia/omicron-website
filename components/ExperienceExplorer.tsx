@@ -9,6 +9,7 @@ import {useSearchParams,useRouter,usePathname} from 'next/navigation';
 import {useTranslations} from 'next-intl';
 import type {Locale,Project} from '@/types/project';
 import {useProjectLabels} from './useProjectLabels';
+import {expertiseValues, serviceValues} from '@/lib/projectLabels';
 import {mapCountries} from '@/data/mapCountries';
 import {filterProjects,paginateProjects,paginationPages,projectYears,type ProjectFilters} from '@/lib/projectFilters';
 import {ProjectModal} from './ProjectModal';
@@ -18,16 +19,20 @@ import styles from './ExperienceExplorer.module.scss';
 const filterKeys=['expertise','service','country','client','year'] as const;
 const icons=[Leaf,FileText,MapPin,Users,CalendarDays];
 const unique=(values:string[])=>[...new Set(values.filter(Boolean))].sort();
+// Taxonomy options follow the Home order and only list values some project uses.
+const inTaxonomyOrder=(taxonomy:string[],used:string[])=>taxonomy.filter(value=>used.includes(value));
 export function ExperienceExplorer({locale,projects}:{locale:Locale;projects:Project[]}) {
   const t=useTranslations('Experience'); const emailCopy = useTranslations("ContactEmail"); const home=useTranslations('Home'); const labels=useProjectLabels();
   const search=useSearchParams(); const router=useRouter(); const pathname=usePathname();
   const query=search.get('q')||''; const [draft,setDraft]=useState(query);
   useEffect(()=>setDraft(query),[query]);
-  const filters:ProjectFilters={q:query,expertise:search.get('expertise')||'',service:search.get('service')||'',country:search.get('country')||'',client:search.get('client')||'',year:search.get('year')||'',sort:search.get('sort')||'recent'};
+  // Unknown taxonomy values (e.g. stale links) are ignored rather than breaking the labels.
+  const taxonomyParam=(key:'expertise'|'service',values:string[])=>{const value=search.get(key)||'';return values.includes(value)?value:'';};
+  const filters:ProjectFilters={q:query,expertise:taxonomyParam('expertise',expertiseValues),service:taxonomyParam('service',serviceValues),country:search.get('country')||'',client:search.get('client')||'',year:search.get('year')||'',sort:search.get('sort')||'recent'};
   const filtered=filterProjects(projects,filters,locale,project=>[...project.expertise.map(labels.expertise),...project.services.map(labels.service),labels.location(project),project.funder==='Unión Europea'?home('clients.eu'):'']);
   const {items,page,totalPages}=paginateProjects(filtered,Number(search.get('page')||1));
   const selected=projects.find(project=>project.slug===search.get('project'));
-  const options=useMemo(()=>({expertise:unique(projects.flatMap(p=>p.expertise)),service:unique(projects.flatMap(p=>p.services)),country:unique([...Object.values(mapCountries).map(c=>c.queryCountry),...projects.flatMap(p=>[...p.countries,...(p.regions||[p.region])])]),client:unique(projects.flatMap(p=>[p.client,...(p.funder?[p.funder]:[])])),year:unique(projects.flatMap(p=>projectYears(p).map(String))).reverse()}),[projects]);
+  const options=useMemo(()=>({expertise:inTaxonomyOrder(expertiseValues,projects.flatMap(p=>p.expertise)),service:inTaxonomyOrder(serviceValues,projects.flatMap(p=>p.services)),country:unique([...Object.values(mapCountries).map(c=>c.queryCountry),...projects.flatMap(p=>[...p.countries,...(p.regions||[p.region])])]),client:unique(projects.flatMap(p=>[p.client,...(p.funder?[p.funder]:[])])),year:unique(projects.flatMap(p=>projectYears(p).map(String))).reverse()}),[projects]);
   function update(values:Record<string,string>,resetPage=true) {
     const params=new URLSearchParams(search.toString());
     if(resetPage) params.delete('page');

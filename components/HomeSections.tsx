@@ -9,13 +9,16 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import {
   ArrowRight,
+  ArrowUpRight,
   FileText,
   Leaf,
   Mail,
   Globe2,
   Sprout,
   Landmark,
-  Zap,
+  Pickaxe,
+  Sun,
+  HandCoins,
   Building2,
   Users,
   Compass,
@@ -26,6 +29,7 @@ import {
   Wrench,
   Coins,
   Network,
+  type LucideIcon,
 } from 'lucide-react'
 import type { Locale, Project } from '@/types/project'
 import { assets } from '@/data/assets'
@@ -40,18 +44,23 @@ import { Contours } from './Contours'
 import { HomeFeaturedProjects } from './HomeFeaturedProjects'
 import { HomeHowCarousel } from './HomeHowCarousel'
 import { OmicronMap } from './map/OmicronMap'
+import { mapCountries, type ActiveMapCountryCode } from '@/data/mapCountries'
+import { filterProjects } from '@/lib/projectFilters'
+import { expertiseValues, serviceValues } from '@/lib/projectLabels'
 import styles from './HomeSections.module.scss'
 
-const expertiseIcons = [
+// Indexed like expertiseKeys / serviceKeys (see data/home.ts).
+const expertiseIcons: LucideIcon[] = [
   Leaf,
   Network,
   Sprout,
   Coins,
-  Zap,
+  Pickaxe,
+  Sun,
   Building2,
   Landmark,
 ]
-const serviceIcons = [
+const serviceIcons: LucideIcon[] = [
   Compass,
   ChartNoAxesCombined,
   Building2,
@@ -59,7 +68,37 @@ const serviceIcons = [
   Handshake,
   BookOpen,
   Monitor,
+  HandCoins,
 ]
+// A Home list row linking to /experience filtered by that area or service.
+function FilterRow({
+  className,
+  href,
+  icon: Icon,
+  label,
+}: {
+  className: string
+  href: string
+  icon: LucideIcon
+  label: string
+}) {
+  return (
+    <li className={className}>
+      <Link className={styles.rowLink} href={href}>
+        <span className={styles.rowIcon}>
+          <Icon size={28} aria-hidden='true' />
+        </span>
+        <span>{label}</span>
+        <ArrowUpRight
+          className={styles.rowArrow}
+          size={22}
+          aria-hidden='true'
+        />
+      </Link>
+    </li>
+  )
+}
+
 function PhotoBackground({
   priority = false,
 }: {
@@ -87,6 +126,17 @@ export function HomeSections({
   const featured = projects.filter(
     (project) => project.featured,
   )
+  // Same filter as /experience?country=…, so the map always matches the listing.
+  const countryProjectCounts = Object.fromEntries(
+    Object.entries(mapCountries).map(([code, { queryCountry }]) => [
+      code,
+      filterProjects(
+        projects,
+        { q: '', expertise: '', service: '', country: queryCountry, client: '', year: '', sort: '' },
+        locale,
+      ).length,
+    ]),
+  ) as Record<ActiveMapCountryCode, number>
   const t = useTranslations('Home')
   const emailCopy = useTranslations('ContactEmail')
   const headline = {
@@ -140,9 +190,9 @@ export function HomeSections({
             <ArrowRight size={24} aria-hidden='true' />
           </Link>
         </div>
+        {/* Inside the hero so hero + stats share the first viewport (see .hero). */}
+        <HomeStats />
       </section>
-
-      <HomeStats />
 
       <section className={styles.expertiseSection}>
         <Contours />
@@ -153,23 +203,15 @@ export function HomeSections({
               {t('expertise.intro')}
             </p>
             <ul className={styles.rows}>
-              {expertiseKeys.map((key) => {
-                const Icon = expertiseIcons[key]
-                return (
-                  <li
-                    className={styles.expertiseRow}
-                    key={key}
-                    tabIndex={0}
-                  >
-                    <span className={styles.rowIcon}>
-                      <Icon size={28} aria-hidden='true' />
-                    </span>
-                    <span>
-                      {t(`expertise.items.${key}`)}
-                    </span>
-                  </li>
-                )
-              })}
+              {expertiseKeys.map((key) => (
+                <FilterRow
+                  key={key}
+                  className={styles.expertiseRow}
+                  href={`/${locale}/experience?expertise=${encodeURIComponent(expertiseValues[key])}`}
+                  icon={expertiseIcons[key]}
+                  label={t(`expertise.items.${key}`)}
+                />
+              ))}
             </ul>
           </div>
           <div>
@@ -178,23 +220,15 @@ export function HomeSections({
               {t('services.intro')}
             </p>
             <ul className={styles.rows}>
-              {serviceKeys.map((key) => {
-                const Icon = serviceIcons[key]
-                return (
-                  <li
-                    className={styles.serviceRow}
-                    key={key}
-                    tabIndex={0}
-                  >
-                    <span className={styles.rowIcon}>
-                      <Icon size={28} aria-hidden='true' />
-                    </span>
-                    <span>
-                      {t(`services.items.${key}`)}
-                    </span>
-                  </li>
-                )
-              })}
+              {serviceKeys.map((key) => (
+                <FilterRow
+                  key={key}
+                  className={styles.serviceRow}
+                  href={`/${locale}/experience?service=${encodeURIComponent(serviceValues[key])}`}
+                  icon={serviceIcons[key]}
+                  label={t(`services.items.${key}`)}
+                />
+              ))}
             </ul>
           </div>
         </div>
@@ -250,7 +284,10 @@ export function HomeSections({
             </dl>
           </div>
           <div className={styles.mapVisual}>
-            <OmicronMap locale={locale} />
+            <OmicronMap
+              locale={locale}
+              projectCounts={countryProjectCounts}
+            />
           </div>
         </div>
       </section>

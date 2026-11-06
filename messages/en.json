@@ -17,7 +17,7 @@
   },
   "Home": {
     "heroEyebrow": "CONSULTING FOR SUSTAINABLE DEVELOPMENT",
-    "heroBody": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
+    "heroBody": "We support the public and private sectors, multilateral financial institutions and development cooperation agencies in designing, implementing and evaluating sustainable solutions across Latin America.",
     "experienceCta": "Explore our experience",
     "projectsCta": "View projects",
     "emailCta": "Contact us",
@@ -36,9 +36,10 @@
         "1": "Sustainable Trade, Competitiveness & Value Chains",
         "2": "Rural & Territorial Development",
         "3": "Sustainable Finance",
-        "4": "Responsible Mining & Energy",
-        "5": "Infrastructure & Basic Services",
-        "6": "Governance & Institutional Development"
+        "4": "Responsible Mining",
+        "5": "Renewable Energy",
+        "6": "Infrastructure & Basic Services",
+        "7": "Governance & Institutional Development"
       }
     },
     "services": {
@@ -51,7 +52,8 @@
         "3": "Technical Assistance & Implementation",
         "4": "Facilitation & Participatory Processes",
         "5": "Knowledge Management & Capacity Building",
-        "6": "Digital Transformation & Solutions"
+        "6": "Digital Transformation & Solutions",
+        "7": "Financial Structuring"
       }
     },
     "featured": {
@@ -64,15 +66,15 @@
       "body": "Projects that make an impact across the region.",
       "titleAlt": "OMICRON presence in Latin America and the Caribbean",
       "description": "Cartogram with intentionally enlarged Central America and Caribbean. Countries with documented experience are shown in green.",
-      "engagementCount": "{count, plural, one {# consulting engagement} other {# consulting engagements}}",
-      "countryAction": "View {count, plural, one {# consulting engagement} other {# consulting engagements}} in {country}",
+      "engagementCount": "{count, plural, one {# project} other {# projects}}",
       "view": "View",
       "countryLabel": "countries in Latin America and the Caribbean",
       "engagementLabel": "consulting engagements",
       "international": "Other international markets",
       "titleLayout": "<line>across Latin America </line><line>and the Caribbean</line>",
-      "countryAccessibleName": "{country}, {count, plural, one {# consulting engagement} other {# consulting engagements}}",
-      "tapHint": "Tap a country to explore"
+      "countryAccessibleName": "{country}, {count, plural, one {# project} other {# projects}}",
+      "tapHint": "Tap a country to explore",
+      "noPublishedProjects": "Documented experience"
     },
     "how": {
       "title": "How we work",
@@ -113,7 +115,7 @@
     },
     "about": {
       "eyebrow": "About OMICRON",
-      "body": "We support governments, development partners, financial institutions and public and private organizations in designing, implementing and evaluating sustainable solutions across Latin America.",
+      "body": "We are a technical partner to public institutions, private companies, multilateral development banks and international cooperation agencies, helping them conceive, deliver and measure sustainable solutions throughout Latin America.",
       "values": {
         "sustainability": "A focus on sustainability",
         "collaboration": "Collaborative work",
@@ -124,7 +126,7 @@
     "team": {
       "intro": "Professionals from different disciplines share a common purpose: creating sustainable solutions to complex development challenges.",
       "roles": {
-        "ceo": "CEO",
+        "ceo": "General Manager",
         "businessDevelopment": "Business Development",
         "energy": "Energy",
         "technology": "Technology"
@@ -139,7 +141,7 @@
       "body": "Let’s discuss how we can design and implement solutions together.",
       "titleLayout": "<line>Have a project </line><last>in mind?</last>"
     },
-    "heroTitleLayout": "<line>Solutions for </line><line>complex development </line><last>challenges</last>"
+    "heroTitleLayout": "<line>Comprehensive solutions </line><last>for complex challenges</last>"
   },
   "Common": {
     "viewProject": "View project"
@@ -185,7 +187,7 @@
   "Experience": {
     "eyebrow": "OUR EXPERIENCE",
     "title": "Projects that generate impact",
-    "intro": "We support governments, development partners, financial institutions and private organizations in designing, implementing and evaluating sustainable solutions for territories and people.",
+    "intro": "Alongside the public and private sectors, multilateral banks and international cooperation agencies, we turn ideas into sustainable projects: we design them, support their delivery and evaluate their impact on territories and people’s lives.",
     "heading": "Explore our projects",
     "support": "Discover our experience across Latin America and the Caribbean.",
     "searchPlaceholder": "Search by project, client, country or keyword…",
