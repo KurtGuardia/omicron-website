@@ -11,8 +11,7 @@ import type {Locale,Project} from '@/types/project';
 import {useProjectLabels} from './useProjectLabels';
 import {expertiseValues, serviceValues} from '@/lib/projectLabels';
 import {reveal} from '@/lib/reveal';
-import {mapCountries} from '@/data/mapCountries';
-import {filterProjects,paginateProjects,paginationPages,projectYears,type ProjectFilters} from '@/lib/projectFilters';
+import {countryFilterValue,filterProjects,organizationOptions,paginateProjects,paginationPages,projectYears,type ProjectFilters} from '@/lib/projectFilters';
 import {ProjectModal} from './ProjectModal';
 import {ProjectCard} from './ProjectCard';
 import {Contours} from './Contours';
@@ -29,11 +28,13 @@ export function ExperienceExplorer({locale,projects}:{locale:Locale;projects:Pro
   useEffect(()=>setDraft(query),[query]);
   // Unknown taxonomy values (e.g. stale links) are ignored rather than breaking the labels.
   const taxonomyParam=(key:'expertise'|'service',values:string[])=>{const value=search.get(key)||'';return values.includes(value)?value:'';};
-  const filters:ProjectFilters={q:query,expertise:taxonomyParam('expertise',expertiseValues),service:taxonomyParam('service',serviceValues),country:search.get('country')||'',client:search.get('client')||'',year:search.get('year')||'',sort:search.get('sort')||'recent'};
+  const filters:ProjectFilters={q:query,expertise:taxonomyParam('expertise',expertiseValues),service:taxonomyParam('service',serviceValues),country:countryFilterValue(projects,search.get('country')||''),client:search.get('client')||'',year:search.get('year')||'',sort:search.get('sort')||'recent'};
   const filtered=filterProjects(projects,filters,locale,project=>[...project.expertise.map(labels.expertise),...project.services.map(labels.service),labels.location(project),project.funder==='Unión Europea'?home('clients.eu'):'']);
   const {items,page,totalPages}=paginateProjects(filtered,Number(search.get('page')||1));
   const selected=projects.find(project=>project.slug===search.get('project'));
-  const options=useMemo(()=>({expertise:inTaxonomyOrder(expertiseValues,projects.flatMap(p=>p.expertise)),service:inTaxonomyOrder(serviceValues,projects.flatMap(p=>p.services)),country:unique([...Object.values(mapCountries).map(c=>c.queryCountry),...projects.flatMap(p=>[...p.countries,...(p.regions||[p.region])])]),client:unique(projects.flatMap(p=>[p.client,...(p.funder?[p.funder]:[])])),year:unique(projects.flatMap(p=>projectYears(p).map(String))).reverse()}),[projects]);
+  // Countries are ISO codes plus region names, sorted by their localized label.
+  const byLabel=(values:string[],label:(value:string)=>string)=>[...values].sort((a,b)=>label(a).localeCompare(label(b),locale));
+  const options=useMemo(()=>({expertise:inTaxonomyOrder(expertiseValues,projects.flatMap(p=>p.expertise)),service:inTaxonomyOrder(serviceValues,projects.flatMap(p=>p.services)),country:byLabel(unique(projects.flatMap(p=>[...p.countryIso,...(p.regions||[])])),labels.geography),client:byLabel(organizationOptions(projects),value=>value),year:unique(projects.flatMap(p=>projectYears(p).map(String))).reverse()}),[projects,locale]);
   function update(values:Record<string,string>,resetPage=true) {
     const params=new URLSearchParams(search.toString());
     if(resetPage) params.delete('page');

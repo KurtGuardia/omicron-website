@@ -263,8 +263,23 @@ for (const locale of ['es', 'en']) {
       assert(catalogs[locale][`Metadata.${page}${suffix}`])
 }
 const projects = JSON.parse(
-  fs.readFileSync('data/omicron-projects.json', 'utf8'),
+  fs.readFileSync('data/experience.json', 'utf8'),
 )
+// Dataset invariants: one card per engagement, stable unique IDs/slugs, a curated Featured set.
+for (const key of ['project_id', 'slug'])
+  assert.equal(
+    new Set(projects.map((project) => project[key])).size,
+    projects.length,
+    `Duplicate ${key} in data/experience.json`,
+  )
+for (const project of projects)
+  assert.equal(
+    project.source_engagement_ids.length,
+    1,
+    `${project.slug} must map to exactly one source engagement`,
+  )
+const featuredCount = projects.filter((project) => project.featured).length
+assert(featuredCount > 0 && featuredCount <= 8, `Unexpected Featured count: ${featuredCount}`)
 for (const project of projects)
   for (const locale of ['es', 'en'])
     for (const field of [
@@ -297,5 +312,5 @@ for (const project of projects) {
       )
 }
 console.log(
-  `ES/EN audit passed: ${Object.keys(catalogs.es).length} message keys, ${checkedCalls} source references, ${projects.length} bilingual projects and all map countries.`,
+  `ES/EN audit passed: ${Object.keys(catalogs.es).length} message keys, ${checkedCalls} source references, ${projects.length} bilingual projects (${featuredCount} featured) and all map countries.`,
 )

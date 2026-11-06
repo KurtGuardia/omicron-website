@@ -6,7 +6,7 @@ import Link from "next/link";
 import {useRouter} from "next/navigation";
 import {ArrowUpRight} from "lucide-react";
 import {useTranslations} from "next-intl";
-import {isActiveMapCountryCode, mapCountries, type ActiveMapCountryCode} from "@/data/mapCountries";
+import {isActiveMapCountryCode, type ActiveMapCountryCode} from "@/data/mapCountries";
 import type {Locale} from "@/types/project";
 import styles from "./OmicronMap.module.scss";
 
@@ -37,7 +37,7 @@ export function OmicronMap({locale, projectCounts}: {locale: Locale; projectCoun
   const visibleCode = focusedCode ?? hoveredCode ?? selectedCode;
 
   const countryHref = (code: ActiveMapCountryCode) =>
-    `/${locale}/experience?country=${encodeURIComponent(mapCountries[code].queryCountry)}`;
+    `/${locale}/experience?country=${code}`;
   const hasProjects = (code: ActiveMapCountryCode) => projectCounts[code] > 0;
   const countryActionLabel = (code: ActiveMapCountryCode) => hasProjects(code)
     ? t("countryAccessibleName", {country: countries(code), count: projectCounts[code]})

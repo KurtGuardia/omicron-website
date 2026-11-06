@@ -22,6 +22,10 @@ export type Project = {
   summary: Record<Locale, string>;
   client: string;
   funder?: string;
+  /** Normalized client, funder and partner entities, used by the client filter. */
+  organizations: string[];
+  originalTitle?: string;
+  sourceRole?: string;
   countries: string[];
   region: string;
   period: string;

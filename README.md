@@ -1,6 +1,6 @@
-# OMICRON Consultores – implementation scaffold V3
+# OMICRON Consultores – sitio web
 
-Base técnica para empezar directamente la Tarea 8.2 en Codex / VS Code.
+Sitio bilingüe (ES/EN) de OMICRON Consultores: Home y catálogo de experiencia.
 
 ## Decisiones cerradas
 
@@ -14,8 +14,6 @@ Base técnica para empezar directamente la Tarea 8.2 en Codex / VS Code.
 - Sin light/dark mode
 - Container desktop fluido con `max-width: 1560px`
 - Hero, backgrounds y secciones visuales pueden ser full-bleed
-- El SVG definitivo del mapa se producirá fuera de Codex y luego se integrará en el repo
-- El set visual de imágenes temporales/finales se producirá fuera de Codex y luego se integrará
 
 ## Instalación
 
@@ -51,6 +49,7 @@ Los IDs internos, slugs y valores de filtros no deben traducirse. La UI muestra 
 ## Validación
 
 ```bash
+pnpm check       # auditoría ES/EN + invariantes del dataset
 pnpm typecheck
 pnpm build
 ```
@@ -63,16 +62,21 @@ pnpm build
 - `messages/` – traducciones
 - `i18n/` – routing/request/navigation de next-intl
 - `components/` – UI
-- `data/` – contenido seed separado de presentación
+- `data/experience.json` – base de experiencia (una tarjeta por engagement del CV)
+- `data/projects.ts` – adaptador del dataset a la UI
+- `data/projectOverrides.ts` – portadas y títulos EN que no vienen en la exportación
+- `data/` – resto de contenido separado de presentación
 - `styles/_tokens.scss` – tokens SCSS
-- `styles/_mixins.scss` – mixins
 - `app/globals.scss` – estilos globales actuales
 - `netlify.toml` – configuración base de Netlify
 
-## Estado
+## Base de experiencia
 
-La base técnica está lista para Tarea 8.2. El diseño visual aprobado debe implementarse fielmente en código; no rediseñar ni introducir Tailwind/shadcn.
+`data/experience.json` es la exportación del Excel de revisión (*OMICRON Experience Database*). Para publicar correcciones se reemplaza ese archivo con la nueva exportación, manteniendo el nombre; editar el Excel no cambia el sitio por sí solo.
 
-## Siguiente instrucción para Codex
-
-> Read `CODEX_IMPLEMENTATION_PLAN.md`. Execute TASK 8.2 only. Build the approved Home desktop using the existing Next.js + SCSS project. Inspect the repository first, preserve all approved design decisions, run relevant checks, summarize the changes, then stop.
+- Solo se publican los registros con `publish_status: "Publish"`.
+- Los Featured de Home son los registros con `featured: true`.
+- `results_*`, `context_*` y galerías vacíos ocultan su sección; no se rellenan.
+- El inglés de la mayoría de registros es un resumen editorial conciso, no una traducción integral.
+- Las portadas y correcciones de títulos EN viven en `data/projectOverrides.ts` (por slug) para sobrevivir a nuevas exportaciones.
+- Tras reemplazar el JSON, ejecutar `pnpm check` y `pnpm build`.

@@ -45,7 +45,7 @@ import { HomeHowCarousel } from './HomeHowCarousel'
 import { OmicronMap } from './map/OmicronMap'
 import { ScrollWord } from './ScrollWord'
 import { reveal } from '@/lib/reveal'
-import { mapCountries, type ActiveMapCountryCode } from '@/data/mapCountries'
+import { mapCountryCodes, type ActiveMapCountryCode } from '@/data/mapCountries'
 import { filterProjects } from '@/lib/projectFilters'
 import { expertiseValues, serviceValues } from '@/lib/projectLabels'
 import styles from './HomeSections.module.scss'
@@ -112,13 +112,18 @@ export function HomeSections({
   const featured = projects.filter(
     (project) => project.featured,
   )
+  // Home only opens featured cards (and their related links), so only those reach the client.
+  const relatedIds = new Set(featured.flatMap((project) => project.relatedProjectIds || []))
+  const homeProjects = projects.filter(
+    (project) => project.featured || relatedIds.has(project.id),
+  )
   // Same filter as /experience?country=…, so the map always matches the listing.
   const countryProjectCounts = Object.fromEntries(
-    Object.entries(mapCountries).map(([code, { queryCountry }]) => [
+    mapCountryCodes.map((code) => [
       code,
       filterProjects(
         projects,
-        { q: '', expertise: '', service: '', country: queryCountry, client: '', year: '', sort: '' },
+        { q: '', expertise: '', service: '', country: code, client: '', year: '', sort: '' },
         locale,
       ).length,
     ]),
@@ -233,7 +238,7 @@ export function HomeSections({
         <HomeFeaturedProjects
           locale={locale}
           featured={featured}
-          projects={projects}
+          projects={homeProjects}
         />
       </section>
 

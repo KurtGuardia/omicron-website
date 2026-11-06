@@ -30,7 +30,7 @@ function InlineText({text}: {text: string}) {
 }
 
 function LegalModal({markdown, onClose}: {markdown: string; onClose: () => void}) {
-  const t = useTranslations('Legal');
+  const legal = useTranslations('Legal');
   const [root, setRoot] = useState<HTMLElement | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const closeAction = useRef(onClose);
@@ -71,7 +71,7 @@ function LegalModal({markdown, onClose}: {markdown: string; onClose: () => void}
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
     }}>
-      <header className={styles.header}><h2 id="legal-dialog-title">{title}</h2><button ref={closeRef} type="button" onClick={onClose} aria-label={t('close')}><X aria-hidden="true" size={25}/></button></header>
+      <header className={styles.header}><h2 id="legal-dialog-title">{title}</h2><button ref={closeRef} type="button" onClick={onClose} aria-label={legal('close')}><X aria-hidden="true" size={25}/></button></header>
       <div className={styles.body} tabIndex={0} role="region" aria-label={title}>
         {blocks.map((block, index) => block.kind === 'heading' ? <h3 key={index}><InlineText text={block.text}/></h3> : block.kind === 'list' ? <ul key={index}>{block.items.map((item, itemIndex) => <li key={itemIndex}><InlineText text={item}/></li>)}</ul> : <p key={index}><InlineText text={block.text}/></p>)}
       </div>

@@ -182,7 +182,10 @@
     "JM": "Jamaica",
     "CU": "Cuba",
     "PY": "Paraguay",
-    "TT": "Trinidad y Tobago"
+    "TT": "Trinidad y Tobago",
+    "CH": "Suiza",
+    "DE": "Alemania",
+    "ES": "España"
   },
   "Experience": {
     "eyebrow": "NUESTRA EXPERIENCIA",
