@@ -1,6 +1,7 @@
 "use client";
 
 import {useCallback,useEffect,useState} from "react";
+import {reveal} from '@/lib/reveal';
 import Link from "next/link";
 import {useTranslations} from "next-intl";
 import {ArrowRight} from "lucide-react";
@@ -32,8 +33,8 @@ export function HomeFeaturedProjects({locale, featured, projects}: {locale: Loca
 
   return <>
     <div className="container">
-      <div className={styles.sectionHeading}><h2 id="featured-title">{t("featured.title")}</h2><p>{t("featured.intro")}</p></div>
-      <div className={styles.projectGrid}>{cards.map(project => <ProjectCard key={project.id} project={project} locale={locale} onOpen={openProject}/>)}</div>
+      <div className={styles.sectionHeading}><h2 id="featured-title" {...reveal(0)}>{t("featured.title")}</h2><p {...reveal(1)}>{t("featured.intro")}</p></div>
+      <div className={styles.projectGrid}>{cards.map((project, index) => <ProjectCard key={project.id} project={project} locale={locale} onOpen={openProject} revealIndex={index}/>)}</div>
       <div className={styles.projectsAction}><Link className={styles.outlineButton} href={`/${locale}/experience`}>{t("projectsCta")}<ArrowRight size={19} aria-hidden="true"/></Link></div>
     </div>
     {selectedProject && <ProjectModal locale={locale} project={selectedProject} projects={projects} onClose={() => setProjectUrl(null, "replace")} onSelect={selectRelatedProject}/>}

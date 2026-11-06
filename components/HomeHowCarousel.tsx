@@ -6,6 +6,7 @@ import {useTranslations} from "next-intl";
 import Image from "next/image";
 import {howStepImages, howStepImagePositions} from "@/data/assets";
 import styles from "./HomeSections.module.scss";
+import {reveal} from "@/lib/reveal";
 
 const stepNumbers = ["01", "02", "03", "04"] as const;
 const stepKeys = ["0", "1", "2", "3"] as const;
@@ -117,8 +118,8 @@ export function HomeHowCarousel() {
   } as CSSProperties;
 
   return <>{howStepImages.map((src, index) => <div key={index} aria-hidden="true" className={styles.howStepBackground} style={{opacity: index === currentStep ? 1 : 0, '--how-image': `url("${src}")`, '--how-image-position': howStepImagePositions[index]} as CSSProperties}><Image src={src} alt="" fill sizes="100vw" className={styles.howStepImage}/></div>)}<div className={`container ${styles.howContent}`}>
-    <h2 id="how-title">{t("how.title")}</h2>
-    <p className={styles.howIntro}>{t("how.intro")}</p>
+    <h2 id="how-title" {...reveal(0)}>{t("how.title")}</h2>
+    <p className={styles.howIntro} {...reveal(1)}>{t("how.intro")}</p>
     <div
       ref={carouselRef}
       className={styles.howCarousel}
@@ -142,6 +143,7 @@ export function HomeHowCarousel() {
             const isCurrent = trackIndex === 1;
             return <div
               className={styles.howSlide}
+              data-step={stepIndex}
               key={`${trackIndex}-${step.number}`}
               role="group"
               aria-roledescription={t("how.slideDescription")}

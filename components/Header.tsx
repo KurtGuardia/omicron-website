@@ -50,8 +50,11 @@ export function Header({locale, active = "home"}: {locale: Locale; active?: "hom
   }, [active]);
   useEffect(() => {
     if (!menuOpen) return;
-    const oldOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    // Lock scrolling on the root scroller: hiding overflow on <body> would make it the scroll
+    // container and un-stick the sticky header (logo and close button scrolled out of view).
+    const root = document.documentElement;
+    const oldOverflow = root.style.overflow;
+    root.style.overflow = "hidden";
     headerRef.current?.querySelector<HTMLElement>(`#mobile-navigation a`)?.focus({preventScroll: true});
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setMenuOpen(false);
@@ -65,13 +68,15 @@ export function Header({locale, active = "home"}: {locale: Locale; active?: "hom
     const onResize = () => { if (window.innerWidth > 1024) setMenuOpen(false); };
     window.addEventListener("keydown", onKey);
     window.addEventListener("resize", onResize);
-    return () => { document.body.style.overflow = oldOverflow; window.removeEventListener("keydown", onKey); window.removeEventListener("resize", onResize); menuRef.current?.focus({preventScroll: true}); };
+    return () => { root.style.overflow = oldOverflow; window.removeEventListener("keydown", onKey); window.removeEventListener("resize", onResize); menuRef.current?.focus({preventScroll: true}); };
   }, [menuOpen]);
   return <header ref={headerRef} role={menuOpen ? "dialog" : undefined} aria-modal={menuOpen ? true : undefined} aria-label={menuOpen ? t("menu") : undefined} className={`${styles.header} ${styles.homeHeader} ${scrolled ? styles.scrolledHeader : ""}`}>
     <a className={styles.skip} href="#main-content">{t("skip")}</a>
     <div className={`container ${styles.headerInner}`}>
       <Link href={`/${locale}`} className={styles.logoWrap} aria-label={t("logoAlt")} onClick={() => setMenuOpen(false)}>
-        <BrandLogo alt={t("logoAlt")} priority light/>
+        {/* Light logo over photos and the menu overlay; full-colour logo on the white scrolled bar (CSS toggles). */}
+        <BrandLogo alt={t("logoAlt")} priority light className={styles.logoOnDark}/>
+        <BrandLogo alt="" priority className={styles.logoOnLight}/>
       </Link>
       <nav className={styles.navigation} aria-label={t("label")}>
         <Link aria-current={active === "home" && homeSection === "home" ? "page" : undefined} href={`/${locale}`}>{t("home")}</Link>

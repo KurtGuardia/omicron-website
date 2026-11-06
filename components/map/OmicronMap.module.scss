@@ -8,7 +8,7 @@
   overflow: visible;
 
   :global(.country) { vector-effect: non-scaling-stroke; transform-box: fill-box; transform-origin: center; }
-  :global(.country--inactive) { fill: #deeceb; stroke: #fff; stroke-width: 1.15; pointer-events: none; }
+  :global(.country--inactive) { fill: #e6edf3; stroke: #fff; stroke-width: 1.15; pointer-events: none; }
   :global(.country--active) {
     fill: url(#regionalCountryFill);
     stroke: #fff;
@@ -46,27 +46,27 @@
   width: max-content;
   max-width: calc(100% - 16px);
   padding: 10px 12px;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 8px;
-  background: #00243b;
-  color: #fff;
-  box-shadow: 0 8px 22px rgba(0,27,43,.2);
+  border: 1px solid #e2e8ef;
+  border-radius: 10px;
+  background: #fff;
+  color: #172235;
+  box-shadow: 0 12px 30px rgba(15,35,70,.18);
   font-size: 14px;
   line-height: 1.25;
   text-align: center;
   transform: translate(-50%, -100%);
 
   strong { font-weight: 750; }
-  span { color: #e1edf2; }
+  span { color: #5b6678; }
   a {
     display: inline-flex;
     align-items: center;
     gap: 2px;
-    color: #ffad75;
+    color: #1a5fbf;
     font-weight: 750;
     text-decoration: underline;
     text-underline-offset: 2px;
-    &:hover { color: #ffd0ac; }
+    &:hover { color: #2f6f22; }
     &:focus-visible { outline: 2px solid #fb8a42; outline-offset: 3px; }
   }
 }
@@ -80,5 +80,5 @@
 
 @media (pointer: coarse) { .tooltip { padding: 10px 14px; a { min-height: 44px; padding-inline: 8px; } } }
 .tooltip::after { content: ''; position: absolute; left: 0; right: 0; top: 100%; height: 14px; }
-.touchHint { display: none; margin: 10px 0 0; text-align: center; color: #34577d; font-size: 13px; }
+.touchHint { display: none; margin: 10px 0 0; text-align: center; color: #5b6678; font-size: 13px; }
 @media (pointer: coarse), (max-width: 800px) { .touchHint { display: block; } }

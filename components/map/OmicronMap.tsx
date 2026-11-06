@@ -134,11 +134,11 @@ export function OmicronMap({locale, projectCounts}: {locale: Locale; projectCoun
       <desc id="map-desc">{t("description")}</desc>
       <defs>
         <linearGradient id="regionalCountryFill" x1="0" y1="0" x2="1" y2=".6">
-          <stop offset="0" stopColor="#83ad6a"/>
-          <stop offset=".55" stopColor="#347b60"/>
-          <stop offset="1" stopColor="#135574"/>
+          <stop offset="0" stopColor="#a4c785"/>
+          <stop offset=".55" stopColor="#5b8a3c"/>
+          <stop offset="1" stopColor="#2f5c2b"/>
         </linearGradient>
-        <linearGradient id="regionalCountryFillReverse" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stopColor="#135574"/><stop offset=".45" stopColor="#347b60"/><stop offset="1" stopColor="#83ad6a"/></linearGradient>
+        <linearGradient id="regionalCountryFillReverse" x1="0" y1="0" x2="1" y2=".6"><stop offset="0" stopColor="#2f5c2b"/><stop offset=".45" stopColor="#5b8a3c"/><stop offset="1" stopColor="#a4c785"/></linearGradient>
         <filter id="countryGlow" x="-50%" y="-50%" width="200%" height="200%">
           <feDropShadow dx="0" dy="0" stdDeviation="5.6" floodColor="#fff" floodOpacity=".95" />
           <feDropShadow dx="0" dy="0" stdDeviation="11.6" floodColor="#FB8A42" floodOpacity=".84" />

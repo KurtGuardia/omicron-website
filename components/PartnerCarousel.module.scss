@@ -1,11 +1,11 @@
 @use '../styles/tokens' as *;
 
 .carousel { position: relative; margin-top: 24px; outline: none; }
-.carousel:focus-visible { outline: 3px solid $sky; outline-offset: 6px; border-radius: 8px; }
+.carousel:focus-visible { outline: 3px solid $orange; outline-offset: 6px; border-radius: 8px; }
 .controls { position: relative; display: flex; justify-content: center; gap: 10px; margin-top: 24px;
-  button { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid rgba(8,36,65,.2); border-radius: 50%; background: rgba(255,255,255,.8); color: $navy; cursor: pointer; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
-    &:hover { background: $orange; border-color: $orange; color: #082441; }
-    &:active { background: #f07834; }
+  button { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid $border; border-radius: 50%; background: $white; color: $ink; cursor: pointer; transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    &:hover { background: $orange; border-color: $orange; color: $ink; }
+    &:active { background: #ef7430; }
     &:focus-visible { outline: 3px solid $orange; outline-offset: 3px; }
     svg { width: 20px; height: 20px; }
   }
@@ -13,13 +13,13 @@
 .viewport { --slide-gap: 26px; overflow: hidden; touch-action: pan-y; }
 .track { display: flex; width: 100%; gap: var(--slide-gap); padding: 0; margin: 0; list-style: none; will-change: transform; transition: transform 520ms cubic-bezier(.22,.68,0,1); }
 .slide { display: grid; flex: 0 0 calc((100% - (5 * var(--slide-gap))) / 6); min-width: 0; place-items: center; }
-.mark { display: grid; place-items: center; width: 100%; height: 112px; padding: 14px 16px; border-radius: 10px; color: #18334d; text-align: center;
-  &[data-surface='dark'] { background: #082b45; }
+.mark { display: grid; place-items: center; width: 100%; height: 112px; padding: 14px 16px; border-radius: 10px; color: $ink; text-align: center;
+  &[data-surface='dark'] { background: $charcoal; }
 }
 .image { position: relative; display: block; width: 100%; max-width: 212px; height: 76px;
   img { object-fit: contain; }
 }
-.wordmark { display: -webkit-box; max-width: 210px; overflow: hidden; color: #203d59; font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+.wordmark { display: -webkit-box; max-width: 210px; overflow: hidden; color: $text; font-size: 19px; font-weight: 700; line-height: 1.25; overflow-wrap: anywhere; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
 .mark[data-surface='dark'] .wordmark { color: white; }
 
 @media (max-width: 1200px) {

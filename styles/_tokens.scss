@@ -1,16 +1,30 @@
-$navy: #07216c;
-$navy-2: #061a3c;
-$sky: #73a8f6;
-$orange: #fb8a42;
-$green: #668b43;
-$green-dark: #285a35;
-$ink: #172033;
-$muted: #5d6878;
-$surface: #f7f8f5;
-$blue-surface: #eef5ff;
-$green-surface: #f2f7ed;
-$orange-surface: #fff4ea;
-$border: #dde4ec;
+// Luminous palette built on the logo's four colours, each with one job:
+//   green  → thematic areas, sustainability, the map      blue → services, knowledge
+//   orange → actions only (buttons, CTA dots)             ink  → text (logo navy, darkened)
+// Light surfaces dominate; dark appears only over photos and in the footer.
+// Every text pair below meets WCAG AA (≥ 4.5:1); solid fills carry white icons (≥ 3:1).
+$ink: #172235;          // headings (16:1 on white)
+$text: #46536a;         // body copy
+$muted: #5b6678;        // secondary text, meta (≥ 5.3:1 on every tint)
+$green: #4f8a34;        // fills, icons
+$green-ink: #2f6f22;    // green as text (≥ 5.5:1 on $green-50)
+$green-50: #eef6e8;
+$green-100: #dcecd0;
+$blue: #2f7fe0;
+$blue-ink: #1a5fbf;     // blue as text (≥ 5.4:1 on $blue-50)
+$blue-50: #eaf3ff;
+$blue-100: #d4e6ff;
+$orange: #fb8a42;       // actions: ink text on it (6.7:1)
+$orange-hover: #ff9b5b;
+$orange-ink: #b4500e;   // orange as text (≥ 4.7:1)
+$orange-50: #fff1e6;
+$sky-50: #f2f7fd;       // alternate section background
+$surface: #f4f7fa;      // neutral light surface (inputs, hovers)
+$surface-2: #e9eef4;    // chips, wells
+$border: #e2e8ef;
+$footer: #121a26;       // the only flat dark surface
+$scrim: #0f1722;        // photo overlays: rgba($scrim, .5)
+$charcoal: $footer;     // menus/tooltips on dark (kept for existing references)
 $white: #fff;
 
 // Approved wide desktop container. Full-bleed visual sections remain 100vw.

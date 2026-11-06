@@ -5,10 +5,11 @@ import {ArrowRight, MapPin} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 import type {Locale, Project} from '@/types/project';
 import styles from './ProjectCard.module.scss';
-export function ProjectCard({project,locale,onOpen,variant='home'}: {project:Project;locale:Locale;onOpen:(project:Project)=>void;variant?:'home'|'experience'}) {
+import {reveal} from '@/lib/reveal';
+export function ProjectCard({project,locale,onOpen,variant='home',revealIndex}: {project:Project;locale:Locale;onOpen:(project:Project)=>void;variant?:'home'|'experience';revealIndex?:number}) {
   const common=useTranslations('Common'); const home=useTranslations('Home'); const labels=useProjectLabels();
   const location=labels.location(project);
-  return <article className={`${styles.projectCard} ${variant==='experience' ? styles.experience : ''}`}>
+  return <article className={`${styles.projectCard} ${variant==='experience' ? styles.experience : ''}`} {...(revealIndex === undefined ? {} : reveal(revealIndex))}>
     <div className={styles.projectImage}><ContentImage src={project.image} alt={project.image ? project.title[locale] : home('featured.imageAlt')} fill sizes={variant==='home' ? '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw' : '(max-width: 600px) 100vw, (max-width: 1024px) 50vw, (min-width: 1700px) 25vw, 33vw'}/></div>
     <div className={styles.projectContent}>
       <ul className={styles.tags}>{(project.tags?.[locale] || project.expertise.map(labels.expertise)).slice(0,2).map(tag=><li key={tag}>{tag}</li>)}</ul>

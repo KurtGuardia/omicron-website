@@ -3,7 +3,6 @@ import {useEffect, useRef, useState} from 'react';
 import {CalendarDays, FileText, Globe2, MapPin} from 'lucide-react';
 import {useTranslations} from 'next-intl';
 import {homeMetrics} from '@/data/home';
-import {Contours} from './Contours';
 import styles from './HomeSections.module.scss';
 
 export function HomeStats() {
@@ -34,7 +33,7 @@ export function HomeStats() {
     return () => { observer.disconnect(); cancelAnimationFrame(frame); preference.removeEventListener('change', finish); };
   }, []);
   const number = (value: string) => <><span aria-hidden="true">{Math.round(parseInt(value) * progress)}{value.endsWith('+') ? '+' : ''}</span><span className={styles.metricAccessible}>{value}</span></>;
-  return <section className={styles.statsStrip}><Contours/><dl ref={ref} className={`container ${styles.statsGrid}`} data-animated={animated} data-revealed={revealed}>
+  return <section className={styles.statsStrip}><dl ref={ref} className={`container ${styles.statsGrid}`} data-animated={animated} data-revealed={revealed}>
     <div><CalendarDays aria-hidden="true"/><dt>{t('stats.years')}</dt><dd>{number(homeMetrics.years)}</dd></div>
     <div><Globe2 aria-hidden="true"/><dt>{t('stats.countries')}</dt><dd>{number(homeMetrics.countries)}</dd></div>
     <div><FileText aria-hidden="true"/><dt>{t('stats.projects')}</dt><dd>{number(homeMetrics.engagements)}</dd></div>

@@ -1,25 +1,19 @@
 @use '../styles/tokens' as *;
 
 :root {
-  --navy: #{$navy};
-  --navy2: #{$navy-2};
-  --sky: #{$sky};
   --orange: #{$orange};
-  --green: #{$green};
-  --greenDark: #{$green-dark};
   --ink: #{$ink};
   --muted: #{$muted};
   --surface: #{$surface};
-  --blueSurface: #{$blue-surface};
   --border: #{$border};
   --white: #{$white};
   --max: #{$content-max};
   --pagePadding: #{$page-padding-desktop};
   --radius: #{$radius};
   --section: #{$section-space};
-  font-family: Manrope, Inter, Arial, sans-serif;
+  font-family: var(--font-manrope), Manrope, Inter, Arial, sans-serif;
   color: $ink;
-  background: $surface;
+  background: $white;
 }
 * {
   box-sizing: border-box;
@@ -50,7 +44,7 @@ input:focus-visible,
 select:focus-visible {
   outline: 3px solid $orange;
   outline-offset: 5px;
-  box-shadow: 0 0 0 2px #052748;
+  box-shadow: 0 0 0 2px $ink;
 }
 #main-content {
   scroll-margin-top: 120px;
@@ -82,7 +76,7 @@ select:focus-visible {
 // Existing Experience and project modal styles, retained for their later implementation tasks.
 .experienceHero {
   color: white;
-  background: linear-gradient(90deg, #03163a, #0a3150);
+  background: $charcoal;
 }
 .eyebrow {
   font-size: 13px;
@@ -135,7 +129,7 @@ select:focus-visible {
 .projectContent h3 {
   font-size: 22px;
   margin: 10px 0 4px;
-  color: var(--navy);
+  color: var(--ink);
 }
 .projectContent p {
   line-height: 1.45;
@@ -158,7 +152,7 @@ select:focus-visible {
 }
 .textLink {
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
   border: 0;
   background: none;
   padding: 0;
@@ -211,7 +205,7 @@ select:focus-visible {
   gap: 7px;
   font-size: 13px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--ink);
 }
 .filters select {
   border: 1px solid #d5deea;
@@ -223,7 +217,7 @@ select:focus-visible {
   align-self: flex-end;
   border: 0;
   background: transparent;
-  color: var(--navy);
+  color: var(--ink);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -238,4 +232,25 @@ select:focus-visible {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+
+// Scroll reveal: components/ScrollReveal.tsx adds [data-revealed] when a [data-reveal] element enters
+// the viewport. Start states apply only while JS runs (html[data-js]) and motion is allowed. Uses the
+// individual `translate`/`scale` properties so components keep full control of `transform` (hovers).
+@media (prefers-reduced-motion: no-preference) {
+  [data-js] [data-reveal]:not([data-reveal='lines']) {
+    opacity: 0;
+    translate: 0 40px;
+    transition: opacity .9s cubic-bezier(.2, .7, .2, 1), translate .9s cubic-bezier(.2, .7, .2, 1), scale .9s cubic-bezier(.2, .7, .2, 1);
+    transition-delay: calc(var(--reveal-i, 0) * 90ms);
+  }
+  [data-js] [data-reveal='left'] { translate: -56px 0; }
+  [data-js] [data-reveal='right'] { translate: 56px 0; }
+  [data-js] [data-reveal='scale'] { translate: 0 24px; scale: .94; }
+  [data-js] [data-reveal][data-revealed] { opacity: 1; translate: none; scale: none; }
+}
+// Phones: headlines with line masks simply fade up as one block (see .headlineLine in HomeSections).
+@media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+  [data-js] [data-reveal='lines'] { opacity: 0; translate: 0 32px; transition: opacity .9s ease, translate .9s cubic-bezier(.2, .7, .2, 1); }
+  [data-js] [data-reveal='lines'][data-revealed] { opacity: 1; translate: none; }
 }

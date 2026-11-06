@@ -2,8 +2,7 @@ import { HomeStats } from './HomeStats'
 import { ParallaxImage } from './ParallaxImage'
 import { SectionWaves } from './SectionWaves'
 import { contactMailto } from '@/data/contact'
-import type { ReactNode } from 'react'
-import Image from 'next/image'
+import type { CSSProperties, ReactNode } from 'react'
 import { ContentImage } from './ContentImage'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
@@ -44,6 +43,8 @@ import { Contours } from './Contours'
 import { HomeFeaturedProjects } from './HomeFeaturedProjects'
 import { HomeHowCarousel } from './HomeHowCarousel'
 import { OmicronMap } from './map/OmicronMap'
+import { ScrollWord } from './ScrollWord'
+import { reveal } from '@/lib/reveal'
 import { mapCountries, type ActiveMapCountryCode } from '@/data/mapCountries'
 import { filterProjects } from '@/lib/projectFilters'
 import { expertiseValues, serviceValues } from '@/lib/projectLabels'
@@ -76,14 +77,16 @@ function FilterRow({
   href,
   icon: Icon,
   label,
+  index,
 }: {
   className: string
   href: string
   icon: LucideIcon
   label: string
+  index: number
 }) {
   return (
-    <li className={className}>
+    <li className={className} {...reveal(index + 1)}>
       <Link className={styles.rowLink} href={href}>
         <span className={styles.rowIcon}>
           <Icon size={28} aria-hidden='true' />
@@ -96,23 +99,6 @@ function FilterRow({
         />
       </Link>
     </li>
-  )
-}
-
-function PhotoBackground({
-  priority = false,
-}: {
-  priority?: boolean
-}) {
-  return (
-    <Image
-      src={assets.hero}
-      alt=''
-      fill
-      priority={priority}
-      sizes='100vw'
-      className={styles.background}
-    />
   )
 }
 
@@ -142,16 +128,18 @@ export function HomeSections({
   const headline = {
     line: (children: ReactNode) => (
       <span className={styles.headlineLine}>
-        {children}
+        <span className={styles.headlineInner}>{children}</span>
       </span>
     ),
     last: (children: ReactNode) => (
       <span className={styles.headlineLine}>
-        {children}
-        <span
-          className={styles.accentDot}
-          aria-hidden='true'
-        />
+        <span className={styles.headlineInner}>
+          {children}
+          <span
+            className={styles.accentDot}
+            aria-hidden='true'
+          />
+        </span>
       </span>
     ),
   }
@@ -175,16 +163,17 @@ export function HomeSections({
         />
         <Contours />
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>
+          <p className={styles.eyebrow} style={{ '--reveal-i': 0 } as CSSProperties}>
             {t('heroEyebrow')}
           </p>
-          <h1 id='hero-title'>
+          <h1 id='hero-title' style={{ '--reveal-i': 1 } as CSSProperties}>
             {t.rich('heroTitleLayout', headline)}
           </h1>
-          <p className={styles.heroBody}>{t('heroBody')}</p>
+          <p className={styles.heroBody} style={{ '--reveal-i': 4 } as CSSProperties}>{t('heroBody')}</p>
           <Link
             className={styles.primaryButton}
             href={`/${locale}/experience`}
+            style={{ '--reveal-i': 5 } as CSSProperties}
           >
             {t('experienceCta')}
             <ArrowRight size={24} aria-hidden='true' />
@@ -197,7 +186,7 @@ export function HomeSections({
       <section className={styles.expertiseSection}>
         <Contours />
         <div className={`container ${styles.dualList}`}>
-          <div>
+          <div {...reveal(0)}>
             <h2>{t('expertise.title')}</h2>
             <p className={styles.listIntro}>
               {t('expertise.intro')}
@@ -210,11 +199,12 @@ export function HomeSections({
                   href={`/${locale}/experience?expertise=${encodeURIComponent(expertiseValues[key])}`}
                   icon={expertiseIcons[key]}
                   label={t(`expertise.items.${key}`)}
+                  index={key}
                 />
               ))}
             </ul>
           </div>
-          <div>
+          <div {...reveal(1)}>
             <h2>{t('services.title')}</h2>
             <p className={styles.listIntro}>
               {t('services.intro')}
@@ -227,6 +217,7 @@ export function HomeSections({
                   href={`/${locale}/experience?service=${encodeURIComponent(serviceValues[key])}`}
                   icon={serviceIcons[key]}
                   label={t(`services.items.${key}`)}
+                  index={key}
                 />
               ))}
             </ul>
@@ -252,11 +243,11 @@ export function HomeSections({
       >
         <SectionWaves />
         <div className={`container ${styles.mapLayout}`}>
-          <div className={styles.mapCopy}>
+          <div className={styles.mapCopy} {...reveal(0, 'left')}>
             <p className={styles.eyebrow}>
               {t('map.eyebrow')}
             </p>
-            <h2 id='regional-title'>
+            <h2 id='regional-title' {...reveal(1, 'lines')}>
               {t.rich('map.titleLayout', headline)}
             </h2>
             <p>{t('map.body')}</p>
@@ -283,7 +274,7 @@ export function HomeSections({
               </div>
             </dl>
           </div>
-          <div className={styles.mapVisual}>
+          <div className={styles.mapVisual} {...reveal(2, 'scale')}>
             <OmicronMap
               locale={locale}
               projectCounts={countryProjectCounts}
@@ -305,12 +296,15 @@ export function HomeSections({
         aria-labelledby='clients-title'
       >
         <SectionWaves />
+        <ScrollWord text='OMICRON' />
         <div className='container'>
           <div className={styles.sectionHeading}>
             {/* <h2 id='clients-title'>{t('clients.title')}</h2>
             <p>{t('clients.intro')}</p> */}
           </div>
-          <PartnerCarousel />
+          <div {...reveal(0)}>
+            <PartnerCarousel />
+          </div>
         </div>
       </section>
 
@@ -319,30 +313,30 @@ export function HomeSections({
         id='about'
         aria-labelledby='about-title'
       >
-        <PhotoBackground />
+        <ParallaxImage src={assets.hero} className={styles.background} />
         <Contours />
         <div className={`container ${styles.aboutLayout}`}>
-          <p className={styles.eyebrow}>
+          <p className={styles.eyebrow} {...reveal(0)}>
             {t('about.eyebrow')}
           </p>
-          <h2 id='about-title'>
+          <h2 id='about-title' {...reveal(1, 'lines')}>
             {t.rich('about.titleLayout', headline)}
           </h2>
-          <p className={styles.aboutCopy}>
+          <p className={styles.aboutCopy} {...reveal(4)}>
             {t('about.body')}
           </p>
           <ul className={styles.aboutValues}>
-            <li>
+            <li {...reveal(2, 'right')}>
               <Leaf size={42} aria-hidden='true' />
               <span>
                 {t('about.values.sustainability')}
               </span>
             </li>
-            <li>
+            <li {...reveal(3, 'right')}>
               <Users size={42} aria-hidden='true' />
               <span>{t('about.values.collaboration')}</span>
             </li>
-            <li>
+            <li {...reveal(4, 'right')}>
               <ChartNoAxesCombined
                 size={42}
                 aria-hidden='true'
@@ -360,19 +354,20 @@ export function HomeSections({
         <Contours tone='light' />
         <div className='container'>
           <div className={styles.sectionHeading}>
-            <p className={styles.eyebrow}>
+            <p className={styles.eyebrow} {...reveal(0)}>
               {t('team.eyebrow')}
             </p>
-            <h2 id='team-title'>
+            <h2 id='team-title' {...reveal(1, 'lines')}>
               {t.rich('team.titleLayout', headline)}
             </h2>
-            <p>{t('team.intro')}</p>
+            <p {...reveal(3)}>{t('team.intro')}</p>
           </div>
           <div className={styles.teamGrid}>
-            {team.map((member) => (
+            {team.map((member, index) => (
               <article
                 className={styles.teamMember}
                 key={member.name}
+                {...reveal(index, 'scale')}
               >
                 <div className={styles.avatar}>
                   <ContentImage
@@ -402,18 +397,18 @@ export function HomeSections({
         id='contact'
         aria-labelledby='contact-title'
       >
-        <PhotoBackground />
+        <ParallaxImage src={assets.hero} className={styles.background} />
         <Contours />
         <div className={`container ${styles.contactInner}`}>
           <div>
-            <p className={styles.eyebrow}>
+            <p className={styles.eyebrow} {...reveal(0)}>
               {t('contact.eyebrow')}
             </p>
-            <h2 id='contact-title'>
+            <h2 id='contact-title' {...reveal(1, 'lines')}>
               {t.rich('contact.titleLayout', headline)}
             </h2>
           </div>
-          <div className={styles.contactAction}>
+          <div className={styles.contactAction} {...reveal(3, 'right')}>
             <p>{t('contact.body')}</p>
             <a
               className={styles.primaryButton}

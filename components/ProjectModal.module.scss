@@ -7,7 +7,7 @@
   place-items: center;
   overflow-y: auto;
   padding: 32px;
-  background: rgba(3, 20, 40, 0.76);
+  background: rgba(18, 17, 15, 0.74);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
@@ -19,9 +19,9 @@
   overflow: auto;
   border-radius: 18px;
   background: #fff;
-  color: #13254b;
-  box-shadow: 0 32px 90px rgba(0, 16, 35, 0.42);
-  scrollbar-color: rgba(14, 48, 68, 0.4) transparent;
+  color: #172235;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.4);
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
   scrollbar-width: thin;
 }
 .close {
@@ -35,15 +35,15 @@
   height: 48px;
   border: 0;
   border-radius: 50%;
-  color: #08215a;
+  color: #172235;
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 5px 18px rgba(0, 20, 50, 0.18);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
   transition:
     transform 150ms ease,
     background-color 150ms ease;
   &:hover {
     transform: rotate(4deg);
-    background: #eff6ff;
+    background: #f4f7fa;
   }
   &:focus-visible {
     outline: 3px solid $orange;
@@ -59,7 +59,7 @@
   overflow: hidden;
   padding: clamp(30px, 4vw, 64px);
   color: #fff;
-  background: #0a3350;
+  background: #141c28;
 }
 .heroImage {
   z-index: -1;
@@ -73,13 +73,13 @@
   background:
     linear-gradient(
       90deg,
-      rgba(2, 20, 38, 0.86),
-      rgba(2, 25, 44, 0.45) 56%,
-      rgba(2, 23, 42, 0.12)
+      rgba(18, 17, 15, 0.84),
+      rgba(18, 17, 15, 0.45) 56%,
+      rgba(18, 17, 15, 0.1)
     ),
     linear-gradient(
       0deg,
-      rgba(1, 18, 33, 0.5),
+      rgba(18, 17, 15, 0.5),
       transparent 66%
     );
 }
@@ -108,10 +108,10 @@
   }
 }
 .greenTag {
-  background: rgba(40, 105, 71, 0.88);
+  background: rgba(70, 110, 45, 0.9);
 }
 .blueTag {
-  background: rgba(20, 69, 119, 0.9);
+  background: rgba(35, 34, 31, 0.88);
 }
 .hero h2 {
   max-width: 760px;
@@ -135,8 +135,8 @@
   gap: 18px;
   align-items: center;
   padding: 22px 34px;
-  border-bottom: 1px solid #dce5ee;
-  background: linear-gradient(90deg, #fff, #f7fbfe);
+  border-bottom: 1px solid #e2e8ef;
+  background: linear-gradient(90deg, #fff, #fafbfd);
 }
 .metaItem {
   display: grid;
@@ -145,7 +145,7 @@
   gap: 12px;
   min-width: 0;
   padding-right: 14px;
-  border-right: 1px solid #d5e0ec;
+  border-right: 1px solid #e2e8ef;
   &:last-child {
     border: 0;
   }
@@ -156,11 +156,11 @@
     padding-top: 3px;
   }
   strong {
-    color: #13234c;
+    color: #172235;
     font-size: 16px;
   }
   > div > span {
-    color: #4e6280;
+    color: #5b6678;
     font-size: 16px;
     line-height: 1.28;
   }
@@ -172,8 +172,8 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  color: #0a3478;
-  background: #e6f3fc;
+  color: #172235;
+  background: #e9eef4;
 }
 .body {
   display: grid;
@@ -195,14 +195,14 @@
   margin: 0 0 24px;
   h3 {
     margin: 3px 0 8px;
-    color: #09245e;
+    color: #172235;
     font-size: 23px;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }
   p {
     margin: 0;
-    color: #526785;
+    color: #5b6678;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -222,7 +222,7 @@
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    color: #526785;
+    color: #5b6678;
     font-size: 16px;
     line-height: 1.4;
   }
@@ -232,7 +232,7 @@
     padding: 2px;
     border-radius: 50%;
     color: #fff;
-    background: #559b6b;
+    background: #5b8a3c;
   }
 }
 .sidebar {
@@ -242,7 +242,7 @@
 .sideSection {
   padding: 0 0 18px;
   margin: 0 0 17px;
-  border-bottom: 1px solid #e3ebf2;
+  border-bottom: 1px solid #e2e8ef;
   &:last-child {
     border: 0;
     margin-bottom: 0;
@@ -252,7 +252,7 @@
     align-items: center;
     gap: 12px;
     margin: 0 0 13px;
-    color: #102653;
+    color: #172235;
     font-size: 18px;
     line-height: 1.25;
   }
@@ -280,16 +280,16 @@
   background: #e7f4e8;
 }
 .area1 {
-  color: #1553a1;
-  background: #e5f1ff;
+  color: #46536a;
+  background: #e9eef4;
 }
 .area2 {
-  color: #a95b17;
+  color: #b4500e;
   background: #fff0dc;
 }
 .area3 {
-  color: #6243a7;
-  background: #f0eaff;
+  color: #5b4ba8;
+  background: #efebff;
 }
 .services {
   display: grid;
@@ -297,8 +297,8 @@
   span {
     padding: 9px 12px;
     border-radius: 12px;
-    background: linear-gradient(100deg, #edf7ff, #e5f2fc);
-    color: #16468a;
+    background: linear-gradient(100deg, #f4f7fa, #eef2f6);
+    color: #172235;
     font-size: 14px;
     line-height: 1.25;
   }
@@ -313,7 +313,7 @@
   min-height: 100px;
   overflow: hidden;
   border-radius: 9px;
-  background: #e5eef5;
+  background: #e9eef4;
   &:first-child {
     grid-column: 1/-1;
     min-height: 126px;
@@ -335,18 +335,18 @@
   padding: 7px;
   border: 0;
   border-radius: 9px;
-  background: #f4f8fc;
-  color: #0c2b67;
+  background: #f4f7fa;
+  color: #172235;
   text-align: left;
   cursor: pointer;
   &:hover:not(:disabled) {
-    background: #e8f2fb;
+    background: #e9eef4;
   }
   &:disabled {
     cursor: default;
   }
   > svg {
-    color: #1b5ab1;
+    color: #b4500e;
   }
 }
 .relatedImage {
@@ -356,7 +356,7 @@
   height: 64px;
   overflow: hidden;
   border-radius: 7px;
-  background: #dceaf3;
+  background: #e2e8ef;
   img {
     object-fit: cover;
   }
@@ -367,14 +367,14 @@
   min-width: 0;
   strong {
     overflow: hidden;
-    color: #102c69;
+    color: #172235;
     font-size: 13px;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
   small {
     overflow: hidden;
-    color: #526785;
+    color: #5b6678;
     font-size: 11px;
     line-height: 1.25;
     text-overflow: ellipsis;
@@ -389,7 +389,7 @@
   margin-top: 24px;
   padding: 17px;
   border-radius: 14px;
-  background: linear-gradient(110deg, #f3f9fc, #edf6fb);
+  background: linear-gradient(110deg, #f4f7fa, #eef2f6);
   .ctaIcon {
     display: grid;
     place-items: center;
@@ -397,16 +397,16 @@
     height: 58px;
     border-radius: 50%;
     color: #fff;
-    background: #082b62;
+    background: #172235;
   }
   strong {
     display: block;
-    color: #11295a;
+    color: #172235;
     font-size: 16px;
   }
   p {
     margin: 3px 0 0;
-    color: #536985;
+    color: #5b6678;
     font-size: 14px;
     line-height: 1.35;
   }
@@ -417,7 +417,7 @@
     padding: 12px 18px;
     border-radius: 9px;
     background: $orange;
-    color: #06234d;
+    color: #172235;
     font-size: 15px;
     font-weight: 750;
     white-space: nowrap;
@@ -514,7 +514,7 @@
     grid-template-columns: 40px minmax(0, 1fr);
     padding: 0 0 10px;
     border-right: 0;
-    border-bottom: 1px solid #e1eaf1;
+    border-bottom: 1px solid #e2e8ef;
     &:last-child {
       border: 0;
       padding-bottom: 0;
@@ -537,7 +537,7 @@
   }
   .sidebar {
     padding: 18px 0 0;
-    border-top: 1px solid #e0e8ef;
+    border-top: 1px solid #e2e8ef;
   }
   .sideSection h3 {
     font-size: 17px;
@@ -592,7 +592,7 @@
   margin: 16px 0 0;
   > div {
     padding: 12px;
-    background: #edf7ff;
+    background: #f4f7fa;
     border-radius: 8px;
   }
   dt {
@@ -647,7 +647,7 @@
   }
   .sidebar {
     padding: 20px 0 0;
-    border-top: 1px solid #dce5ee;
+    border-top: 1px solid #e2e8ef;
   }
   .meta {
     grid-template-columns: 1fr;
@@ -656,7 +656,7 @@
   }
   .metaItem {
     border-right: 0;
-    border-bottom: 1px solid #e1eaf1;
+    border-bottom: 1px solid #e2e8ef;
     padding: 0 0 12px;
     &:last-child {
       padding-bottom: 0;
@@ -714,11 +714,11 @@
 }
 // OMICRON accents keep the existing detail hierarchy while differentiating icons.
 .metaIcon[data-tone='green'], .detailIcon[data-tone='green'] { color: #247344; background: #e3f3df; }
-.metaIcon[data-tone='blue'], .detailIcon[data-tone='blue'] { color: #1466b5; background: #e1f1ff; }
-.metaIcon[data-tone='orange'], .detailIcon[data-tone='orange'] { color: #a64f0c; background: #ffead6; }
+.metaIcon[data-tone='blue'], .detailIcon[data-tone='blue'] { color: #46536a; background: #e9eef4; }
+.metaIcon[data-tone='orange'], .detailIcon[data-tone='orange'] { color: #b4500e; background: #ffead6; }
 .sideSection h3 > svg { color: #247344; }
-.sideSection:nth-child(2) h3 > svg { color: #1466b5; }
-.sideSection:nth-child(3) h3 > svg { color: #b95e14; }
-.sideSection:nth-child(4) h3 > svg { color: #1466b5; }
-.area3 { color: #1466b5; background: #e1f1ff; }
+.sideSection:nth-child(2) h3 > svg { color: #46536a; }
+.sideSection:nth-child(3) h3 > svg { color: #b4500e; }
+.sideSection:nth-child(4) h3 > svg { color: #46536a; }
+.area3 { color: #46536a; background: #e9eef4; }
 .cta .ctaIcon { color: #ffad75; }
