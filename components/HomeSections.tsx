@@ -313,7 +313,7 @@ export function HomeSections({
         id='about'
         aria-labelledby='about-title'
       >
-        <ParallaxImage src={assets.hero} className={styles.background} />
+        <ParallaxImage src={assets.about} className={styles.background} />
         <Contours />
         <div className={`container ${styles.aboutLayout}`}>
           <p className={styles.eyebrow} {...reveal(0)}>
@@ -397,7 +397,7 @@ export function HomeSections({
         id='contact'
         aria-labelledby='contact-title'
       >
-        <ParallaxImage src={assets.hero} className={styles.background} />
+        <ParallaxImage src={assets.contact} className={styles.background} />
         <Contours />
         <div className={`container ${styles.contactInner}`}>
           <div>

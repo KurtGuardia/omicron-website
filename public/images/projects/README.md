@@ -10,5 +10,6 @@ placeholder through the shared ContentImage component;
 failed cover loads use that same fallback. Image frames keep
 their existing responsive aspect ratios.
 
-No individual project covers or galleries have been supplied
-yet.
+Covers are provisional Pexels stock photos (sources and licence in
+`docs/image-sources.md`); replace each `cover.webp` with real project
+photography when available. No galleries have been supplied yet.

@@ -4,7 +4,12 @@ export const assets = {
   // Dark-background variant generated from logo.png by scripts/prepare-logo-variants.mjs.
   logoLight: "/images/logo-light.png",
   hero: "/images/parallax/hero-parallax-tall.png",
-  project: "/images/placeholders/project-placeholder.png",
+  // Distinct section backgrounds so no photo repeats across the page flow.
+  about: "/images/sections/about.webp",
+  contact: "/images/sections/contact.webp",
+  experienceHero: "/images/sections/experience-hero.webp",
+  experienceContact: "/images/sections/experience-contact.webp",
+  project:"/images/placeholders/project-placeholder.png",
   avatar: "/images/team/team-placeholder.png",
   contoursLight: "/images/decor/contours-light.svg",
   contoursDark: "/images/decor/contours-dark.svg",
