@@ -22,6 +22,24 @@ html {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
   overflow-y: scroll;
+  // Firefox + Chromium 121+ (standard properties: thumb colour, track colour).
+  scrollbar-color: $green $surface-2;
+}
+// Safari and older Chromium.
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: $surface-2;
+}
+::-webkit-scrollbar-thumb {
+  background: $green;
+  border: 3px solid $surface-2;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: $green-ink;
 }
 body {
   margin: 0;
